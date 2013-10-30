@@ -182,19 +182,19 @@ module.exports = function(grunt) {
         files : [{expand: true, cwd: 'js', src: ['**'], dest: '../build/debug/js'}]
       },
       module_js: {
-        // files: [{expand: true, src: ['**']}]
+        files: [{expand: true, cwd: 'modules', src: ['**/js/*.js'], dest: '../build/debug/js/modules/'}]
 
         // go through every module folder
-        files : function() {
-          var module, array = [];
+        // files : function() {
+        //   var module, array = [];
 
-          // copy all js
-          grunt.file.expand('modules/**/js').forEach(function(path) {
-            module = path.split('/')[1];
-            array.push({expand: true, cwd: path, src: ['**'], dest: '../build/debug/js/modules/'});
-          });
-          return array;
-        }
+        //   // copy all js
+        //   grunt.file.expand('modules/**/js').forEach(function(path) {
+        //     module = path.split('/')[1];
+        //     array.push({expand: true, cwd: path, src: ['**'], dest: '../build/debug/js/modules/'});
+        //   });
+        //   return array;
+        // }
       },
       debug_modules : {
        // go through every module folder
@@ -409,28 +409,18 @@ module.exports = function(grunt) {
     var modules = [];
 
     // go through every module, or the one passed
-    grunt.file.expand('modules/'+module+'/js/').forEach(function(path) {
+    grunt.file.expand('modules/'+module+'/js').forEach(function(path) {
       mod = path.split('/')[1];
       modules.push({
+        expand: true,
         cwd: path,
         src: ['*.js'],
         dest: '../build/'+mode+'/js/modules'
       });
-
-      grunt.config('jade.modules.files', modules);
-      grunt.task.run('jade:modules');
-      // grunt.registerTask(path, function() {
-      //   // copy all the JS files
-      //   grunt.config('copy.module_js.files.cwd', path);
-      //   grunt.config('copy:module_js.files.dest', '../build/debug/js/modules/');
-
-      //   // run
-      //   grunt.task.run('copy:module_js');
-      // });
-
-      // // run it
-      // grunt.task.run(path);
     });
+
+    grunt.config('copy.module_js.files', modules);
+    grunt.task.run('copy:module_js');
   });
 
 
