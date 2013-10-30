@@ -65,8 +65,28 @@ h1 {
   li {
     color: darken($white, 20%);
     border-bottom: 1px solid $nav-border;
+    position: relative;
+    @include transition(border-color, 0.3s);
     &:last-child {
       border: none;
+      position: inherit;
+      &:after {
+        z-index: -2;
+      }
+    }
+    &:hover {
+      border-color: $white;
+      &:after {background: $white;}
+    }
+    &:after {
+      content: "\00a0";
+      background: $black;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 30%;
+      height: 10%;
+      @include transition(background, 0.3s);
     }
   }
   a {
@@ -78,7 +98,7 @@ h1 {
     @include transition(color, 0.3s);
     &:hover {
       color: $white;
-      background: darken($black, 2%);
+      // background: darken($black, 2%);
     }
   }
 }
@@ -103,6 +123,11 @@ h1 {
   .foundicon-search {
     position: absolute;
     @include rems(padding, 4px);
+    -webkit-transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    transform: scale(-1, 1);
   }
 }
 
@@ -120,14 +145,11 @@ footer {
       @include rems(padding-left, 4px);
       @include rems(padding-right, 2px);
     }
-    &:last-child:after {
-      content: "";
-    }
+    &:last-child:after {content: "";}
   }
   a {
-    &:hover {
-      text-decoration: underline;
-      // color: blue;
-    }
+    border-bottom: 1px solid $black;
+    @include transition(border-color, 0.3s);
+    &:hover {border-bottom: 1px solid #999999;}
   }
 }
