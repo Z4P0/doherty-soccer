@@ -6,11 +6,17 @@ $black: #2f2f2f;
 $nav-border: #4d4d4d;
 
 
+
 #global-nav {
   background: $black;
   color: $white;
-  position: relative;
-  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  // visibility: hidden;
   line-height: 1;
   @include rems(max-width, 260px);
   @include units(padding, 2, 0, 1, 2);
@@ -20,11 +26,30 @@ $nav-border: #4d4d4d;
     color: inherit;
     text-decoration: none;
   }
-  @include mq(tablet) {
-    @include units(padding-top, 3);
+  @include mq(tablet) {@include units(padding-top, 3);}
+  @include mq(netbook) {@include units(padding-top, 4);}
+
+  // off-screen styles
+  // Needs to be fixed size so #main can move same distance
+  -webkit-transform: translateX(-12rem);
+  -ms-transform: translateX(-12rem);
+  -o-transform: translateX(-12rem);
+  transform: translateX(-12rem);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  &.nav-show {
+    visibility: visible;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
   }
-  @include mq(netbook) {
-    @include units(padding-top, 4);
+  ~ #main {
+    transition: 0.5s;
+  }
+  &.nav-show ~ #main {
+    transform: translateX(12rem);
   }
 }
 header, footer {

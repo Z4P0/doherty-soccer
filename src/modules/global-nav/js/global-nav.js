@@ -1,65 +1,44 @@
-// define(function(require){
-
 'use strict';
 
-// var $ = require('jquery'),
-//     Modernizr = require('modernizr'),
-//     enquire = require('enquire'),
-//     hammer = require('plugins/index').hammer,
-//     Settings = require('require/sony-global-settings'),
-//     Utilities = require('require/sony-global-utilities'),
-//     Environment = require('require/sony-global-environment'),
-//     SonyCarousel = require('secondary/index').sonyCarousel,
-//     throttleDebounce = require('plugins/index').throttleDebounce,
-//     imagesLoaded = require('plugins/index').imagesLoaded,
-//     viewport = require( 'plugins/index' ).viewport;
+// show/hide nav --> clicking on toggle
+// update nav --> current page
+// handle search things
 
-var globalNav = {
-  'init': function() {
-    console.log('lol');
-    // alert('hello from: testing.js:init()');
-    // simple run through
+ds.nav = (function() {
+  var nav,
+      toggle,
+      menu,
+      search;
 
-  }
-};
+  var init = function(_settings) {
+    // nav
+    nav = $(_settings.nav);
 
-return globalNav;
+    // toggle
+    toggle = $(_settings.toggle);
+    toggle.click(function() {
+      console.log('CLICK');
+      nav.toggleClass('nav-show');
+    });
 
-// });
+    // menu
+    menu = $(_settings.menu);
 
+    // search field
+    search = $(_settings.search);
 
-// Testing Module
-// ---------------------------------------
-// simple run through to get comfortable with the module setup
-//
-// * **Class:** Test
-// * **Version:** 0.1
-// * **Dependencies:** jQuery 1.7+, Modernizr, Enquire, [SonyCarousel](sony-carousel.html),
+    console.log(this);
+    console.log(nav);
+  };
 
-// define(function(require){
+  return {
+    init : init
+  };
+})();
 
-//   'use strict';
-
-//   var $ = require('jquery'),
-//       Modernizr = require('modernizr'),
-//       enquire = require('enquire'),
-//       hammer = require('plugins/index').hammer,
-//       Settings = require('require/sony-global-settings'),
-//       Utilities = require('require/sony-global-utilities'),
-//       Environment = require('require/sony-global-environment'),
-//       SonyCarousel = require('secondary/index').sonyCarousel,
-//       throttleDebounce = require('plugins/index').throttleDebounce,
-//       imagesLoaded = require('plugins/index').imagesLoaded,
-//       viewport = require( 'plugins/index' ).viewport;
-
-//   var module = {
-//     'init': function() {
-//       // alert('hello from: testing.js:init()');
-//       // simple run through
-
-//     }
-//   };
-
-//   return module;
-
-// });
+ds.nav.init({
+  nav: '#global-nav',
+  toggle: '#nav-toggle',
+  menu: '#nav-menu a',
+  search: '#search-field'
+});
