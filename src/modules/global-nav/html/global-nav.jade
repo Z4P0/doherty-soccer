@@ -1,0 +1,22 @@
+nav#global-nav
+  header
+    h1 #{data.siteName}
+    p#tagline #{data.siteTagline}
+    nav#nav-toggle #{data.abbr}
+  ul#nav-menu
+    - for (i=0; i< data.globalNav.length; i++) {
+      li
+        //- search
+        if data.globalNav[i] == "Search"
+          form#search-field
+            i.foundicon-search.general-icon
+            input(type="text", placeholder="#{data.globalNav[i]}")
+        else
+          a(href="#") #{data.globalNav[i]}
+    - }
+  footer
+    ul#footer-links.inline
+      - for(j=0; j<data.footerLinks.length; j++) {
+        li
+          a(href="#") #{data.footerLinks[j]}
+      - }

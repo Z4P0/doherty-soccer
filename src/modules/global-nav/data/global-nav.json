@@ -1,0 +1,18 @@
+{
+  "siteName" : "Doherty Soccer",
+  "siteTagline" : "She is like a cat in the dark, and she is the darkness",
+  "abbr" : "DS",
+  "globalNav" : [
+    "Home",
+    "Sign In",
+    "Articles",
+    "Leagues",
+    "Cups",
+    "Search"
+  ],
+  "footerLinks" : [
+    "Settings",
+    "About",
+    "Privacy Policy"
+  ]
+}

@@ -47,6 +47,22 @@
 }
 
 
+// css circle
+@mixin circle($size, $color, $alignment:middle) {
+  display: inline-block;
+  vertical-align: $alignment;
+  height: $size;
+  width: $size;
+  border-radius: $size;
+  background: $color;
+}
+
+// simulate simple hover effect
+@mixin hover() {
+  &:hover {cursor: pointer;}
+}
+
+
 // clearfix
 @mixin cf()
 {
@@ -56,4 +72,51 @@
     display: table;
   }
   &:after {clear: both;}
+}
+
+// original author: Karl Merkli
+// found: http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+// ===================================
+// has been modified
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin units($property, $values...) {
+  $max: length($values);
+
+  // string holders
+  $pxValues: ''; // for pixel fallback
+  $remValues: ''; // rem value
+
+  // loop through values provided
+  @for $i from 1 through $max {
+    $baseline: 26;
+    $value: strip-unit(nth($values, $i))*$baseline;
+
+
+    $pxValues: #{$pxValues + $value}px;
+    $remValues: #{$remValues + $value/16}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+      $pxValues: #{$pxValues + " "};
+    }
+  }
+
+  // set property value
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+}
+// ===================================
+
+
+@mixin rems($property, $value) {
+  $rawValue: strip-unit($value);
+  $pxValue: #{$rawValue}px;
+  $remValue: #{$rawValue/16}rem;
+
+  // set property values
+  #{$property}: $pxValue;
+  #{$property}: $remValue;
 }

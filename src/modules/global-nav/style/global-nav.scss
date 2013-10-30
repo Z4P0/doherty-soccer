@@ -1,0 +1,133 @@
+@import "../../../style/pieces/vars";
+@import "../../../style/pieces/mixins";
+
+$white: #ebebeb;
+$black: #2f2f2f;
+$nav-border: #4d4d4d;
+
+
+#global-nav {
+  background: $black;
+  color: $white;
+  position: relative;
+  height: 100%;
+  line-height: 1;
+  @include rems(max-width, 260px);
+  @include units(padding, 2, 0, 1, 2);
+  @include transition(padding-top, 0.3s);
+  p, ul {margin: 0;}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  @include mq(tablet) {
+    @include units(padding-top, 3);
+  }
+  @include mq(netbook) {
+    @include units(padding-top, 4);
+  }
+}
+header, footer {
+  @include units(padding-right, 1)
+}
+
+header {
+  @include rems(margin-bottom, 30px);
+  position: relative;
+}
+h1 {
+  margin: 0;
+  font-family: $bold;
+  text-transform: uppercase;
+  @include rems(font-size, 18px);
+  @include rems(margin-bottom, 6px);
+}
+#tagline {
+  font-family: $italic;
+  color: #afafaf;
+  @include rems(font-size, 12px);
+}
+#nav-toggle {
+  position: absolute;
+  @include rems(top, -24px);
+  @include rems(right, -52px);
+  @include rems(width, 52px);
+  @include rems(height, 52px);
+  @include rems(padding-top, 18px);
+  @include rems(font-size, 18px);
+  text-align: center;
+  background: $black;
+  @include hover();
+}
+
+#nav-menu {
+  list-style: none;
+  li {
+    color: darken($white, 20%);
+    border-bottom: 1px solid $nav-border;
+    &:last-child {
+      border: none;
+    }
+  }
+  a {
+    display: inline-block;
+    width: 100%;
+    @include rems(font-size, 18px);
+    @include rems(padding-bottom, 6px);
+    @include rems(padding-top, 24px);
+    @include transition(color, 0.3s);
+    &:hover {
+      color: $white;
+      background: darken($black, 2%);
+    }
+  }
+}
+#search-field {
+  @include units(padding-right, 1);
+  @include rems(margin-top, 16px);
+  position: relative;
+  input[type="text"] {
+    width: 100%;
+    background: #1a1a1a;
+    border: none;
+    margin: 0;
+    color: $white;
+    font-family: $italic;
+    @include rems(font-size, 16px);
+    @include rems(padding-left, 26px);
+    @include units(min-height, 1);
+    &:focus {
+      font-family: $regular;
+    }
+  }
+  .foundicon-search {
+    position: absolute;
+    @include rems(padding, 4px);
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  @include units(padding-bottom, 1);
+}
+#footer-links {
+  color: #999999;
+  @include rems(font-size, 12px);
+  li {
+    &:after {
+      content: "\2013";
+      @include rems(padding-left, 4px);
+      @include rems(padding-right, 2px);
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }
+  a {
+    &:hover {
+      text-decoration: underline;
+      // color: blue;
+    }
+  }
+}
