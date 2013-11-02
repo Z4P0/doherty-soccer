@@ -367,7 +367,7 @@ module.exports = function(grunt) {
       'jade:deploy',
       'docs'
     ]);
-  })
+  });
 
   // compile stuff in 'docs'
   grunt.registerTask('docs', 'update docs/ folder', function() {

@@ -1,0 +1,32 @@
+@import "../../../style/pieces/vars";
+@import "../../../style/pieces/mixins";
+
+.comment {
+  @include rems(max-width, 520px);
+  margin: 0 auto;
+}
+
+.comment-actions {
+  // text-align: right;
+  @include rems(font-size, 14px);
+  li {
+    @include hover();
+    &:after {
+      content: "|";
+      @include rems(padding, 3px);
+    }
+    &:last-child:after {
+      content: "";
+      padding: 0;
+    }
+  }
+}
+
+.comment-meta{
+  @include rems(font-size, 14px);
+  @include units(margin-bottom, 0.25);
+  img {
+    @include units(margin-right, 0.25);
+    vertical-align: bottom;
+  }
+}

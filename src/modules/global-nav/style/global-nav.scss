@@ -1,11 +1,7 @@
 @import "../../../style/pieces/vars";
 @import "../../../style/pieces/mixins";
 
-$white: #ebebeb;
-$black: #2f2f2f;
 $nav-border: #4d4d4d;
-
-
 
 #global-nav {
   background: $black;
@@ -15,8 +11,6 @@ $nav-border: #4d4d4d;
   top: 0;
   left: 0;
   bottom: 0;
-  overflow-y: auto;
-  // visibility: hidden;
   line-height: 1;
   @include rems(max-width, 260px);
   @include units(padding, 2, 0, 1, 2);
@@ -31,15 +25,18 @@ $nav-border: #4d4d4d;
 
   // off-screen styles
   // Needs to be fixed size so #main can move same distance
-  -webkit-transform: translateX(-12rem);
-  -ms-transform: translateX(-12rem);
-  -o-transform: translateX(-12rem);
-  transform: translateX(-12rem);
+  -webkit-transform: translateX(-260px);
+  -ms-transform: translateX(-260px);
+  -o-transform: translateX(-260px);
+  transform: translateX(-260px);
+  -webkit-transform: translateX(-16.25rem);
+  -ms-transform: translateX(-16.25rem);
+  -o-transform: translateX(-16.25rem);
+  transform: translateX(-16.25rem);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
   &.nav-show {
-    visibility: visible;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
@@ -49,7 +46,14 @@ $nav-border: #4d4d4d;
     transition: 0.5s;
   }
   &.nav-show ~ #main {
-    transform: translateX(12rem);
+    -webkit-transform: translateX(260px);
+    -ms-transform: translateX(260px);
+    -o-transform: translateX(260px);
+    transform: translateX(260px);
+    -webkit-transform: translateX(16.25rem);
+    -ms-transform: translateX(16.25rem);
+    -o-transform: translateX(16.25rem);
+    transform: translateX(16.25rem);
   }
 }
 header, footer {
@@ -95,24 +99,24 @@ h1 {
     &:last-child {
       border: none;
       position: inherit;
-      &:after {
-        z-index: -2;
-      }
+      // &:after {
+      //   z-index: -2;
+      // }
     }
     &:hover {
       border-color: $white;
-      &:after {background: $white;}
+      // &:after {background: $white;}
     }
-    &:after {
-      content: "\00a0";
-      background: $black;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      width: 30%;
-      height: 10%;
-      @include transition(background, 0.3s);
-    }
+    // &:after {
+    //   content: "\00a0";
+    //   background: $black;
+    //   position: absolute;
+    //   right: 0;
+    //   bottom: 0;
+    //   width: 30%;
+    //   height: 10%;
+    //   @include transition(background, 0.3s);
+    // }
   }
   a {
     display: inline-block;

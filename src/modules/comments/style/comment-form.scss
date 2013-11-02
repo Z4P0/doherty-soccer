@@ -1,0 +1,25 @@
+@import "../../../style/pieces/vars";
+@import "../../../style/pieces/mixins";
+
+#comment-form-wrapper {
+  // background: tomato;
+  @include rems(max-width, 520px);
+  margin: 0 auto;
+  @include units(padding, 1, 0);
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+}
+#comment-form {
+  // background: green;
+}
+textarea {
+  width: 100%;
+  @include rems(font-size, 14px);
+  @include units(padding, 0.25);
+  @include transition(min-height, 0.3s);
+  &:focus {
+    @include rems(min-height, 130px);
+  }
+}

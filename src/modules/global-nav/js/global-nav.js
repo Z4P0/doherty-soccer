@@ -1,6 +1,5 @@
 'use strict';
 
-// show/hide nav --> clicking on toggle
 // update nav --> current page
 // handle search things
 
@@ -17,7 +16,6 @@ ds.nav = (function() {
     // toggle
     toggle = $(_settings.toggle);
     toggle.click(function() {
-      console.log('CLICK');
       nav.toggleClass('nav-show');
     });
 
@@ -26,9 +24,6 @@ ds.nav = (function() {
 
     // search field
     search = $(_settings.search);
-
-    console.log(this);
-    console.log(nav);
   };
 
   return {

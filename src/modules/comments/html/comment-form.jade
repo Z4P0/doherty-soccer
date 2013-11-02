@@ -1,0 +1,19 @@
+section#comment-form-wrapper
+  form#comment-form
+    textarea(placeholder="Enter your comment...")
+    div#comment-reveal
+      //- if not LO/NR
+      section#comment-registration
+        ul
+          li
+            input(type="text", placeholder="Email")
+          li
+            input(type="text", placeholder="Name")
+
+      //- follow updates
+      label#comment-follow
+        input(type="checkbox")
+        | Notify me of replies to my comment
+      //- if logged in
+      div
+        input(type="submit")

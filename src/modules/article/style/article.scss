@@ -1,0 +1,45 @@
+@import "../../../style/pieces/vars";
+@import "../../../style/pieces/mixins";
+
+.article-post {
+  @include rems(max-width, 520px);
+  // padding top
+  padding: 0 5%;
+  @include mq(tablet) {padding: 0 2%;}
+  @include mq(netbook) {padding: 0;}
+  @include transition(padding, 0.3s);
+  margin: 0 auto;
+  p {
+    @include rems(font-size, 20px);
+    @include rems(line-height, 26px);
+    @include rems(margin-bottom, 26px);
+  }
+}
+
+.article-title, .article-header {
+  font-family: $bold;
+  @include rems(margin-bottom, 26px);
+}
+.article-title {
+  @include rems(font-size, 40px);
+}
+.article-meta {
+  display: inline-block;
+  @include rems(padding-top, 52px);
+  text-transform: uppercase;
+  @include rems(font-size, 14px);
+  font-family: $bold;
+  color: lighten($black, 35%);
+}
+.article-category {
+  color: inherit;
+}
+.posted-on {
+  &:before {content: " | "}
+  // padding: 1em;
+}
+// lead in
+// .lead-in {
+//   font-size: 26px !important;
+//   font-size: 1.625rem !important;
+// }

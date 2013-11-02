@@ -1,0 +1,21 @@
+include ../../../html/jade-helpers.jade
+!!! 5
+
+head
+  title comment-form
+  meta(name="description", content="comment-form demo")
+  include ../../../html/head.jade
+  +css("comment-form")
+  +css("comment-post")
+
+
+body
+  a(href="#main", class="assistive-text") Skip to main content
+  div.container
+    +partial("comments/html/comment-form.jade","modules/comments/data/comment-form.json")
+    +partial("comments/html/comment-post.jade","modules/comments/data/comment-post.json")
+
+  include ../../../html/foot.jade
+  +js("comment-form")
+  +js("comment-post")
+</html>

@@ -1,0 +1,47 @@
+article.article-post
+  //- meta
+  span.article-meta Posted in <a href="#" class="article-category">El Tri</a>
+      span.posted-on #{data.meta.posted}
+  //- title
+  h2.article-title #{data.title}
+  //- leadin
+  p.lead-in #{data.body.leadin}
+  //- article
+  h3.article-header First Half
+  - for (i=0; i<data.body.firstHalf.length; i++) {
+    p #{data.body.firstHalf[i]}
+  - }
+  h3.article-header Second Half
+  - for (j=0; j<data.body.secondHalf.length; j++) {
+    p #{data.body.secondHalf[j]}
+  - }
+  h3.article-header Post Game Interview
+  - for (k=0; k<data.body.postGameInterview.length; k++) {
+    p #{data.body.postGameInterview[k]}
+  - }
+
+
+//- 2013 FIFA U-17 World Cup,
+//- Alejandro Díaz,
+//- Christian Tovar,
+//- Erick Aguirre,
+//- Iván Ochoa,
+//- José Robles,
+//- Luis Hernández,
+//- Marco Granados,
+//- Omar Govea,
+//- Osvaldo Rodríguez,
+//- Pedro Terán,
+//- Raúl Gudiño,
+//- Salomón Wbias,
+//- Ulises Jaimes,
+//- Ulises Rivas.
+
+//- Raúl "Potro" Gutiérrez,
+
+//- Italy U-17,
+//- Mexico sub-17,
+//- Mexico u-17,
+
+
+//- Bookmark the permalink.
