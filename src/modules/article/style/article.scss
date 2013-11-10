@@ -18,18 +18,28 @@
 
 .article-title, .article-header {
   font-family: $bold;
-  @include rems(margin-bottom, 26px);
+  @include rems(margin-bottom, 13px);
 }
 .article-title {
   @include rems(font-size, 40px);
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 .article-meta {
   display: inline-block;
-  @include rems(padding-top, 52px);
+  @include rems(padding-bottom, 39px);
   text-transform: uppercase;
   @include rems(font-size, 14px);
   font-family: $bold;
   color: lighten($black, 35%);
+  a {
+    @include transition(color, 0.3s);
+    &:hover {
+      color: $black;
+    }
+  }
 }
 .article-category {
   color: inherit;
@@ -38,8 +48,42 @@
   &:before {content: " | "}
   // padding: 1em;
 }
-// lead in
-// .lead-in {
-//   font-size: 26px !important;
-//   font-size: 1.625rem !important;
-// }
+
+
+
+
+
+
+
+
+
+
+// recent articles
+.recent-articles {
+  list-style-type: none;
+  @include rems(max-width, 390px);
+  li {
+    @include rems(margin-bottom, 52px);
+  }
+}
+.article-preview {
+  .article-title {
+    @include rems(font-size, 16px);
+    @include rems(line-height, 20px);
+    @include rems(margin-top, 0);
+    @include rems(margin-bottom, 3px);
+  }
+  .article-meta {
+    color: #808080;
+    text-transform: none;
+    @include rems(font-size, 14px);
+    @include rems(padding-bottom, 13px);
+  }
+  .lead-in {
+    @include rems(font-size, 14px);
+    @include rems(line-height, 22px);
+  }
+  .read-more {
+    @include rems(font-size, 14px);
+  }
+}

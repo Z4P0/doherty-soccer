@@ -3,12 +3,30 @@
   "siteTagline" : "She is like a cat in the dark, and she is the darkness",
   "abbr" : "DS",
   "globalNav" : [
-    "Home",
-    "Sign In",
-    "Articles",
-    "Leagues",
-    "Cups",
-    "Search"
+    {
+      "text": "Home",
+      "link": "00-home-page.html"
+    },
+    {
+      "text": "Sign In",
+      "link": "#"
+    },
+    {
+      "text": "Articles",
+      "link": "#"
+    },
+    {
+      "text": "Leagues",
+      "link": "#"
+    },
+    {
+      "text": "Cups",
+      "link": "#"
+    },
+    {
+      "text": "Search",
+      "link": "#"
+    }
   ],
   "footerLinks" : [
     "Settings",

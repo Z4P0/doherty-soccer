@@ -1,0 +1,16 @@
+article.article-post
+  //- title
+  h2.article-title
+    a(href="01-article-page.html") #{data.title}
+  //- meta
+  span.article-meta Posted in <a href="#" class="article-category">El Tri</a>
+      span.posted-on #{data.meta.posted}
+  //- leadin
+  p.lead-in #{data.body.leadin}
+  //- article
+  h3.article-header First Half
+  //- - for (i=0; i<data.body.firstHalf.length; i++) {
+  - for (i=0; i<2; i++) {
+    p #{data.body.firstHalf[i]}
+  - }
+  a(href="01-article-page.html").read-article Continue reading

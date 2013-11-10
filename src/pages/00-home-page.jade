@@ -1,9 +1,10 @@
-include html/jade-helpers.jade
+include ../html/jade-helpers.jade
 !!! 5
+
 head
-  title Doherty Soccer
-  meta(name="description", content="Doherty Soccer - CONCACAF Coverage")
-  include html/head.jade
+  title homepage demo
+  meta(name="description", content="homepage demo")
+  include ../html/head.jade
   +css("article")
   +css("global-nav")
 
@@ -11,7 +12,6 @@ body#homepage
   a(href="#main", class="assistive-text") Skip to main content
   div.container
     +partial("global-nav/html/global-nav.jade","modules/global-nav/data/global-nav.json")
-
     section#main
       div.wrapper
         //- latest article preview
@@ -22,7 +22,7 @@ body#homepage
           h3.t7 Recent Posts
           +partial("article/html/recent-articles.jade","modules/article/data/recent-articles.json")
 
-  include html/foot.jade
+  include ../html/foot.jade
   +js("article")
   +js("global-nav")
 </html>

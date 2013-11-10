@@ -1,0 +1,15 @@
+ul.recent-articles
+  - for (i=0; i<data.length; i++) {
+  li
+    article.article-preview
+      //- title
+      h2.article-title
+        a(href="#") #{data[i].title}
+      //- meta
+      span.article-meta Posted in <a href="#" class="article-category">#{data[i].postMeta.category}</a>
+          span.posted-on #{data[i].postMeta.date}
+      //- leadin
+      //- p.lead-in #{data[i].leadIn}
+      p
+        a(href="#").read-more Read more
+  - }

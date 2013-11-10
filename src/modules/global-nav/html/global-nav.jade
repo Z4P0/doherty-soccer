@@ -7,12 +7,12 @@ nav#global-nav
     - for (i=0; i< data.globalNav.length; i++) {
       li
         //- search
-        if data.globalNav[i] == "Search"
+        if data.globalNav[i].text == "Search"
           form#search-field
             i.foundicon-search.general-icon
-            input(type="text", placeholder="#{data.globalNav[i]}")
+            input(type="text", placeholder="#{data.globalNav[i].text}")
         else
-          a(href="#") #{data.globalNav[i]}
+          a(href="#{data.globalNav[i].link}") #{data.globalNav[i].text}
     - }
   footer
     ul#footer-links.inline

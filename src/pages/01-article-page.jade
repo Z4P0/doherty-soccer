@@ -15,9 +15,10 @@ body
   div.container
     +partial("global-nav/html/global-nav.jade","modules/global-nav/data/global-nav.json")
     section#main
-      +partial("article/html/article.jade","modules/article/data/article.json")
-      +partial("comments/html/comment-form.jade","modules/comments/data/comment-form.json")
-      +partial("comments/html/comment-post.jade","modules/comments/data/comment-post.json")
+      div.wrapper
+        +partial("article/html/article.jade","modules/article/data/article.json")
+        +partial("comments/html/comment-form.jade","modules/comments/data/comment-form.json")
+        +partial("comments/html/comment-post.jade","modules/comments/data/comment-post.json")
 
   include ../html/foot.jade
   +js("article")
