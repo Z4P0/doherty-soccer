@@ -1,0 +1,40 @@
+@import "../../../style/pieces/vars";
+@import "../../../style/pieces/mixins";
+
+#match-facts {
+  @include rems(max-width, 390px);
+  @include cf();
+  .t7 {
+    @include rems(font-size, 14px);
+    @include rems(margin-bottom, 13px);
+    font-family: $bold;
+  }
+}
+.results-overview {
+  @include cf();
+}
+.team-results {
+  width: 50%;
+  @include rems(max-width, 182px);
+  float: left;
+  list-style-type: none;
+  &:last-child {
+    @include rems(margin-left, 26px);
+  }
+}
+.team, .score {
+  // text-align: center;
+}
+.score {
+  display: block;
+  @include rems(font-size, 60px);
+}
+.goals, .lineup, .substitutes {
+  list-style-type: none;
+  @include rems(margin-bottom, 39px);
+}
+.lineup, .substitutes {
+  li {
+    @include rems(margin-bottom, 13px);
+  }
+}

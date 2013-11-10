@@ -1,0 +1,34 @@
+section#match-facts
+  //- overview
+  section.results-overview
+    - for(m=0; m<data.teams.length; m++) {
+    section.team-results
+      h4.team #{data.teams[m].team}
+      span.score #{data.teams[m].score}
+      - if(data.teams[m].goals.length > 0) {
+      ul.goals
+        - for(j=0; j<data.teams[m].goals.length; j++) {
+        li #{data.teams[m].goals[j].scorer} (#{data.teams[m].goals[j].time})
+        - }
+      - }
+    -}
+
+  - for(i=0; i<data.teams.length; i++) {
+  section.team-results
+    //- lineup
+    h4.t7 Lineup
+    ul.lineup
+      - for(k=0; k<data.teams[i].lineup.length; k++) {
+      li #{data.teams[i].lineup[k].number} #{data.teams[i].lineup[k].name}
+      - }
+    //- subs
+    h4.t7 Substitutes
+    ul.substitutes
+      - for(l=0; l<data.teams[i].substitutes.length; l++) {
+      li #{data.teams[i].substitutes[l].number} #{data.teams[i].substitutes[l].name}
+      - }
+    //- manager
+    h4.t7 Manager
+    span.manager #{data.teams[i].manager}
+  -}
+  //- section#officials

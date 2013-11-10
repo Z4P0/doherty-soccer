@@ -1,0 +1,200 @@
+[
+  {
+    "team": "America",
+    "played": "17",
+    "won": "11",
+    "draw": "4",
+    "loss": "2",
+    "goalsFound": "31",
+    "goalsAllowed": "12",
+    "goalDifference": "19",
+    "points": "37"
+  },
+  {
+    "team": "Santos Laguna",
+    "played": "17",
+    "won": "9",
+    "draw": "6",
+    "loss": "2",
+    "goalsFound": "32",
+    "goalsAllowed": "20",
+    "goalDifference": "12",
+    "points": "33"
+  },
+  {
+    "team": "Cruz Azul",
+    "played": "16",
+    "won": "8",
+    "draw": "4",
+    "loss": "4",
+    "goalsFound": "19",
+    "goalsAllowed": "15",
+    "goalDifference": "4",
+    "points": "28"
+  },
+  {
+    "team": "Toluca",
+    "played": "17",
+    "won": "6",
+    "draw": "9",
+    "loss": "2",
+    "goalsFound": "33",
+    "goalsAllowed": "17",
+    "goalDifference": "16",
+    "points": "27"
+  },
+  {
+    "team": "Club Leon",
+    "played": "16",
+    "won": "7",
+    "draw": "6",
+    "loss": "3",
+    "goalsFound": "20",
+    "goalsAllowed": "14",
+    "goalDifference": "6",
+    "points": "27"
+  },
+  {
+    "team": "Morelia",
+    "played": "17",
+    "won": "8",
+    "draw": "3",
+    "loss": "6",
+    "goalsFound": "26",
+    "goalsAllowed": "23",
+    "goalDifference": "3",
+    "points": "27"
+  },
+  {
+    "team": "Queretaro",
+    "played": "17",
+    "won": "7",
+    "draw": "5",
+    "loss": "5",
+    "goalsFound": "20",
+    "goalsAllowed": "19",
+    "goalDifference": "1",
+    "points": "26"
+  },
+  {
+    "team": "Chiapas FC",
+    "played": "17",
+    "won": "6",
+    "draw": "7",
+    "loss": "4",
+    "goalsFound": "26",
+    "goalsAllowed": "25",
+    "goalDifference": "1",
+    "points": "25"
+  },
+  {
+    "team": "UANL Tigres",
+    "played": "16",
+    "won": "5",
+    "draw": "7",
+    "loss": "4",
+    "goalsFound": "22",
+    "goalsAllowed": "20",
+    "goalDifference": "2",
+    "points": "22"
+  },
+  {
+    "team": "Tijuana",
+    "played": "16",
+    "won": "5",
+    "draw": "6",
+    "loss": "5",
+    "goalsFound": "20",
+    "goalsAllowed": "18",
+    "goalDifference": "2",
+    "points": "21"
+  },
+  {
+    "team": "Monterrey",
+    "played": "17",
+    "won": "5",
+    "draw": "5",
+    "loss": "7",
+    "goalsFound": "22",
+    "goalsAllowed": "23",
+    "goalDifference": "-1",
+    "points": "20"
+  },
+  {
+    "team": "Veracruz",
+    "played": "17",
+    "won": "4",
+    "draw": "8",
+    "loss": "5",
+    "goalsFound": "20",
+    "goalsAllowed": "24",
+    "goalDifference": "-4",
+    "points": "20"
+  },
+  {
+    "team": "Puebla",
+    "played": "17",
+    "won": "4",
+    "draw": "7",
+    "loss": "6",
+    "goalsFound": "19",
+    "goalsAllowed": "21",
+    "goalDifference": "-2",
+    "points": "19"
+  },
+  {
+    "team": "Pachuca",
+    "played": "17",
+    "won": "3",
+    "draw": "8",
+    "loss": "6",
+    "goalsFound": "14",
+    "goalsAllowed": "18",
+    "goalDifference": "-4",
+    "points": "17"
+  },
+  {
+    "team": "Atlas",
+    "played": "16",
+    "won": "1",
+    "draw": "9",
+    "loss": "6",
+    "goalsFound": "18",
+    "goalsAllowed": "28",
+    "goalDifference": "-10",
+    "points": "12"
+  },
+  {
+    "team": "Guadalajara",
+    "played": "17",
+    "won": "2",
+    "draw": "6",
+    "loss": "9",
+    "goalsFound": "16",
+    "goalsAllowed": "30",
+    "goalDifference": "-14",
+    "points": "12"
+  },
+  {
+    "team": "Atlante",
+    "played": "17",
+    "won": "3",
+    "draw": "3",
+    "loss": "11",
+    "goalsFound": "17",
+    "goalsAllowed": "35",
+    "goalDifference": "-18",
+    "points": "12"
+  },
+  {
+    "team": "Pumas UNAM",
+    "played": "16",
+    "won": "1",
+    "draw": "7",
+    "loss": "8",
+    "goalsFound": "6",
+    "goalsAllowed": "19",
+    "goalDifference": "-13",
+    "points": "10"
+  }
+]

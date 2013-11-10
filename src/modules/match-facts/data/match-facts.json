@@ -1,0 +1,239 @@
+{
+  "teams" : [
+    {
+      "team": "Mexico",
+      "image": "logo.jpg",
+      "score": "2",
+      "goals": [
+        {
+          "time": "26'",
+          "scorer": "Alejandro Diaz"
+        },
+        {
+          "time": "90' +2",
+          "scorer": "Ivan Ochoa"
+        }
+      ],
+      "lineup": [
+        {
+          "number": "1",
+          "name": "Raul Gudino"
+        },
+        {
+          "number": "3",
+          "name": "Salomon Wbias"
+        },
+        {
+          "number": "4",
+          "name": "Pedro Teran"
+        },
+        {
+          "number": "5",
+          "name": "Osvaldo Rodriguez",
+          "subbed": "-66'"
+        },
+        {
+          "number": "7",
+          "name": "Luis Hernandez",
+          "subbed": "-58'"
+        },
+        {
+          "number": "9",
+          "name": "Alejandro Diaz"
+        },
+        {
+          "number": "11",
+          "name": "Ivan Ochoa"
+        },
+        {
+          "number": "14",
+          "name": "Erick Aguirre"
+        },
+        {
+          "number": "16",
+          "name": "Ulises Rivas",
+          "captain": true
+        },
+        {
+          "number": "18",
+          "name": "Omar Govea"
+        },
+        {
+          "number": "19",
+          "name": "Ulises Jaimes",
+          "subbed": "-70'"
+        }
+      ],
+      "substitutes" : [
+        {
+          "number": "12",
+          "name": "Edson Resendez"
+        },
+        {
+          "number": "21",
+          "name": "Antonio Torres"
+        },
+        {
+          "number": "2",
+          "name": "Francisco Calderon"
+        },
+        {
+          "number": "6",
+          "name": "Erich Hernandez"
+        },
+        {
+          "number": "8",
+          "name": "Jose Almanza"
+        },
+        {
+          "number": "10",
+          "name": "Marco Granados",
+          "subbed": "+70'"
+        },
+        {
+          "number": "13",
+          "name": "Jose Robles",
+          "subbed": "+66'"
+        },
+        {
+          "number": "15",
+          "name": "Christian Tovar",
+          "subbed": "+58'"
+        },
+        {
+          "number": "17",
+          "name": "Jonh Gonzalez"
+        },
+        {
+          "number": "20",
+          "name": "Victor Zuniga"
+        }
+      ],
+      "manager": "Raul Gutierrez"
+    },
+    {
+      "team": "Italy",
+      "image": "",
+      "score": "0",
+      "goals" : [],
+      "lineup": [
+        {
+          "number": "1",
+          "name": "Simone Scuffet"
+        },
+        {
+          "number": "3",
+          "name": "Federico DiMarco"
+        },
+        {
+          "number": "4",
+          "name": "Mario Pugliese"
+        },
+        {
+          "number": "5",
+          "name": "Elio Capradossi"
+        },
+        {
+          "number": "6",
+          "name": "Ivan De Santis"
+        },
+        {
+          "number": "9",
+          "name": "Alberto Cerri",
+          "captain": true
+        },
+        {
+          "number": "10",
+          "name": "Vittorio Parigini"
+        },
+        {
+          "number": "11",
+          "name": "Luca Vico",
+          "subbed": "-53'"
+        },
+        {
+          "number": "15",
+          "name": "Demetrio Steffe",
+          "subbed": "-46'HT"
+        },
+        {
+          "number": "16",
+          "name": "Arturo Calabresi",
+          "subbed": "-67'"
+        },
+        {
+          "number": "20",
+          "name": "Antonio Romano"
+        }
+      ],
+      "substitutes" : [
+        {
+          "number": "12",
+          "name": "Emil Audero"
+        },
+        {
+          "number": "21",
+          "name": "Lorenzo Ferrari"
+        },
+        {
+          "number": "7",
+          "name": "Gennaro Tutino",
+          "subbed": "+46'HT"
+        },
+        {
+          "number": "8",
+          "name": "Andrea Palazzi"
+        },
+        {
+          "number": "13",
+          "name": "Roberto Pirrello"
+        },
+        {
+          "number": "14",
+          "name": "Alberto Tibolla",
+          "subbed": "+67'"
+        },
+        {
+          "number": "17",
+          "name": "Matteo Lomolino"
+        },
+        {
+          "number": "18",
+          "name": "Michael Fabbro",
+          "subbed": "+53'"
+        },
+        {
+          "number": "19",
+          "name": "Enrico Baldini"
+        },
+        {
+          "number": "2",
+          "name": "Davide Calabria Absent"
+        }
+      ],
+      "manager": "Daniele Zoratto"
+    }
+  ],
+  "officials": [
+    {
+      "title": "Referee",
+      "name": "Nestor Pitana",
+      "country": "Arg"
+    },
+    {
+      "title": "Assistant Referee 1",
+      "name": "Juan Pablo Belatti",
+      "country": "Arg"
+    },
+    {
+      "title": "Assistant Referee 2",
+      "name": "Diego Bonfa",
+      "country": "Arg"
+    },
+    {
+      "title": "Fourth official",
+      "name": "Juan Soto",
+      "country": "Ven"
+    }
+  ]
+}

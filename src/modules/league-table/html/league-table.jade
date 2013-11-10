@@ -1,0 +1,27 @@
+table
+  thead
+    tr
+      th Pos
+      th Club
+      th P
+      th W
+      th D
+      th L
+      th Gf
+      th Ga
+      th Gd
+      th Pts
+  tbody
+    - for (i=0; i<data.length; i++) {
+      tr
+        td #{i}
+        td #{data[i].team}
+        td #{data[i].played}
+        td #{data[i].won}
+        td #{data[i].draw}
+        td #{data[i].loss}
+        td #{data[i].goalsFound}
+        td #{data[i].goalsAllowed}
+        td #{data[i].goalDifference}
+        td #{data[i].points}
+    - }
