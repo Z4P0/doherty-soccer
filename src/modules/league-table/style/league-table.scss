@@ -2,3 +2,26 @@
 @import "../../../style/pieces/mixins";
 
 // styles
+.league-table {
+	.current {
+    background: darken($white, 15%) !important;
+	}
+	.position {
+		text-align: center;
+	}
+	.team {
+		@include px(padding, 0, 16px, 0, 8px);
+	}
+	.numbers {
+		@include px(padding, 0, 4px);
+	}
+	tr {
+		background: inherit;
+		@include transition(background, 0.3s);
+		&:hover {
+			background: $white;
+			cursor: pointer;
+		}
+	}
+	thead tr:hover {cursor: default;}
+}

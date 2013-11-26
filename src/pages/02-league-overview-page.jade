@@ -1,0 +1,71 @@
+include ../html/jade-helpers.jade
+!!! 5
+
+head
+  title article demo
+  meta(name="description", content="article demo")
+  include ../html/head.jade
+  +css("global-nav")
+  +css("league-table")
+
+body
+  a(href="#main", class="assistive-text") Skip to main content
+  div.container
+    +partial("global-nav/html/global-nav.jade","modules/global-nav/data/global-nav.json")
+
+    section#main
+      div.wrapper
+        section#league-overview(data-league="liga-mx", data-current-club="atlante")
+          h2.league-name Liga MX
+          //- list of leagues
+          ul.league-clubs
+            li(data-club="atlante")
+              img(src="img/leagues/liga-mx/atlante.png")
+            li(data-club="atlas")
+              img(src="img/leagues/liga-mx/atlas.png")
+            li(data-club="chiapas")
+              img(src="img/leagues/liga-mx/chiapas.png")
+            li(data-club="club-america")
+              img(src="img/leagues/liga-mx/club-america.png")
+            li(data-club="club-leon")
+              img(src="img/leagues/liga-mx/club-leon.png")
+            li(data-club="cruz-azul")
+              img(src="img/leagues/liga-mx/cruz-azul.png")
+            li(data-club="guadalajara")
+              img(src="img/leagues/liga-mx/guadalajara.png")
+            li(data-club="monarcas-morelia")
+              img(src="img/leagues/liga-mx/monarcas-morelia.png")
+            li(data-club="monterrey")
+              img(src="img/leagues/liga-mx/monterrey.png")
+            li(data-club="pachuca")
+              img(src="img/leagues/liga-mx/pachuca.png")
+            li(data-club="puebla")
+              img(src="img/leagues/liga-mx/puebla.png")
+            li(data-club="pumas-unam")
+              img(src="img/leagues/liga-mx/pumas-unam.png")
+            li(data-club="queretaro")
+              img(src="img/leagues/liga-mx/queretaro.png")
+            li(data-club="santos-laguna")
+              img(src="img/leagues/liga-mx/santos-laguna.png")
+            li(data-club="tigres-uanl")
+              img(src="img/leagues/liga-mx/tigres-uanl.png")
+            li(data-club="toluca")
+              img(src="img/leagues/liga-mx/toluca.png")
+            li(data-club="veracruz")
+              img(src="img/leagues/liga-mx/veracruz.png")
+            li(data-club="xolos-tijuana")
+              img(src="img/leagues/liga-mx/xolos-tijuana.png")
+
+          section#interactive-area
+            //- league table
+            +partial("league-table/html/league-table-small.jade","modules/league-table/data/league-table.json")
+
+            //- map
+            section#map-wrapper
+              p &nbsp;
+              div#map
+
+  include ../html/foot.jade
+  +js("global-nav")
+  script(src="js/libs/mapbox.js")
+</html>

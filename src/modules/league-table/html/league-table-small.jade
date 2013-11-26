@@ -7,9 +7,6 @@ table.league-table
       th W
       th D
       th L
-      th Gf
-      th Ga
-      th Gd
       th Pts
   tbody
     - for (i=0; i<data.length; i++) {
@@ -20,8 +17,5 @@ table.league-table
         td.numbers #{data[i].won}
         td.numbers #{data[i].draw}
         td.numbers #{data[i].loss}
-        td.numbers #{data[i].goalsFound}
-        td.numbers #{data[i].goalsAllowed}
-        td.numbers #{data[i].goalDifference}
         td.numbers #{data[i].points}
     - }

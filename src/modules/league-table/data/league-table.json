@@ -8,7 +8,8 @@
     "goalsFound": "31",
     "goalsAllowed": "12",
     "goalDifference": "19",
-    "points": "37"
+    "points": "37",
+    "slug": "america"
   },
   {
     "team": "Santos Laguna",
@@ -19,7 +20,8 @@
     "goalsFound": "32",
     "goalsAllowed": "20",
     "goalDifference": "12",
-    "points": "33"
+    "points": "33",
+    "slug": "santos-laguna"
   },
   {
     "team": "Cruz Azul",
@@ -30,7 +32,8 @@
     "goalsFound": "19",
     "goalsAllowed": "15",
     "goalDifference": "4",
-    "points": "28"
+    "points": "28",
+    "slug": "cruz-azul"
   },
   {
     "team": "Toluca",
@@ -41,7 +44,8 @@
     "goalsFound": "33",
     "goalsAllowed": "17",
     "goalDifference": "16",
-    "points": "27"
+    "points": "27",
+    "slug": "toluca"
   },
   {
     "team": "Club Leon",
@@ -52,7 +56,8 @@
     "goalsFound": "20",
     "goalsAllowed": "14",
     "goalDifference": "6",
-    "points": "27"
+    "points": "27",
+    "slug": "club-leon"
   },
   {
     "team": "Morelia",
@@ -63,7 +68,8 @@
     "goalsFound": "26",
     "goalsAllowed": "23",
     "goalDifference": "3",
-    "points": "27"
+    "points": "27",
+    "slug": "monarcas-morelia"
   },
   {
     "team": "Queretaro",
@@ -74,7 +80,8 @@
     "goalsFound": "20",
     "goalsAllowed": "19",
     "goalDifference": "1",
-    "points": "26"
+    "points": "26",
+    "slug": "queretaro"
   },
   {
     "team": "Chiapas FC",
@@ -85,7 +92,8 @@
     "goalsFound": "26",
     "goalsAllowed": "25",
     "goalDifference": "1",
-    "points": "25"
+    "points": "25",
+    "slug": "chiapas"
   },
   {
     "team": "UANL Tigres",
@@ -96,7 +104,8 @@
     "goalsFound": "22",
     "goalsAllowed": "20",
     "goalDifference": "2",
-    "points": "22"
+    "points": "22",
+    "slug": "tigres-uanl"
   },
   {
     "team": "Tijuana",
@@ -107,7 +116,8 @@
     "goalsFound": "20",
     "goalsAllowed": "18",
     "goalDifference": "2",
-    "points": "21"
+    "points": "21",
+    "slug": "xolos-tijuana"
   },
   {
     "team": "Monterrey",
@@ -118,7 +128,8 @@
     "goalsFound": "22",
     "goalsAllowed": "23",
     "goalDifference": "-1",
-    "points": "20"
+    "points": "20",
+    "slug": "monterrey"
   },
   {
     "team": "Veracruz",
@@ -129,7 +140,8 @@
     "goalsFound": "20",
     "goalsAllowed": "24",
     "goalDifference": "-4",
-    "points": "20"
+    "points": "20",
+    "slug": "veracruz"
   },
   {
     "team": "Puebla",
@@ -140,7 +152,8 @@
     "goalsFound": "19",
     "goalsAllowed": "21",
     "goalDifference": "-2",
-    "points": "19"
+    "points": "19",
+    "slug": "puebla"
   },
   {
     "team": "Pachuca",
@@ -151,7 +164,8 @@
     "goalsFound": "14",
     "goalsAllowed": "18",
     "goalDifference": "-4",
-    "points": "17"
+    "points": "17",
+    "slug": "pachuca"
   },
   {
     "team": "Atlas",
@@ -162,7 +176,8 @@
     "goalsFound": "18",
     "goalsAllowed": "28",
     "goalDifference": "-10",
-    "points": "12"
+    "points": "12",
+    "slug": "atlas"
   },
   {
     "team": "Guadalajara",
@@ -173,7 +188,8 @@
     "goalsFound": "16",
     "goalsAllowed": "30",
     "goalDifference": "-14",
-    "points": "12"
+    "points": "12",
+    "slug": "guadalajara"
   },
   {
     "team": "Atlante",
@@ -184,7 +200,8 @@
     "goalsFound": "17",
     "goalsAllowed": "35",
     "goalDifference": "-18",
-    "points": "12"
+    "points": "12",
+    "slug": "atlante"
   },
   {
     "team": "Pumas UNAM",
@@ -195,6 +212,7 @@
     "goalsFound": "6",
     "goalsAllowed": "19",
     "goalDifference": "-13",
-    "points": "10"
+    "points": "10",
+    "slug": "pumas-unam"
   }
 ]

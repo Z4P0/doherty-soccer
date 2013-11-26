@@ -120,3 +120,57 @@
   #{$property}: $pxValue;
   #{$property}: $remValue;
 }
+
+
+// pass in pixels value --> gets rems
+@mixin px($property, $values...) {
+  $max: length($values);
+
+  // string holders
+  $pxValues: ''; // for pixel fallback
+  $remValues: ''; // rem value
+
+  // loop through values provided
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+
+
+    $pxValues: #{$pxValues + $value}px;
+    $remValues: #{$remValues + $value/16}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+      $pxValues: #{$pxValues + " "};
+    }
+  }
+
+  // set property value
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+}
+
+
+// flexbox | from css-tricks
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex: $values;
+  -webkit-flex: $values;
+  -ms-flex: $values;
+  flex: $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}

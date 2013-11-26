@@ -348,6 +348,7 @@ module.exports = function(grunt) {
       'css',
       'copy:font',
       'copy:debug_modules',
+      'copy:img',
       'copy:js',
       'js',
       'jade:debug_pages',

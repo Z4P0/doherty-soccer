@@ -6,8 +6,10 @@
 @import "pieces/base";
 @import "pieces/typography";
 
-// icon set
-// @import "font-awesome/font-awesome";
+// libraries
+@import "libs/mapbox";
+
+
 #main {
   @include rems(margin-top, 78px);
   @include rems(margin-bottom, 78px);
@@ -33,4 +35,60 @@
     @include rems(font-size, 14px);
     @include rems(margin-bottom, 26px);
   }
+}
+
+// #main {
+//   background: rgba(255,0,0,0.2);
+// }
+
+// league overview
+.league-clubs {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 5%;
+    padding: 1%;
+    background: inherit;
+    @include transition(background, 0.3s);
+    &:hover {
+      cursor: pointer;
+      background: darken($white, 5%);
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 50%;
+  }
+  .current {
+    background: $black !important;
+  }
+}
+
+#interactive-area {
+  @include flexbox();
+  justify-content: space-between;
+  // align-items: flex-start;
+  .league-table {
+    @include flex(1);
+  }
+  #map-wrapper {
+    @include flex(3);
+    position: relative;
+  }
+  #map {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+  }
+}
+
+#map {
+  // width:100%;
+  // height:100%;
+  // position:absolute;
+  // top:0px;
+  // left:0px;
 }
