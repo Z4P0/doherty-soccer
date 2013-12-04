@@ -1,0 +1,88 @@
+{
+  "league": {
+    "name": "Liga MX",
+    "slug": "liga-mx"
+  },
+  "season": {
+    "start": {
+      "year": "2012"
+    },
+    "end": {
+      "year": "2013"
+    }
+  },
+  "clubs": [
+    {
+      "name": "Atlante",
+      "slug": "atlante"
+    },
+    {
+      "name": "Atlas",
+      "slug": "atlas"
+    },
+    {
+      "name": "Chiapas",
+      "slug": "chiapas"
+    },
+    {
+      "name": "Club America",
+      "slug": "america"
+    },
+    {
+      "name": "Club Leon",
+      "slug": "leon"
+    },
+    {
+      "name": "Cruz Azul",
+      "slug": "cruz-azul"
+    },
+    {
+      "name": "Guadalajara",
+      "slug": "chivas"
+    },
+    {
+      "name": "Monarcas Moerlia",
+      "slug": "morelia"
+    },
+    {
+      "name": "Monterrey",
+      "slug": "monterrey"
+    },
+    {
+      "name": "Pachuca",
+      "slug": "pachuca"
+    },
+    {
+      "name": "Puebla",
+      "slug": "puebla"
+    },
+    {
+      "name": "Pumas UNAM",
+      "slug": "pumas"
+    },
+    {
+      "name": "Queretaro",
+      "slug": "queretaro"
+    },
+    {
+      "name": "Santos Laguna",
+      "slug": "santos"
+    },
+    {
+      "name": "Tigres UANL",
+      "slug": "tigres"
+    },
+    {
+      "name": "Toluca",
+      "slug": "toluca"
+    },
+    {
+      "name": "Veracruz",
+      "slug": "veracruz"
+    },
+    {
+      "name": "Xolos Tijuana",
+      "slug": "xolos"
+    }
+  ]
+}

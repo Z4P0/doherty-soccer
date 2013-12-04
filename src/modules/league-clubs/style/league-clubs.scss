@@ -1,0 +1,28 @@
+@import "../../../style/pieces/vars";
+@import "../../../style/pieces/mixins";
+
+.league-name {
+  @include rems(font-size, 24px);
+}
+.league-clubs {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 5%;
+    padding: 1%;
+    background: inherit;
+    @include transition(background, 0.3s);
+    &:hover {
+      cursor: pointer;
+      background: darken($white, 5%);
+    }
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 50%;
+  }
+  .current {
+    background: $black !important;
+  }
+}

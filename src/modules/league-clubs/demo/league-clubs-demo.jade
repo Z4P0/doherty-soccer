@@ -1,0 +1,16 @@
+include ../../../html/jade-helpers.jade
+!!! 5
+
+head
+  title league clubs demo
+  meta(name="description", content="league clubs demo")
+  include ../../../html/head.jade
+  +css("league-clubs")
+
+body
+  a(href="#main", class="assistive-text") Skip to main content
+  div.container
+    +partial("league-clubs/html/league-clubs.jade","modules/league-clubs/data/league-clubs.json")
+
+  include ../../../html/foot.jade
+</html>

@@ -1,0 +1,6 @@
+//- list of leagues
+ul.league-clubs
+  - for (i=0; i< data.clubs.length; i++) {
+  li(data-club="#{data.clubs[i].slug}")
+    img(src="img/leagues/#{data.league.slug}/#{data.clubs[i].slug}.png", alt="#{data.clubs[i].name}")
+  - }

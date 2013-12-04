@@ -21,7 +21,7 @@
     "goalsAllowed": "20",
     "goalDifference": "12",
     "points": "33",
-    "slug": "santos-laguna"
+    "slug": "santos"
   },
   {
     "team": "Cruz Azul",
@@ -57,7 +57,7 @@
     "goalsAllowed": "14",
     "goalDifference": "6",
     "points": "27",
-    "slug": "club-leon"
+    "slug": "leon"
   },
   {
     "team": "Morelia",
@@ -69,7 +69,7 @@
     "goalsAllowed": "23",
     "goalDifference": "3",
     "points": "27",
-    "slug": "monarcas-morelia"
+    "slug": "morelia"
   },
   {
     "team": "Queretaro",
@@ -96,7 +96,7 @@
     "slug": "chiapas"
   },
   {
-    "team": "UANL Tigres",
+    "team": "Tigres UANL",
     "played": "16",
     "won": "5",
     "draw": "7",
@@ -105,10 +105,10 @@
     "goalsAllowed": "20",
     "goalDifference": "2",
     "points": "22",
-    "slug": "tigres-uanl"
+    "slug": "tigres"
   },
   {
-    "team": "Tijuana",
+    "team": "Xolos Tijuana",
     "played": "16",
     "won": "5",
     "draw": "6",
@@ -117,7 +117,7 @@
     "goalsAllowed": "18",
     "goalDifference": "2",
     "points": "21",
-    "slug": "xolos-tijuana"
+    "slug": "xolos"
   },
   {
     "team": "Monterrey",
@@ -189,7 +189,7 @@
     "goalsAllowed": "30",
     "goalDifference": "-14",
     "points": "12",
-    "slug": "guadalajara"
+    "slug": "chivas"
   },
   {
     "team": "Atlante",
@@ -213,6 +213,6 @@
     "goalsAllowed": "19",
     "goalDifference": "-13",
     "points": "10",
-    "slug": "pumas-unam"
+    "slug": "pumas"
   }
 ]

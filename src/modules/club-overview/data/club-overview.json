@@ -1,0 +1,394 @@
+{
+  "league": {
+    "name": "Liga MX",
+    "slug": "liga-mx"
+  },
+  "season": {
+    "start": {
+      "year": "2012"
+    },
+    "end": {
+      "year": "2013"
+    }
+  },
+  "clubs": [
+    {
+      "name": "Atlante",
+      "slug": "atlante",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Atlas",
+      "slug": "atlas",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Chiapas",
+      "slug": "chiapas",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Club America",
+      "slug": "america",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Club Leon",
+      "slug": "leon",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Cruz Azul",
+      "slug": "cruz-azul",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Guadalajara",
+      "slug": "chivas",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Monarcas Moerlia",
+      "slug": "morelia",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Monterrey",
+      "slug": "monterrey",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Pachuca",
+      "slug": "pachuca",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Puebla",
+      "slug": "puebla",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Pumas UNAM",
+      "slug": "pumas",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Queretaro",
+      "slug": "queretaro",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Santos Laguna",
+      "slug": "santos",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Tigres UANL",
+      "slug": "tigres",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Toluca",
+      "slug": "toluca",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Veracruz",
+      "slug": "veracruz",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    },
+    {
+      "name": "Xolos Tijuana",
+      "slug": "xolos",
+      "lastResult": {
+        "win": true,
+        "gf": 3,
+        "opponent": {
+          "name": "America",
+          "slug": "america"
+        },
+        "ga": 0
+      },
+      "nextMatch": {
+        "home": true,
+        "opponent": {
+          "name": "Guadalajara",
+          "slug": "chivas"
+        }
+      },
+      "manager": "MASDFASDFASD"
+    }
+  ]
+}
