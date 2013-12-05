@@ -291,7 +291,7 @@ module.exports = function(grunt) {
       },
       module_jade: {
         files: ['modules/**/demo/*.jade','modules/**/html/*.jade','modules/**/data/*.json'],
-        tasks: ['html']
+        tasks: ['html', 'pages']
       },
       base_img: {
         files: ['img/*.*'],

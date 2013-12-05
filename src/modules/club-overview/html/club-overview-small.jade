@@ -2,7 +2,7 @@ section#club-overviews
 	ul
 		- for (i=0; i< data.clubs.length; i++) {
 		li(data-club="#{data.clubs[i].slug}")
-			h3.club-name #{data.clubs[i].name}
+			//- h3.club-name #{data.clubs[i].name}
 			img.club-logo(src="img/leagues/#{data.league.slug}/#{data.clubs[i].slug}.png")
 			//- previous match
 			- if (data.clubs[i].lastResult)
@@ -24,4 +24,10 @@ section#club-overviews
 				|	#{data.clubs[i].nextMatch.opponent.name}
 			//- manager
 			h4 Manager: #{data.clubs[i].manager}
+			//- stadium
+			section.stadium(data-stadium-name="#{data.clubs[i].stadium.name}",
+				data-stadium-address="#{data.clubs[i].stadium.address}",
+			data-stadium-lat="#{data.clubs[i].stadium.lat}", 
+			data-stadium-long="#{data.clubs[i].stadium.long}")
+				h5 #{data.clubs[i].stadium.name}
 		- }

@@ -16,13 +16,13 @@
       "name": "Atlante",
       "slug": "atlante",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "L",
+        "gf": 0,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Queretaro",
+          "slug": "queretaro"
         },
-        "ga": 0
+        "ga": 1
       },
       "nextMatch": {
         "home": true,
@@ -31,17 +31,27 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "Wilson Edelber Graniolatti",
+      "stadium": {
+        "name": "Estadio Olímpico Andrés Quintana Roo",
+        "address": "Av Circuito Mayapan S/N, Super Manzana 21, 77505 Cancún, Quintana Roo",
+        "lat": 21.151,
+        "long": -86.838,
+        "area": {
+          "lat": 21,
+          "long": -86
+        }
+      }
     },
     {
       "name": "Atlas",
       "slug": "atlas",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "W",
+        "gf": 1,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Morelia",
+          "slug": "morelia"
         },
         "ga": 0
       },
@@ -52,17 +62,27 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "O. Asad",
+      "stadium": {
+        "name": "Estadio Jalisco",
+        "address": "Avenida Patria Colomo No. 2300, Lomos del Bosque 45110 Guadalajara",
+        "lat": 20.705,
+        "long": -103.328,
+        "area": {
+          "lat": 20,
+          "long": -103
+        }
+      }
     },
     {
       "name": "Chiapas",
       "slug": "chiapas",
       "lastResult": {
-        "win": true,
+        "result": "W",
         "gf": 3,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Atlas",
+          "slug": "atlas"
         },
         "ga": 0
       },
@@ -73,19 +93,29 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "S. Bueno",
+      "stadium": {
+        "name": "Estadio Victor Manuel Reyna",
+        "address": "Art. 115 Zona Sin Asignación de Nombre de Colonia 24, Tuxtla Gutiérrez, Chiapas",
+        "lat": 16.762,
+        "long": -93.906,
+        "area": {
+          "lat": 16,
+          "long": -93
+        }
+      }
     },
     {
       "name": "Club America",
       "slug": "america",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "D",
+        "gf": 1,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Cruz Azul",
+          "slug": "cruz-azul"
         },
-        "ga": 0
+        "ga": 1
       },
       "nextMatch": {
         "home": true,
@@ -94,19 +124,29 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "Miguel Herrera",
+      "stadium": {
+        "name": "Estadio Azteca",
+        "address": "Calz de Tlalpan 3465, Santa Ursula Coapa, Coyoacán 04650 Ciudad de México, Distrito Federal",
+        "lat": 19.302,
+        "long": -99.15,
+        "area": {
+          "lat": 19,
+          "long": -99
+        }
+      }
     },
     {
       "name": "Club Leon",
       "slug": "leon",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "L",
+        "gf": 0,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Morelia",
+          "slug": "morelia"
         },
-        "ga": 0
+        "ga": 2
       },
       "nextMatch": {
         "home": true,
@@ -115,19 +155,29 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "G. Matosas",
+      "stadium": {
+        "name": "Estadio León (Nou Camp)",
+        "address": "Boulevard Adolfo López Mateos Ote. 1810, La Martinica 37500 León de Los Aldama, Guanajuato",
+        "lat": 21.115,
+        "long": -101.657,
+        "area": {
+          "lat": 21,
+          "long": -101
+        }
+      }
     },
     {
       "name": "Cruz Azul",
       "slug": "cruz-azul",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "W",
+        "gf": 2,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Atlas",
+          "slug": "atlas"
         },
-        "ga": 0
+        "ga": 1
       },
       "nextMatch": {
         "home": true,
@@ -136,38 +186,58 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "Guillermo Vázquez",
+      "stadium": {
+        "name": "Estadio Azul",
+        "address": "Calle Indiana 255, Ciudad de Los Deportes, Benito Juarez, 03810 Mexico City, Federal District",
+        "lat": 19.38339,
+        "long": -99.17818,
+        "area": {
+          "lat": 19.383,
+          "long": -99.175
+        }
+      }
     },
     {
       "name": "Guadalajara",
       "slug": "chivas",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "D",
+        "gf": 1,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Leon",
+          "slug": "leon"
         },
-        "ga": 0
+        "ga": 1
       },
       "nextMatch": {
         "home": true,
         "opponent": {
-          "name": "Guadalajara",
-          "slug": "chivas"
+          "name": "America",
+          "slug": "america"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "J. Real",
+      "stadium": {
+        "name": "Estadio Omnilife",
+        "address": "Circuito JVC 2800, El Bajio 45019 Zapopan, Jalisco",
+        "lat": 20.681,
+        "long": -103.462,
+        "area": {
+          "lat": 20,
+          "long": -103
+        }
+      }
     },
     {
-      "name": "Monarcas Moerlia",
+      "name": "Monarcas Morelia",
       "slug": "morelia",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "W",
+        "gf": 2,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Leon",
+          "slug": "leon"
         },
         "ga": 0
       },
@@ -178,19 +248,29 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "C. Bustos",
+      "stadium": {
+        "name": "Estadio Morelos",
+        "address": "Libramiento Poniente S/n, Leandro Valle 58147 Morelia, Michoacán",
+        "lat": 19.718,
+        "long": -101.233,
+        "area": {
+          "lat": 19,
+          "long": -101
+        }
+      }
     },
     {
       "name": "Monterrey",
       "slug": "monterrey",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "D",
+        "gf": 1,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Puebla",
+          "slug": "puebla"
         },
-        "ga": 0
+        "ga": 1
       },
       "nextMatch": {
         "home": true,
@@ -199,19 +279,29 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "J. Cruz",
+      "stadium": {
+        "name": "Estadio Tecnológico",
+        "address": "Junco de la Vega y Luis Elizondo S/N, Tecnológico 64849 Monterrey, Nuevo León",
+        "lat": 25.652,
+        "long": -100.286,
+        "area": {
+          "lat": 25,
+          "long": -100
+        }
+      }
     },
     {
       "name": "Pachuca",
       "slug": "pachuca",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "L",
+        "gf": 0,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Monterrey",
+          "slug": "monterrey"
         },
-        "ga": 0
+        "ga": 1
       },
       "nextMatch": {
         "home": true,
@@ -220,19 +310,29 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "G. Caballero",
+      "stadium": {
+        "name": "Estadio Hidalgo",
+        "address": "Acceso Al Estadio, Los Jales Pachuca, Hidalgo",
+        "lat": 20.105,
+        "long": -98.756,
+        "area": {
+          "lat": 20,
+          "long": -98
+        }
+      }
     },
     {
       "name": "Puebla",
       "slug": "puebla",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "D",
+        "gf": 1,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Toluca",
+          "slug": "toluca"
         },
-        "ga": 0
+        "ga": 1
       },
       "nextMatch": {
         "home": true,
@@ -241,17 +341,27 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "R. Romano",
+      "stadium": {
+        "name": "Estadio Cuauhtémoc",
+        "address": "Calz Ignacio Zaragoza 666, Maravillas 72220 Puebla",
+        "lat": 19.077,
+        "long": -98.164,
+        "area": {
+          "lat": 19,
+          "long": -98
+        }
+      }
     },
     {
       "name": "Pumas UNAM",
       "slug": "pumas",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "D",
+        "gf": 0,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Queretaro",
+          "slug": "queretaro"
         },
         "ga": 0
       },
@@ -262,19 +372,29 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "J. Torres Servin",
+      "stadium": {
+        "name": "Estadio Olímpico Universitario",
+        "address": "Av De los Insurgentes S/N, Ciudad Universitaria, Coyoacán 04510 Ciudad de México, Distrito Federal",
+        "lat": 19.331,
+        "long": -99.192,
+        "area": {
+          "lat": 19,
+          "long": -99
+        }
+      }
     },
     {
       "name": "Queretaro",
       "slug": "queretaro",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "L",
+        "gf": 0,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Toluca",
+          "slug": "toluca"
         },
-        "ga": 0
+        "ga": 4
       },
       "nextMatch": {
         "home": true,
@@ -283,17 +403,27 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "I. Ambriz",
+      "stadium": {
+        "name": "Estadio Corregidora",
+        "address": "Av De Las Torres S/N, Colinas del Cimatario 76090 Santiago de Querétaro, Querétaro de Arteaga",
+        "lat": 20.582,
+        "long": -100.371,
+        "area": {
+          "lat": 20,
+          "long": -100.371
+        }
+      }
     },
     {
       "name": "Santos Laguna",
       "slug": "santos",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "W",
+        "gf": 1,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Pumas",
+          "slug": "pumas"
         },
         "ga": 0
       },
@@ -304,19 +434,29 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "Pedro Caixinha",
+      "stadium": {
+        "name": "Territorio Santos Modelo",
+        "address": "Carretera Torreón - San Pedro Km. 7, Torreón, Coahuila de Zaragoza",
+        "lat": 25.633,
+        "long": -103.376,
+        "area": {
+          "lat": 25,
+          "long": -103
+        }
+      }
     },
     {
       "name": "Tigres UANL",
       "slug": "tigres",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "D",
+        "gf": 2,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Queretaro",
+          "slug": "queretaro"
         },
-        "ga": 0
+        "ga": 2
       },
       "nextMatch": {
         "home": true,
@@ -325,19 +465,29 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "Ricardo Ferretti",
+      "stadium": {
+        "name": "Estadio Universitario",
+        "address": "Universidad S/N, Ciudad Universitaria 66451 San Nicolás de Los Garza, Nuevo León",
+        "lat": 25.722,
+        "long": -100.311,
+        "area": {
+          "lat": 25,
+          "long": -100
+        }
+      }
     },
     {
       "name": "Toluca",
       "slug": "toluca",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "D",
+        "gf": 2,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Leon",
+          "slug": "leon"
         },
-        "ga": 0
+        "ga": 2
       },
       "nextMatch": {
         "home": true,
@@ -346,19 +496,29 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "J. Cardozo",
+      "stadium": {
+        "name": "Estadio Nemesio Díez Riega",
+        "address": "Felipe Villanueva 300, De San Bernardino, 50080 Toluca de Lerdo, Estado de México, Mexico",
+        "lat": 19.287,
+        "long": -99.667,
+        "area": {
+          "lat": 19,
+          "long": -99
+        }
+      }
     },
     {
       "name": "Veracruz",
       "slug": "veracruz",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "L",
+        "gf": 0,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Leon",
+          "slug": "leon"
         },
-        "ga": 0
+        "ga": 2
       },
       "nextMatch": {
         "home": true,
@@ -367,19 +527,29 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "J. Luna",
+      "stadium": {
+        "name": "Estadio Luis de La Fuente El Pirata",
+        "address": "Paseo Jacarandas y Paseo Jardin, Virginia, Boca del Río, Veracruz-Llave",
+        "lat": 19.165,
+        "long": -96.214,
+        "area": {
+          "lat": 19,
+          "long": -96
+        }
+      }
     },
     {
       "name": "Xolos Tijuana",
       "slug": "xolos",
       "lastResult": {
-        "win": true,
-        "gf": 3,
+        "result": "L",
+        "gf": 0,
         "opponent": {
-          "name": "America",
-          "slug": "america"
+          "name": "Puebla",
+          "slug": "puebla"
         },
-        "ga": 0
+        "ga": 2
       },
       "nextMatch": {
         "home": true,
@@ -388,7 +558,17 @@
           "slug": "chivas"
         }
       },
-      "manager": "MASDFASDFASD"
+      "manager": "C. Farías",
+      "stadium": {
+        "name": "Estadio Caliente",
+        "address": "Blvd. Agua Caliente, Hipódromo, 22000 Tijuana, Baja California",
+        "lat": 32.506,
+        "long": -116.993,
+        "area": {
+          "lat": 32,
+          "long": -116
+        }
+      }
     }
   ]
 }

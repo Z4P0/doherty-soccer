@@ -56,33 +56,9 @@ ds.league_overview = (function() {
 		// 	// .setView([23, -100], 5); // mexico
 		// 	// cruz azul
 		// 	.setView([19.383, -99.175], 15);
-		// 	// "cruzAzul": {
-		// 	// 	"lat": 19.38297,
-		// 	// 	"long": -99.17718
-			// }
 
-		map = L.mapbox.map('map', 'examples.map-20v6611k')
-			.setView([19.383, -99.175], 15);
-
-		L.mapbox.markerLayer({
-		    // this feature is in the GeoJSON format: see geojson.org
-		    // for the full specification
-		    type: 'Feature',
-		    geometry: {
-		        type: 'Point',
-		        // coordinates here are in longitude, latitude order because
-		        // x, y is the standard for GeoJSON and many formats
-		        coordinates: [-99.17818, 19.38339]
-		    },
-		    properties: {
-		        title: 'Estadio Azul',
-		        description: 'Calle Indiana 255, Ciudad de Los Deportes, Benito Juarez, 03810 Mexico City, Federal District, Mexico',
-		        // one can customize markers by adding simplestyle properties
-		        // http://mapbox.com/developers/simplestyle/
-		        'marker-size': 'small',
-		        'marker-color': '#2f2f2f'
-		    }
-		}).addTo(map);
+		map = L.mapbox.map('map', 'examples.map-20v6611k');
+			// .setView([23, -100], 5); // mexico
 
 
 
@@ -91,6 +67,12 @@ ds.league_overview = (function() {
 	}
 
 	var update = function() {
+		/*
+		1. update table, list item, overview
+		2. update map
+		*/
+
+		// 1.
 		// clear classes first
 		$(current_club.node).removeClass('current');
 		$(current_club.table).removeClass('current');
@@ -119,7 +101,53 @@ ds.league_overview = (function() {
 		$(current_club.overview).addClass('current');
 
 
+		// 2.
+		// update map
+		var newMap = $(current_club.overview).find('.stadium');
+		map.setView([newMap.attr('data-stadium-lat'), newMap.attr('data-stadium-long')], 6);
+
+		// add marker
+		L.mapbox.markerLayer({
+	    // this feature is in the GeoJSON format: see geojson.org
+	    // for the full specification
+	    type: 'Feature',
+	    geometry: {
+	        type: 'Point',
+	        // coordinates here are in longitude, latitude order because
+	        // x, y is the standard for GeoJSON and many formats
+	        coordinates: [newMap.attr('data-stadium-long'), newMap.attr('data-stadium-lat')]
+	    },
+	    properties: {
+	        title: newMap.attr('data-stadium-name'),
+	        description: newMap.attr('data-stadium-address'),
+	        // one can customize markers by adding simplestyle properties
+	        // http://mapbox.com/developers/simplestyle/
+	        'marker-size': 'small',
+	        'marker-color': '#2f2f2f'
+	    }
+		}).addTo(map);		
+
 	}
+
+		// 	L.mapbox.markerLayer({
+		//     // this feature is in the GeoJSON format: see geojson.org
+		//     // for the full specification
+		//     type: 'Feature',
+		//     geometry: {
+		//         type: 'Point',
+		//         // coordinates here are in longitude, latitude order because
+		//         // x, y is the standard for GeoJSON and many formats
+		//         coordinates: [-99.17818, 19.38339]
+		//     },
+		//     properties: {
+		//         title: 'Estadio Azul',
+		//         description: 'Calle Indiana 255, Ciudad de Los Deportes, Benito Juarez, 03810 Mexico City, Federal District, Mexico',
+		//         // one can customize markers by adding simplestyle properties
+		//         // http://mapbox.com/developers/simplestyle/
+		//         'marker-size': 'small',
+		//         'marker-color': '#2f2f2f'
+		//     }
+		// }).addTo(map);
 
 	return {
 		init: init
