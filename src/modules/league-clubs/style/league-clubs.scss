@@ -2,16 +2,19 @@
 @import "../../../style/pieces/mixins";
 
 .league-name {
-  @include rems(font-size, 24px);
+  @include rems(font-size, 32px);
+  @include px(margin-bottom, 4px);
+  font-weight: bold;
 }
 .league-clubs {
+  text-align: center;
+  // background: #34495e;
   li {
     display: inline-block;
     vertical-align: middle;
     width: 5%;
-    padding: 1%;
-    background: inherit;
-    @include transition(background, 0.3s);
+    padding: 0.5em;
+    @include transition(background, 0.2s);
     &:hover {
       cursor: pointer;
       background: darken($white, 5%);

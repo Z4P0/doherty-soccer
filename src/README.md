@@ -2,8 +2,6 @@
 
 
 #### folder structure
-- base
-  contains the files that are used through all parts of the site
 - modules
   each part of the site is broken down into contained pieces
   ex. navigation, footer, header

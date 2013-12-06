@@ -9,6 +9,8 @@ head
   +css("league-table")
   +css("league-clubs")
   +css("club-overview")
+  +css("club-overview")
+  +css("article")
 
 
 body
@@ -18,8 +20,19 @@ body
 
     section#main
       div.wrapper
-        section#league-overview(data-league="liga-mx", data-current-club="atlante")
+
+        section#league-info
           h2.league-name Liga MX
+          p The Liga MX is the top level of the Mexican football league system.
+            span.more-info-toggle(data-content="") &nbsp;More
+          section.more-info
+            //- p The Mexican first division was established in 1943. From 2012 the league comprised 18 participating clubs. Up to June 2011, it was divided into three groups competing for league titles until July 2011 when groups were removed in favor of a single table format. Each season the league holds two tournaments: the Apertura, which starts in the summer, and the Clausura, which starts in the winter. The league is currently ranked number 11 in the world and number 10 in the last decade (2001–2010) by the IFFHS.
+
+        //- league overview
+        //- ===================================
+        section#league-overview(data-league="liga-mx", data-current-club="atlante")
+          //- league clubs
+          +partial("league-clubs/html/league-clubs.jade","modules/league-clubs/data/league-clubs.json")
           
           //- interactive area
           section#interactive-area
@@ -31,18 +44,19 @@ body
               div#map
               //- team overview
               +partial("club-overview/html/club-overview-small.jade","modules/club-overview/data/club-overview.json")
-          //- league clubs
-          +partial("league-clubs/html/league-clubs.jade","modules/league-clubs/data/league-clubs.json")
+
+        //- articles
+        //- ===================================
+        section#related-articles
+          h2 Articles
+          +partial("article/html/recent-articles.jade","modules/article/data/recent-articles.json")
 
 
         section.notes
           ul
-            li clicking the marker shows the stadium name
-
 
 
   include ../html/foot.jade
   +js("global-nav")
-  script(src="", type="text/javascript")
   script(src="js/libs/mapbox.js")
 </html>

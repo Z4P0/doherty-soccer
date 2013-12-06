@@ -17,7 +17,7 @@
 	}
 	tr {
 		background: inherit;
-		@include transition(background, 0.3s);
+		@include transition(background, 0.2s);
 		&:hover {
 			background: $white;
 			cursor: pointer;

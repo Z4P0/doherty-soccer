@@ -2,8 +2,9 @@ section#club-overviews
 	ul
 		- for (i=0; i< data.clubs.length; i++) {
 		li(data-club="#{data.clubs[i].slug}")
-			//- h3.club-name #{data.clubs[i].name}
-			img.club-logo(src="img/leagues/#{data.league.slug}/#{data.clubs[i].slug}.png")
+			//- logo
+			figure.club-logo
+				img(src="img/leagues/#{data.league.slug}/#{data.clubs[i].slug}.png")
 			//- previous match
 			- if (data.clubs[i].lastResult)
 			h4 Last Result
