@@ -32,42 +32,102 @@
   }
 }
 
-// #main {
-//   background: rgba(255,0,0,0.2);
-// }
-
 // league overview
-#league-overview {
-  @include rems(margin-bottom, 32px);
-}
-
-#league-info {
+// ===================================
+// header
+#league-header {
   border-bottom: 2px solid #2f2f2f;
   margin-bottom: 1em;
-  padding-bottom: 0.5em;
-  p {
-    margin-bottom: 0;
+  @include flexbox();
+  justify-content: space-between;
+  align-items: flex-end;
+  p {margin-bottom: 0;}
+  @include px(padding-bottom, 8px);
+  @extend .wrapper;
+}
+#league-info {
+  @include flex(2);
+}
+#season {
+  @include flex(1);
+  text-align: right;
+  color: lighten($black, 20%);
+}
+
+
+#content {
+  @include flexbox();
+}
+
+
+// league overview menu
+// ===================================
+#league-menu-options {
+  @include flex(1);
+  text-align: right;
+  max-width: 10%;
+  ul {
+    position: fixed;
+    width: 10%;
+  }
+  li {
+    list-style: none;
+    @include px(font-size, 14px);
+    text-transform: uppercase;
+    position: relative;
+    @include rems(padding-right, 16px);
+    @include px(margin, 8px, 0);
+  }
+  a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: lighten($black, 25%);
+    &:after {
+      content: "\00a0";
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 3px;
+      background: lighten($black, 25%);
+      opacity: 0;
+      @include transition(opacity, 0.1s);
+    }
+    &:hover {
+      color: $black;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  .current {
+    color: $black;
+    // font-weight: bold;
+    &:after {
+      background: $black;
+      opacity: 1;
+    }
   }
 }
 
-.more-info-toggle {
-  color: #2980b9;
-  // font-style: italic;
-  @include hover();
+
+// main content
+// ===================================
+#main-content {
+  @include flex(2);
+  margin-right: 10%;
 }
 
-// #more-info {
-//   -moz-column-count: 3;
-//   -moz-column-gap: 20px;
-//   -webkit-column-count: 3;
-//   -webkit-column-gap: 20px;
-// }
+// league overview
+#league-overview {
+  // @include px(padding-top, 32px);
+  @include rems(padding-bottom, 32px);
+  @include px(margin-bottom, 64px);
+}
 
 
 #interactive-area {
   @include flexbox();
   justify-content: space-between;
-  // align-items: flex-start;
   .league-table {
     @include flex(1);
   }
@@ -82,4 +142,37 @@
   position:absolute;
   top:0px;
   left:0px;
+}
+
+
+#league-articles {
+  @include flexbox();
+  justify-content: space-between;
+  @include px(padding-top, 32px);
+  @include px(margin-bottom, 64px);
+  #article-preview {@include flex(2);}
+  .article-post {margin: initial;}
+  #recent-posts {@include flex(1);}
+}
+
+#league-history {
+  @include px(padding-top, 32px);
+}
+
+#league-extras {
+  @include px(padding-top, 32px);
+  @include px(margin-bottom, 64px);
+}
+
+
+
+// other
+// ===================================
+.transform-transition {
+  transition: -webkit-transform 0.4s ease-out,
+    -moz-transform 0.4s ease-in,
+    -o-transform 0.4s ease-in,
+    -ms-transform 0.4s ease-in,
+    transform 0.4s ease-in;
+  opacity: 0.2;
 }

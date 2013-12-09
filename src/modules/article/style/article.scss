@@ -1,6 +1,14 @@
 @import "../../../style/pieces/vars";
 @import "../../../style/pieces/mixins";
 
+.article {
+  p {
+    @include rems(font-size, 20px);
+    @include rems(line-height, 26px);
+    @include rems(margin-bottom, 26px);
+  }
+}
+
 .article-post {
   @include rems(max-width, 520px);
   // padding top

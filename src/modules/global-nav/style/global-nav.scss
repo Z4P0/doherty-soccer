@@ -56,9 +56,6 @@ $nav-border: #4d4d4d;
     transform: translateX(16.25rem);
   }
 }
-header, footer {
-  @include units(padding-right, 1)
-}
 
 header {
   @include rems(margin-bottom, 30px);
@@ -75,6 +72,7 @@ h1 {
   font-family: $italic;
   color: #afafaf;
   @include rems(font-size, 12px);
+  @include units(padding-right, 1)
 }
 #nav-toggle {
   position: absolute;

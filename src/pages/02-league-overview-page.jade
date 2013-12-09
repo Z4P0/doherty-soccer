@@ -8,8 +8,7 @@ head
   +css("global-nav")
   +css("league-table")
   +css("league-clubs")
-  +css("club-overview")
-  +css("club-overview")
+  +css("stadium-overview")
   +css("article")
 
 
@@ -19,42 +18,109 @@ body
     +partial("global-nav/html/global-nav.jade","modules/global-nav/data/global-nav.json")
 
     section#main
-      div.wrapper
-
+      header#league-header
+        //- div.wrapper
         section#league-info
           h2.league-name Liga MX
           p The Liga MX is the top level of the Mexican football league system.
-            span.more-info-toggle(data-content="") &nbsp;More
-          section.more-info
-            //- p The Mexican first division was established in 1943. From 2012 the league comprised 18 participating clubs. Up to June 2011, it was divided into three groups competing for league titles until July 2011 when groups were removed in favor of a single table format. Each season the league holds two tournaments: the Apertura, which starts in the summer, and the Clausura, which starts in the winter. The league is currently ranked number 11 in the world and number 10 in the last decade (2001–2010) by the IFFHS.
-
-        //- league overview
-        //- ===================================
-        section#league-overview(data-league="liga-mx", data-current-club="atlante")
-          //- league clubs
-          +partial("league-clubs/html/league-clubs.jade","modules/league-clubs/data/league-clubs.json")
-          
-          //- interactive area
-          section#interactive-area
-            //- league table
-            +partial("league-table/html/league-table-small.jade","modules/league-table/data/league-table.json")
-
-            //- map
-            section#map-wrapper
-              div#map
-              //- team overview
-              +partial("club-overview/html/club-overview-small.jade","modules/club-overview/data/club-overview.json")
-
-        //- articles
-        //- ===================================
-        section#related-articles
-          h2 Articles
-          +partial("article/html/recent-articles.jade","modules/article/data/recent-articles.json")
+        aside#season
+          form(action="#", method="post")
+            select
+              option(value="2012-2013") 2012-2013
+              option(value="2012-2013") 2011-2012
+              option(value="2012-2013") 2010-2011
+            select
+              option(value="apertura") Apertura
+              option(value="clasura") Clasura
 
 
-        section.notes
+      //- content
+      //- ===================================
+      section#content
+        nav#league-menu-options
           ul
+            //- these should really be #
+            li 
+              a(href="#league-overview") Overview
+            li 
+              a(href="#league-articles") Articles
+            li 
+              a(href="#league-history") History
+            //- li
+            //-   a(href="#league-cups") Cups
+            li
+              a(href="#league-extras") Extras
+      
+        //- league overview
+        div#main-content
+          section#league-overview(data-league="liga-mx", data-current-club="america")
+            //- league clubs
+            +partial("league-clubs/html/league-clubs.jade","modules/league-clubs/data/league-clubs.json")
+            
+            //- interactive area
+            section#interactive-area
+              //- league table
+              +partial("league-table/html/league-table-small.jade","modules/league-table/data/league-table.json")
 
+              //- map
+              section#map-wrapper
+                div#map
+                //- team overview
+                +partial("stadium-overview/html/stadium-overview-small.jade","modules/stadium-overview/data/stadium-overview.json")
+
+          //- articles
+          section#league-articles
+            section#article-preview
+              +partial("article/html/article-preview.jade","modules/article/data/article.json")
+            //- Recent posts
+            section#recent-posts
+              h3.t7 Recent Posts
+              +partial("article/html/recent-articles.jade","modules/article/data/recent-articles.json")
+
+          //- history
+          section#league-history
+            article.article
+              h3.t4.article-header History
+              p The Mexican first division was established in 1943. From 2012 the league comprised 18 participating clubs. Up to June 2011, it was divided into three groups competing for league titles until July 2011 when groups were removed in favor of a single table format. Each season the league holds two tournaments: the Apertura, which starts in the summer, and the Clausura, which starts in the winter. The league is currently ranked number 11 in the world and number 10 in the last decade (2001–2010) by the IFFHS.
+            aside#league-format
+              h3.t5.article-header Format
+              ul
+                li
+                  h4.t7.article-header Regular Season
+                  article.article
+                    p Liga MX is a single table of 18 teams that play two annual tournaments resulting in two champions per season. The season opens with the apertura tournament (opening tournament- running from July to December) followed by the clausura (closing - running from January to May). This format matches other Latin American schedules and correspond with FIFA's world footballing calendar, which "opens" in July/August and "closes" in April/May of the next year. Each team plays a different team each week, accruing points for wins and ties over the 17 week tournament. Based on these points, the top eight teams reach the liguilla phase of the respective tournament where a new champion is crowned.
+                    //- p From 1996 to 2002, the league followed a similar two-tournament schedule called invierno (winter) and verano (summer) but in 2002 to the 2010/2011 season they divided the 18 teams into three groups of six, called group one, group two, and group three. They remained in their respective groups throughout the two tournaments played that season. The qualification phase of the tournament lasted 17 weeks, with all teams playing each other once per tournament in a home and away series over both tournaments. The top two teams from each group and the two best third place teams qualified to reach the liguilla.
+                li
+                  h4.t7.article-header La Liguilla (Playoffs)
+                  article.article
+                    p The liguilla (Spanish for "little league") is the playoff phase of the tournament. This phase starts with eight qualifying teams and is played in the "tie" format in two-leg aggregate-score, similar to the quarterfinals and semifinals of the UEFA Champions League. The first six qualifying teams are the two best clubs from each of the three groups. The best two clubs on the General Classification Table who are not among the top two in their respective group round up the eight qualifiers. The Elimination bracket goes from an 8 team quarterfinal, to a 4 team semifinal, and a final. The Champion team is awarded the First division trophy, and the runner up is awarded a smaller version of the trophy as well. Each player receives a medal respective to their team's placement. The birth of La liguilla in 1970, modernized the league despite the disagreements between the traditionalists and the modernists. Clubs that were near bankruptcy were now better able to compete and generate profits.
+                li
+                  h4.t7.article-header Relegation
+                  article.article
+                    p At the end of a season, after the Apertura and Clausura tournaments, one team is relegated to the next lower division, Ascenso MX, and one team from that division is promoted and takes the place left open by the relegated team. Currently, the relegated team is determined by computing the points-per-game-played ratio for each team, considering all the games played by the team during the last three seasons (six tournaments). The team with the lowest ratio is relegated. For teams recently promoted, only the games played since their promotion are considered (two or four tournaments). The team promoted from Ascenso MX is the winner of a two-leg match between the champions of the Apertura and Clausura tournaments of that division. If a team becomes the champion in both tournaments, it is automatically promoted.
+            //- +partial("article/html/article-preview.jade","modules/article/data/article.json")
+
+          section#league-extras
+            h3 Extras
+            p Social media
+            ul
+              li facebook
+              li twitter
+              li instagram
+              li official website
+
+          section
+            ul
+              li league history √
+              li teams w/ links √ (add links)
+              li official links √
+              li related articles √
+              li league table √
+              li game schedule / game 'ticker'
+              li "season so far"
+              li season reviews (done at the end of the year)
+
+      //- end page/
 
   include ../html/foot.jade
   +js("global-nav")

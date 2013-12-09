@@ -1,0 +1,35 @@
+section#stadium-overviews
+	ul
+		- for (i=0; i< data.clubs.length; i++) {
+		li(data-club="#{data.clubs[i].slug}")
+			//- logo
+			figure.club-logo
+				//- img(src="img/leagues/#{data.league.slug}/stadiums/#{data.clubs[i].stadium.img}")
+				img(src="img/leagues/#{data.league.slug}/#{data.clubs[i].slug}.png")
+			//- previous match
+			- if (data.clubs[i].lastResult)
+				h4 Last Result
+				p
+					if (data.clubs[i].lastResult.win)
+						| W
+					else
+						| L
+					| &nbsp;#{data.clubs[i].lastResult.gf} - #{data.clubs[i].lastResult.ga} #{data.clubs[i].lastResult.opponent.name}
+			//- next match
+			- if (data.clubs[i].nextMatch)
+				h4 Next Match
+				p
+					if (data.clubs[i].nextMatch.home)
+						| vs. 
+					else
+						| @
+					|	#{data.clubs[i].nextMatch.opponent.name}
+			//- manager
+			h4 Manager: #{data.clubs[i].manager}
+			//- stadium
+			section.stadium(data-stadium-name="#{data.clubs[i].stadium.name}",
+				data-stadium-address="#{data.clubs[i].stadium.address}",
+				data-stadium-lat="#{data.clubs[i].stadium.lat}", 
+				data-stadium-long="#{data.clubs[i].stadium.long}")
+				h5 #{data.clubs[i].stadium.name}
+		- }

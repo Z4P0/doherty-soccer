@@ -5,7 +5,75 @@ var ds = {}; //global var
 //wait until main document is loaded
 window.addEventListener('load',function(){
 	ds.league_overview.init();
+	
+	// set up navigation
+	ds.league_nav.init({
+		menu: $('#league-menu-options')
+	});
 });
+
+
+
+
+ds.league_nav = (function() {
+	// vars
+	var menu = [], menuListener,
+			current = 0, // index
+			$root = $('html, body');
+
+
+	// init
+	var init = function(settings) {
+		// set it up
+		menuSetup(settings.menu);
+
+		// do it up
+		update();
+	}
+
+	var menuSetup = function(_menu) {
+		// event listener
+		menuListener = _menu;
+		menuListener.on('click', function(e) {
+			if (e.target.localName === 'a') {
+				e.preventDefault();
+				update(e.target);
+			}
+		});
+
+		// populate array
+		menu = $.makeArray(menuListener.find('a'));
+	}
+
+	var scrollToTop = function(_href) {
+		// scroll to
+		$root.animate({
+			scrollTop: $(_href).offset().top
+		}, 1000, function() {
+			window.location.hash = _href;
+		});
+	}
+
+	var update = function(_navItem) {
+		// change class
+		menuListener.find('.current').removeClass('current');
+
+		// find nav selection
+		if (_navItem) {
+			for (var i = 0; i < menu.length; i++) {
+				if (menu[i].attributes['href'].nodeValue.split('#')[1] === _navItem.attributes['href'].nodeValue.split('#')[1]) current = i;
+			};
+			scrollToTop(menu[current].attributes['href'].nodeValue);
+		}
+
+		// add class
+		$(menu[current]).addClass('current');
+	}
+
+	return {
+		init: init
+	}
+})();
 
 
 
@@ -15,7 +83,7 @@ ds.league_overview = (function() {
 	var league,
 			clubs,
 			current_club = {},
-			club_overviews,
+			stadium_overviews,
 			table,
 			table_rows,
 			map,
@@ -29,7 +97,7 @@ ds.league_overview = (function() {
 		league = $('#league-overview');
 		clubs = $.makeArray(league.children('.league-clubs').children());
 		current_club.name = league.attr('data-current-club');
-		club_overviews = $.makeArray(league.find('#club-overviews').children().children());
+		stadium_overviews = $.makeArray(league.find('#stadium-overviews').children().children());
 		table = league.find('.league-table');
 		table_rows = $.makeArray(table.children('tbody').children());
 
@@ -37,9 +105,9 @@ ds.league_overview = (function() {
 
 		// map markers
 		// ===================================
-		for (var i = 0; i < club_overviews.length; i++) {
+		for (var i = 0; i < stadium_overviews.length; i++) {
 			// use data-attributes on the '.stadium' element
-			var data = $(club_overviews[i]).find('.stadium');
+			var data = $(stadium_overviews[i]).find('.stadium');
 			
 			// push each club's data
 			markers.push({
@@ -53,7 +121,7 @@ ds.league_overview = (function() {
 		        // description: data.attr('data-stadium-address'),
 		        'marker-size': 'small',
 		        'marker-color': '#ADADAD',
-		        club: club_overviews[i].getAttribute('data-club'),
+		        club: stadium_overviews[i].getAttribute('data-club'),
 		        index: i
 		    }
 			});
@@ -132,7 +200,7 @@ ds.league_overview = (function() {
 			// table node
 			if(table_rows[i].getAttribute('data-club') === current_club.name) current_club.table = table_rows[i];
 			// overview node
-			if (club_overviews[i].getAttribute('data-club') === current_club.name) current_club.overview = club_overviews[i];
+			if (stadium_overviews[i].getAttribute('data-club') === current_club.name) current_club.overview = stadium_overviews[i];
 			// marker
 			if (markers[i].properties.club === current_club.name) current_club.marker = markers[i];
 		};		
@@ -163,7 +231,7 @@ ds.league_overview = (function() {
 			markers[i].properties['marker-color'] = markers[i].properties['old-color'] ||
 			markers[i].properties['marker-color'];
 		}
-		map.markerLayer.setGeoJSON(markers);
+		// map.markerLayer.setGeoJSON(markers);
 	}
 
 

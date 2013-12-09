@@ -1,7 +1,7 @@
 @import "../../../style/pieces/vars";
 @import "../../../style/pieces/mixins";
 
-#club-overviews {
+#stadium-overviews {
   position: absolute;
   z-index: 5;
   right: 0;
@@ -12,8 +12,8 @@
   background: rgba(0,0,0,0.5);
   color: #fff;
   figure {
-    margin: 0;
     padding: 0;
+    @include px(margin, 0, 0, 16px);
   }
   img {
     max-width: 100%;
@@ -37,6 +37,10 @@
     }
   }
 }
+.club-logo {
+  @include px(padding-bottom, 16px);
+}
+
 .club-name {
   text-transform: uppercase;
   text-align: center;
