@@ -1,0 +1,37 @@
+@import "../../../style/pieces/vars";
+@import "../../../style/pieces/mixins";
+
+#league-schedule {
+  @include px(margin-top, 16px);
+  ul {
+    @include cf();
+    // border: 1px solid lighten($black,50%);
+  }
+  li {
+    display: inline-block;
+    vertical-align: top;
+    background: lighten($black, 75%);
+    @include px(padding, 14px);
+    float: left;
+    border: 1px solid lighten($black,50%);
+    border-left: none;
+    &:last-child {
+      // border: none;
+    }
+    &:first-child {
+      border-left: 1px solid lighten($black,50%);
+    }
+  }
+}
+.calendar-box {
+  text-align: center;
+}
+.game-time {
+  @include px(font-size, 14px);
+  @include px(margin-bottom, 10px);
+  color: lighten($black, 15%);
+}
+.game-teams {
+  margin-bottom: 0;
+  font-weight: bold;
+}

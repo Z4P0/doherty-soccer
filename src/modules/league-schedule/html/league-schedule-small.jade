@@ -1,0 +1,8 @@
+section#league-schedule
+	ul
+		- for (i=0; i< data.games.length; i++) {
+		li(data-home="#{data.games[i].teams.home.slug}", data-away="#{data.games[i].teams.away.slug}")
+			section.calendar-box
+				p.game-time #{data.games[i].date.day} #{data.games[i].date.number} #{data.games[i].date.month} #{data.games[i].date.time}
+				p.game-teams #{data.games[i].teams.away.abbv} v #{data.games[i].teams.home.abbv}
+		- }

@@ -1,0 +1,176 @@
+{
+  "league": {
+    "name": "Liga MX",
+    "slug": "liga-mx"
+  },
+  "season": {
+    "start": {
+      "year": "2012"
+    },
+    "end": {
+      "year": "2013"
+    }
+  },
+  "games": [
+    {
+      "date": {
+        "day": "Sun",
+        "number": 4,
+        "month": "Dec",
+        "time": 1000
+      },
+      "teams": {
+        "home": {
+          "name": "Atlas",
+          "slug": "atlas",
+          "abbv": "ATS"
+        },
+        "away": {
+          "name": "Xolos Tijuana",
+          "slug": "xolos",
+          "abbv": "TIJ"
+        }
+      }
+    },
+    {
+      "date": {
+        "day": "Sun",
+        "number": 4,
+        "month": "Dec",
+        "time": 1000
+      },
+      "teams": {
+        "home": {
+          "name": "Chiapas",
+          "slug": "chiapas",
+          "abbv": "CHI"
+        },
+        "away": {
+          "name": "Veracruz",
+          "slug": "veracruz",
+          "abbv": "VER"
+        }
+      }
+    },
+    {
+      "date": {
+        "day": "Sun",
+        "number": 4,
+        "month": "Dec",
+        "time": 1000
+      },
+      "teams": {
+        "home": {
+          "name": "Club America",
+          "slug": "america",
+          "abbv": "AME"
+        },
+        "away": {
+          "name": "Toluca",
+          "slug": "toluca",
+          "abbv": "TOL"
+        }
+      }
+    },
+    {
+      "date": {
+        "day": "Sun",
+        "number": 4,
+        "month": "Dec",
+        "time": 1000
+      },
+      "teams": {
+        "home": {
+          "name": "Club Leon",
+          "slug": "leon",
+          "abbv": "LEO"
+        },
+        "away": {
+          "name": "Tigres UANL",
+          "slug": "tigres",
+          "abbv": "TIG"
+        }
+      }
+    },
+    {
+      "date": {
+        "day": "Sun",
+        "number": 4,
+        "month": "Dec",
+        "time": 1000
+      },
+      "teams": {
+        "home": {
+          "name": "Cruz Azul",
+          "slug": "cruz-azul",
+          "abbv": "CRZ"
+        },
+        "away": {
+          "name": "Santos Laguna",
+          "slug": "santos",
+          "abbv": "SAN"
+        }
+      }
+    },
+    {
+      "date": {
+        "day": "Sun",
+        "number": 4,
+        "month": "Dec",
+        "time": 1000
+      },
+      "teams": {
+        "home": {
+          "name": "Guadalajara",
+          "slug": "chivas",
+          "abbv": "CHI"
+        },
+        "away": {
+          "name": "Queretaro",
+          "slug": "queretaro",
+          "abbv": "QUE"
+        }
+      }
+    },
+    {
+      "date": {
+        "day": "Sun",
+        "number": 4,
+        "month": "Dec",
+        "time": 1000
+      },
+      "teams": {
+        "home": {
+          "name": "Monarcas Morelia",
+          "slug": "morelia",
+          "abbv": "MOR"
+        },
+        "away": {
+          "name": "Pumas UNAM",
+          "slug": "pumas",
+          "abbv": "PUM"
+        }
+      }
+    },
+    {
+      "date": {
+        "day": "Sun",
+        "number": 4,
+        "month": "Dec",
+        "time": 1000
+      },
+      "teams": {
+        "home": {
+          "name": "Monterrey",
+          "slug": "monterrey",
+          "abbv": "MNT"
+        },
+        "away": {
+          "name": "Pachuca",
+          "slug": "pachuca",
+          "abbv": "PCH"
+        }
+      }
+    }
+  ]
+}

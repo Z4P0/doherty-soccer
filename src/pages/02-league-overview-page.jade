@@ -10,6 +10,7 @@ head
   +css("league-clubs")
   +css("stadium-overview")
   +css("article")
+  +css("league-schedule")
 
 
 body
@@ -56,6 +57,7 @@ body
           section#league-overview(data-league="liga-mx", data-current-club="america")
             //- league clubs
             +partial("league-clubs/html/league-clubs.jade","modules/league-clubs/data/league-clubs.json")
+            //- +partial("league-schedule/html/league-schedule-small.jade","modules/league-schedule/data/league-schedule.json")
             
             //- interactive area
             section#interactive-area
@@ -67,6 +69,10 @@ body
                 div#map
                 //- team overview
                 +partial("stadium-overview/html/stadium-overview-small.jade","modules/stadium-overview/data/stadium-overview.json")
+            
+            //- league schedule
+            +partial("league-schedule/html/league-schedule-small.jade","modules/league-schedule/data/league-schedule.json")
+            //- p View full calendar
 
           //- articles
           section#league-articles
