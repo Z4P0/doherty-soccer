@@ -58,10 +58,7 @@
 }
 
 // simulate simple hover effect
-@mixin hover($property, $value) {
-  @if $property {
-    #{$property}: #{$value};
-  }
+@mixin hover() {
   &:hover {cursor: pointer;}
 }
 

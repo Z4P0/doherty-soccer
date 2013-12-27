@@ -1,10 +1,11 @@
 include ../../../html/jade-helpers.jade
 
+header#global-header
+  h1 #{data.siteName}
+  p#tagline #{data.siteTagline}
+  span#nav-toggle #{data.abbr}
+  
 nav#global-nav
-  header
-    h1 #{data.siteName}
-    p#tagline #{data.siteTagline}
-    nav#nav-toggle #{data.abbr}
   ul#nav-menu
     - for (i=0; i< data.globalNav.length; i++) {
       li
@@ -16,4 +17,4 @@ nav#global-nav
         else
           a(href="#{data.globalNav[i].link}") #{data.globalNav[i].text}
     - }
-  +partial("global-nav-footer/html/global-nav-footer.jade","modules/global-nav-footer/data/global-nav-footer.json")
+  //- +partial("global-nav-footer/html/global-nav-footer.jade","modules/global-nav-footer/data/global-nav-footer.json")
