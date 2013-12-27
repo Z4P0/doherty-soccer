@@ -13,14 +13,16 @@ body#homepage
   div.container
     +partial("global-nav/html/global-nav.jade","modules/global-nav/data/global-nav.json")
     section#main
-      div.wrapper
-        //- latest article preview
-        section#article-preview
-          +partial("article/html/article-preview.jade","modules/article/data/article.json")
-        //- Recent posts
-        section#recent-posts
-          h3.t7 Recent Posts
-          +partial("article/html/recent-articles.jade","modules/article/data/recent-articles.json")
+      //- div.wrapper
+      section#latest-article
+        h3.t7 Latest Article
+      //- latest article preview
+      section#article-preview
+        +partial("article/html/article-preview.jade","modules/article/data/article.json")
+      //- Recent posts
+      section#recent-posts
+        h3.t7 Recent Posts
+        +partial("article/html/recent-articles.jade","modules/article/data/recent-articles.json")
 
   include ../html/foot.jade
   +js("article")

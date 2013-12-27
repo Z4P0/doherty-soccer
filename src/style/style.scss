@@ -12,24 +12,23 @@
 
 
 #main {
-  @include rems(margin-top, 78px);
-  @include rems(margin-bottom, 78px);
+  @include px(margin-top, 40px);
 }
 
 // pages
 #recent-posts {
-  @include rems(max-width, 520px);
+  @include px(max-width, 520px);
   border-top: 3px solid $black;
-  @include rems(margin-top, 52px);
+  @include px(margin-top, 52px);
   @include mq(desktop) {
-    @include rems(margin-top, 169px);
-    @include rems(margin-left, 104px);
-    @include rems(padding-top, 26px);
+    @include px(margin-top, 169px);
+    @include px(margin-left, 104px);
+    @include px(padding-top, 26px);
   }
   h3 {
     text-transform: uppercase;
-    @include rems(font-size, 14px);
-    @include rems(margin-bottom, 26px);
+    @include px(font-size, 14px);
+    @include px(margin-bottom, 26px);
   }
 }
 
@@ -78,7 +77,7 @@
     @include px(font-size, 14px);
     text-transform: uppercase;
     position: relative;
-    @include rems(padding-right, 16px);
+    @include px(padding-right, 16px);
     @include px(margin, 8px, 0);
   }
   a {
@@ -123,7 +122,7 @@
 // league overview
 #league-overview {
   // @include px(padding-top, 32px);
-  @include rems(padding-bottom, 32px);
+  @include px(padding-bottom, 32px);
   @include px(margin-bottom, 64px);
 }
 

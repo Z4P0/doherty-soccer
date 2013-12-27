@@ -447,6 +447,7 @@ module.exports = function(grunt) {
 
     grunt.config('jade.modules.files', modules);
     grunt.task.run('jade:modules');
+    grunt.task.run('pages');
   });
 
 
