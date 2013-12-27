@@ -43,7 +43,9 @@
   align-items: flex-end;
   p {margin-bottom: 0;}
   @include px(padding-bottom, 8px);
-  @extend .wrapper;
+  width: 80%;
+  margin: 0 auto;
+
 }
 #league-info {
   @include flex(2);
@@ -133,7 +135,8 @@
   }
 }
 #map-wrapper {
-  @include flex(2);
+  @include flex(4);
+  max-width: 76%;
   position: relative;
 }
 #map {
@@ -157,6 +160,13 @@
 
 #league-history {
   @include px(padding-top, 32px);
+  @include flexbox();
+}
+#history {
+  @include flex(2);
+}
+#league-format {
+  @include flex(1);
 }
 
 #league-extras {
