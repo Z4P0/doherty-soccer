@@ -1,3 +1,5 @@
+include ../../../html/jade-helpers.jade
+
 nav#global-nav
   header
     h1 #{data.siteName}
@@ -14,9 +16,4 @@ nav#global-nav
         else
           a(href="#{data.globalNav[i].link}") #{data.globalNav[i].text}
     - }
-  footer
-    ul#footer-links.inline
-      - for(j=0; j<data.footerLinks.length; j++) {
-        li
-          a(href="#") #{data.footerLinks[j]}
-      - }
+  +partial("global-nav-footer/html/global-nav-footer.jade","modules/global-nav-footer/data/global-nav-footer.json")
