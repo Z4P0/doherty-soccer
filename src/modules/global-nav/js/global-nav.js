@@ -18,6 +18,7 @@ ds.nav = (function() {
     // toggle
     toggle = $(_settings.toggle);
     toggle.click(function() {
+      $(this).toggleClass('show-x');
       nav.toggleClass('nav-show');
     });
 
@@ -47,7 +48,7 @@ ds.nav = (function() {
 })();
 
 ds.nav.init({
-  nav: '#global-nav',
+  nav: '#nav-menu',
   toggle: '#nav-toggle',
   menu: '#nav-menu a',
   search: '#search-field',
