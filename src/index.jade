@@ -3,9 +3,9 @@ include html/jade-helpers.jade
 head
   title Doherty Soccer
   meta(name="description", content="Doherty Soccer - CONCACAF Coverage")
-  include html/head.jade
-  +css("article")
-  +css("global-nav")
+  //- include html/head.jade
+  //- +css("article")
+  //- +css("global-nav")
 
 body#homepage
   a(href="#main", class="assistive-text") Skip to main content
@@ -21,6 +21,28 @@ body#homepage
         section#recent-posts
           h3.t7 Recent Posts
           +partial("article/html/recent-articles.jade","modules/article/data/recent-articles.json")
+          a(href="#") View all articles
+        section#schedule-test
+          h3.t7 Match Calendar
+          form
+            select
+              option(value="all") all
+              optgroup(label="Leagues")
+                option(value="liga-mx") liga-mx
+                option(value="mls") mls
+                option(value="usl-pro") usl-pro
+                option(value="nasl") nasl
+                option(value="usmnt") usmnt
+                option(value="usl-pro") usl-pro
+              optgroup(label="Cups")
+                option(value="us open cup") us open cup
+                option(value="fifa world cup") fifa world cup
+                option(value="concacaf CL") concacaf CL
+                option(value="MX Copa") MX Copa
+          a(href="#") View full calendar
+
+          +partial("league-schedule/html/league-schedule-small.jade","modules/league-schedule/data/league-schedule.json")
+
 
   include html/foot.jade
   +js("article")
