@@ -33,8 +33,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 .t7 {
-  font-size: 1.125em;
+  // font-size: 1.125em;
   display: block;
+  color: $green;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 
