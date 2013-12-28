@@ -2,11 +2,15 @@
 @import "../../../style/pieces/mixins";
 
 .article, .article-post {
-  max-width: 45rem;
+  max-width: 40rem;
+  @include mq(desktop) {
+    width: 90%;
+    // max-width: 45rem;
+  }
   p {
-    @include rems(font-size, 20px);
-    @include rems(line-height, 26px);
-    @include rems(margin-bottom, 26px);
+    @include px(font-size, 20px);
+    @include px(line-height, 26px);
+    @include px(margin-bottom, 26px);
   }
 }
 
@@ -14,10 +18,10 @@
 // ===================================
 .article-title, .article-header {
   font-family: $bold;
-  @include rems(margin-bottom, 13px);
+  @include px(margin-bottom, 13px);
 }
 .article-title {
-  @include rems(font-size, 40px);
+  @include px(font-size, 40px);
   a {
     color: inherit;
     text-decoration: none;
@@ -30,9 +34,9 @@
 .article-meta {
   display: inline-block;
   @include px(font-size, 14px);
-  font-family: $bold;
   color: lighten($black, 35%);
   a {
+    font-family: $bold;
     @include transition(color, 0.3s);
     color: $green;
     &:hover {
@@ -90,22 +94,22 @@
 
 .article-preview {
   .article-title {
-    @include rems(font-size, 16px);
-    @include rems(line-height, 20px);
-    @include rems(margin-top, 0);
-    @include rems(margin-bottom, 3px);
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-top: 0;
+    @include px(margin-bottom, 3px);
   }
   .article-meta {
     color: #808080;
     text-transform: none;
-    @include rems(font-size, 14px);
-    @include rems(padding-bottom, 13px);
+    @include px(font-size, 14px);
+    @include px(padding-bottom, 13px);
   }
   .lead-in {
-    @include rems(font-size, 14px);
-    @include rems(line-height, 22px);
+    @include px(font-size, 14px);
+    @include px(line-height, 22px);
   }
   .read-more {
-    @include rems(font-size, 14px);
+    @include px(font-size, 14px);
   }
 }
