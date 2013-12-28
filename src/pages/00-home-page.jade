@@ -5,24 +5,71 @@ head
   title homepage demo
   meta(name="description", content="homepage demo")
   include ../html/head.jade
-  +css("article")
   +css("global-nav")
+  +css("article")
+  +css("league-schedule")
 
 body#homepage
   a(href="#main", class="assistive-text") Skip to main content
   div.container
     +partial("global-nav/html/global-nav.jade","modules/global-nav/data/global-nav.json")
+    
+    //- main
     section#main
-      //- div.wrapper
-      section#latest-article
-        h3.t7 Latest Article
-      //- latest article preview
-      section#article-preview
-        +partial("article/html/article-preview.jade","modules/article/data/article.json")
-      //- Recent posts
-      section#recent-posts
-        h3.t7 Recent Posts
-        +partial("article/html/recent-articles.jade","modules/article/data/recent-articles.json")
+      //- div#test
+      //-   h2.t7 Latest Post
+      //-     //- title
+      //-     h3.article-title
+      //-       a(href="01-article-page.html") Mexico U-17 Capitalizes on its Chances against Italy
+      //-     //- meta
+      //-     span.article-meta Posted in <a href="#" class="article-category">El Tri</a>
+      //-         span.posted-on October 31, 2013
+
+
+      section#latest-articles
+        //- latest post
+        section#latest-post
+          h2.t7 Latest Post
+          article.article-post
+            //- title
+            h3.article-title
+              a(href="01-article-page.html") Mexico U-17 Capitalizes on its Chances against Italy
+            //- meta
+            span.article-meta Posted in <a href="#" class="article-category">El Tri</a>
+                span.posted-on October 31, 2013
+            
+            //- feature image
+            figure.article-figure
+              a(href="01-article-page.html")
+                img.article-img(src="img/articles/VMB_crop_650.jpg")
+              figcaption Mexico’s U-17 celebrate the game winning goal from Ivan Ochoa. <span class="img-source">Image courtesy of <a href="#">premiumtimesng.com</a></span>
+            //- leadin
+            p.lead-in Mexico’s 2013 U-17 World Cup campaign didn’t get off to the start head coach Raúl ”Potro” Gutiérrez may have wanted, but the team rallied to advance to the knockout stage.
+            a.read-article(href="01-article-page.html") Continue reading
+        
+        //- recent posts
+        section#recent-posts
+          h2.t7 Recent Posts
+          +partial("article/html/recent-articles.jade","modules/article/data/recent-articles.json")
+          a(href="#") View all posts
+
+      //- article categories / view all
+      section#article-categories
+        h2.t7 Article Series
+        ul.article-categories
+          li
+            a(href="#") Soccer In America
+          li
+            a(href="#") US &amp; Mexico
+          li
+            a(href="#") Cuba
+          li
+            a(href="#") View all
+      
+      //- section#concacaf-match-calendar
+        h3.t7 Match Calendar
+        +partial("league-schedule/html/league-schedule-small.jade","modules/league-schedule/data/league-schedule.json")
+
 
   include ../html/foot.jade
   +js("article")
