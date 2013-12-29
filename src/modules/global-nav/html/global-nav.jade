@@ -3,25 +3,24 @@ include ../../../html/jade-helpers.jade
 header#global-header
   h1 
     a(href="00-home-page.html") Doherty Soccer
-  span#nav-toggle
-    i.fi-list(title="Show navigation menu")
-    i.fi-x(title="Close navigation menu")
 
-nav#global-nav
-  ul#nav-menu
-    li
-      a(href="00-home-page.html") Home
-    //- li
-      a(href="#") Sign In
-    li
-      a(href="#") Articles
-    //- li
-      a(href="#") Leagues / Cups
-    //- li
-      a(href="#") Players
-    //- li
-      form#search-field
+  nav#global-nav
+    span#nav-toggle &nbsp;
+      i.fi-list(title="Show navigation menu")
+      i.fi-x(title="Close navigation menu")
+    ul#nav-menu
+      //- li.here
+      //-   a(href="00-home-page.html") Home
+      li.here
+        a(href="#") Articles
+      //- li
+        a(href="#") Competitions
+      //- li
+        a(href="#") Players
+      li
+        a(href="#") Sign In
+      li
+        span#search-text Search
         i.fi-magnifying-glass
-        input(type="text", placeholder="Search")
-
-  //- +partial("global-nav-footer/html/global-nav-footer.jade","modules/global-nav-footer/data/global-nav-footer.json")
+        //- form#search-field
+          input(type="text", placeholder="Search")
