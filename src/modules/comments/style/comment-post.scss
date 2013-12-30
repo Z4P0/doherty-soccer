@@ -2,31 +2,57 @@
 @import "../../../style/pieces/mixins";
 
 .comment {
-  @include rems(max-width, 520px);
-  margin: 0 auto;
-}
-
-.comment-actions {
-  // text-align: right;
-  @include rems(font-size, 14px);
-  li {
-    @include hover();
-    &:after {
-      content: "|";
-      @include rems(padding, 3px);
-    }
-    &:last-child:after {
-      content: "";
-      padding: 0;
+  @include flexbox();
+  i {
+    font-size: 175%;
+    color: $silver;
+    // color: lighten($black, 70%);
+    @include transition(color, 0.3s);
+    &:hover {
+      cursor: pointer;
     }
   }
 }
+.comment-vote {
+  @include flex(1);
+  list-style: none;
+  text-align: center;
+  @include px(max-width, 20px);
+  margin-right: 0.5rem;
+  li {
+    border: none;
+    padding: 0;
+    margin: 0;
+    &:first-child i:hover {color: $green;}
+    &:last-child i:hover {color: $black;}
+  }
+}
+
+.comment-content {
+  @include flex(14);
+}
+
 
 .comment-meta{
-  @include rems(font-size, 14px);
+  color: lighten($black, 30%);
+  @include px(font-size, 14px);
   @include units(margin-bottom, 0.25);
-  img {
-    @include units(margin-right, 0.25);
-    vertical-align: bottom;
+  a {
+    font-family: $bold;
+    color: $green;
+    @include transition(color, 0.3s);
+    &:hover {color: $black;}
+  }
+}
+
+
+
+.comment-actions {
+  color: lighten($black, 25%);
+  @include px(font-size, 12px);
+  li {
+    @include hover();
+    &:after {content: " | ";}
+    &:last-child:after {content: "";}
   }
 }

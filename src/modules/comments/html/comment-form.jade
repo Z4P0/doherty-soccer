@@ -1,19 +1,23 @@
-section#comment-form-wrapper
-  form#comment-form
-    textarea(placeholder="Enter your comment...")
-    div#comment-reveal
-      //- if not LO/NR
-      section#comment-registration
-        ul
-          li
-            input(type="text", placeholder="Email")
-          li
-            input(type="text", placeholder="Name")
+//- section#comment-form-wrapper
+form#comment-form
+  h3.t7 Leave a comment
+  textarea(placeholder="Enter your comment...")
+  div#comment-reveal
+    //- if not LO/NR
+    ul#comment-registration
+      li
+        label
+          h4.t5 Email
+          input(type="text", placeholder="ex. coys@epl.com")
+      li
+        label
+          h4.t5 Username
+          input(type="text", placeholder="ex. mr.levy")
 
-      //- follow updates
-      label#comment-follow
-        input(type="checkbox")
-        | Notify me of replies to my comment
-      //- if logged in
-      div
-        input(type="submit")
+    //- follow updates
+    label#comment-follow
+      input(type="checkbox")
+      | Notify me of replies to my comment
+    //- if logged in
+    div#submit-comment
+      input(type="submit")

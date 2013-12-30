@@ -1,25 +1,43 @@
 @import "../../../style/pieces/vars";
 @import "../../../style/pieces/mixins";
 
-#comment-form-wrapper {
-  // background: tomato;
-  @include rems(max-width, 520px);
-  margin: 0 auto;
-  @include units(padding, 1, 0);
+#comment-form {
+  margin-bottom: $unit;
+  .t7 {
+    margin-bottom: 0.25rem;
+    @include mq(netbook) {
+      margin-bottom: 1rem;
+    }
+  }
+  .t5 {
+    font-size: 0.9rem;
+    color: $black;
+  }
   ul {
     list-style-type: none;
     margin: 0;
   }
-}
-#comment-form {
-  // background: green;
-}
-textarea {
-  width: 100%;
-  @include rems(font-size, 14px);
-  @include units(padding, 0.25);
-  @include transition(min-height, 0.3s);
-  &:focus {
-    @include rems(min-height, 130px);
+  li, textarea {margin-bottom: 0.75rem;}
+  textarea, input[type="text"] {@include px(font-size, 14px);}
+  textarea {
+    width: 100%;
+    @include units(padding, 0.25);
+    @include transition(min-height, 0.3s);
+    &:focus {@include px(min-height, 130px);}
   }
+  input[type="text"] {
+    min-height: 1.875rem;
+    width: 100%;
+    padding-left: 0.25rem;
+    margin-bottom: 0;
+  }
+}
+#comment-follow {
+  font-size: 0.75rem;
+  input {margin-right: 0.5rem;}
+}
+#submit-comment {
+  input{margin:0;}
+  padding-bottom: 1rem;
+  border-bottom: 1px solid darken($silver, 10%);
 }

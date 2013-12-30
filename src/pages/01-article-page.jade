@@ -10,15 +10,169 @@ head
   +css("comment-form")
   +css("comment-post")
 
-body
+body#article-post
   a(href="#main", class="assistive-text") Skip to main content
   div.container
     +partial("global-nav/html/global-nav.jade","modules/global-nav/data/global-nav.json")
     section#main
-      //- div.wrapper
+      //- article
       +partial("article/html/article.jade","modules/article/data/article.json")
-      +partial("comments/html/comment-form.jade","modules/comments/data/comment-form.json")
-      +partial("comments/html/comment-post.jade","modules/comments/data/comment-post.json")
+      
+      //- tags
+      section#article-tags
+        //- players
+        h3.t7 Featured Players
+        ul.article-tags
+          li
+            a(href="#") Alejandro Díaz
+          li
+            a(href="#") Christian Tovar
+          li
+            a(href="#") Erick Aguirre
+          li
+            a(href="#") Iván Ochoa
+          li
+            a(href="#") José Robles
+          li
+            a(href="#") Luis Hernández
+          li
+            a(href="#") Marco Granados
+          li
+            a(href="#") Omar Govea
+          li
+            a(href="#") Osvaldo Rodríguez
+          li
+            a(href="#") Pedro Terán
+          li
+            a(href="#") Raúl Gudiño
+          li
+            a(href="#") Salomón Wbias
+          li
+            a(href="#") Ulises Jaimes
+          li
+            a(href="#") Ulises Rivas
+        h3.t7 Key People
+        ul.article-tags
+          li
+            a(href="#") Raúl "Potro" Gutiérrez
+        h3.t7 Tags
+        ul.article-tags
+          li
+            a(href="") 2013 FIFA U-17 World Cup
+          li
+            a(href="#") Italy U-17
+          li
+            a(href="#") Mexico sub-17
+          li
+            a(href="#") Mexico u-17
+
+      //- recommend + share
+      section#share-article
+        h3.t7 Recommend
+        ul.share-article
+          li
+            i.fi-social-facebook
+          li
+            i.fi-social-google-plus
+          li
+            i.fi-social-reddit
+          li
+            i.fi-social-stumbleupon
+          li
+            i.fi-social-tumblr
+          li
+            i.fi-social-twitter
+
+      //- 
+      div.flex
+        //- next read
+        section#next-article
+          h3.t7 Next post
+          article.article-post
+            h4.article-title
+              a(href="#") Tottenham Hotspur and US U17 Team Highlight 2013 IMG Invitational Tournament
+            p.lead-in I try to keep abreast of important international club tournament and this week a somewhat minor competition caught my eye.
+            a(href="#").read-article Read more
+        
+        //- related articles
+        section#related-articles
+          h3.t7 Related articles
+          ul.related-articles
+            li
+              article.article-preview
+                h4.article-title
+                  a(href="#") Sub-17 Copa Independencia 2012 and the Generation Adidas Cup
+            li
+              article.article-preview
+                h4.article-title
+                  a(href="#") USDA's u14 division and UEFA's Youth League
+            li
+              article.article-preview
+                h4.article-title
+                  a(href="#") U.S. U-18 Team in Lisbon International Tournament
+
+
+        
+      //- comments list
+      section#comments
+        div.flex
+          //- comment form
+          +partial("comments/html/comment-form.jade","modules/comments/data/comment-form.json")
+
+          //- list of comments
+          div#comments-list
+            h3.t7 Comments
+            ul.comments-list
+              li
+                +partial("comments/html/comment-post.jade","modules/comments/data/comment-post.json")
+              li
+                +partial("comments/html/comment-post.jade","modules/comments/data/comment-post-2.json")
+              li
+                +partial("comments/html/comment-post.jade","modules/comments/data/comment-post-3.json")
+
+    //- footer
+    footer#global-footer
+      //- article categories / view all
+      section#site-content
+        h2.t7 Article Series
+        ul.article-categories
+          li
+            a(href="#") Soccer In America
+          li
+            a(href="#") US &amp; Mexico
+          li
+            a(href="#") Cuba
+          li
+            a(href="#") View all
+
+      //- social media
+      section#social-media
+        h3.t7 Follow
+        ul.social-links
+          li
+            a(href="#")
+              i.fi-social-facebook
+          li
+            a(href="#")
+              i.fi-social-twitter
+          li
+            a(href="#")
+              i.fi-mail
+      
+      //- site details
+      section#site-details        
+        ul#extra-details
+          li
+            h3
+              a(href="#") About
+          li
+            h3
+              a(href="#") Privacy
+          li
+            h3
+              a(href="#") Settings
+        h3#copyright Doherty Soccer &copy; 2013
+
 
   include ../html/foot.jade
   +js("article")

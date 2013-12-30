@@ -1,9 +1,14 @@
-article.comment
-  section.comment-meta
-    img(src="http://lorempixel.com/26/26", alt="dummy", width="26", height="26")
-    <a href="#">#{data.commentAuthor}</a> on #{data.postDate} at #{data.postTime}
-  p.comment-text #{data.comment}
-  section.comment-actions
-    ul.inline
-      li.comment-reply Reply
-      li.comment-upvote [+]
+div.comment
+	//- upvote/downvote
+	ul.comment-vote
+		li
+			i.fi-arrow-up
+		li
+			i.fi-arrow-down
+	//- the comment
+	article.comment-content
+		h4.comment-meta <a href="#">#{data.commentAuthor}</a> on #{data.postDate} at #{data.postTime}
+		p.comment-text #{data.comment}
+		ul.inline.comment-actions
+			li reply
+			li report
