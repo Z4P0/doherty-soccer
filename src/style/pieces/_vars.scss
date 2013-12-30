@@ -1,8 +1,11 @@
+$unit: 1.625rem;
+
 $white: lighten(#ebebeb, 3%);
 $black: #2f2f2f;
 $black2: #1e1c1a;
 $brown: #c7b593;
 $green: darken(#20CAA0, 10%);
+$silver: lighten($black, 70%);
 
 $regular: 'fontin_sans_rgregular';
 $bold: 'fontin_sans_rgbold';
