@@ -19,6 +19,12 @@
   max-width: 1420px;
   margin: 0 auto;
 }
+// div.flex
+div.flex {
+  @include mq(netbook) {
+    @include flexbox();
+  }
+}
 
 
 // homepage
@@ -41,6 +47,9 @@
     }
     @include mq(desktop) {
       @include flex(4);
+      .article-post {
+        width: 90%;
+      }
     }
   }
 
@@ -84,6 +93,11 @@
     margin: 0 5% 3rem;
     @include mq(netbook) {margin: 0 10%;}
   }
+  .article-title {
+    @include mq(desktop) {
+      @include px(font-size, 60px);
+    }
+  }
   .article-meta {margin-bottom: 1rem;}
   .comments-list {margin-bottom: 2rem;}
 }
@@ -103,9 +117,7 @@
 
   // tags (players, tags)
   // ===================================
-  #article-tags {
-    padding-top: 1.5rem;
-  }
+  #article-tags {padding-top: 1.5rem;}
   .article-tags {
     list-style: none;
     margin-bottom: 1rem;
@@ -143,12 +155,7 @@
 
 
 
-  // div.flex
-  div.flex {
-    @include mq(netbook) {
-      @include flexbox();
-    }
-  }
+
 
 
   // common styles (next article + related articles)
@@ -156,7 +163,6 @@
   #next-article, #related-articles {
     padding: 1.5rem 5% 5%;
     @include mq(netbook) {padding-bottom: 3%;}
-    // @include mq(desktop) {padding-bottom: 1%;}
     .t7{
       margin-bottom: 0.5rem;
       color: $black2;

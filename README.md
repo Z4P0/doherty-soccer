@@ -1,10 +1,12 @@
 # Doherty Soccer
 front-end build
 
-show "article categories" page
-show "article series" page
-finish article styles
-- basic "bare-bones" (assume no pictures, just text)
+
+
+show "article categories/series" page
+
+
+
 
 nav todo:
 search
