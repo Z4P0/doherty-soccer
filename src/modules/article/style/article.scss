@@ -9,14 +9,14 @@
     @include px(font-size, 22px);
     line-height: 1.3;
     @include mq (netbook) {@include px(font-size, 24px);}
-    @include mq (desktop) {@include px(font-size, 26px);}
+    // @include mq (desktop) {@include px(font-size, 26px);}
   }
   p {
     @include px(font-size, 20px);
     line-height: 1.4;
     @include px(margin-bottom, 26px);
-    @include mq(netbook) {@include px(font-size, 22px);}
-    @include mq(desktop) {@include px(font-size, 24px);}
+    // @include mq(netbook) {@include px(font-size, 22px);}
+    // @include mq(desktop) {@include px(font-size, 24px);}
   }
 }
 
@@ -32,12 +32,12 @@
   @include mq(tablet) {
     @include px(font-size, 45px);
   }
-  @include mq(netbook) {
-    @include px(font-size, 50px);
-  }
-  @include mq(desktop) {
-    @include px(font-size, 55px);
-  }  
+  // @include mq(netbook) {
+  //   @include px(font-size, 50px);
+  // }
+  // @include mq(desktop) {
+  //   @include px(font-size, 55px);
+  // }  
   a {
     color: inherit;
     text-decoration: none;
@@ -47,7 +47,7 @@
   @include px(font-size, 22px);
   margin-top: 2.25rem;
   @include mq(netbook) {@include px(font-size, 24px);}
-  @include mq(desktop) {@include px(font-size, 26px);}
+  // @include mq(desktop) {@include px(font-size, 26px);}
 }
 
 

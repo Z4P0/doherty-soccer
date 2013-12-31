@@ -1,6 +1,5 @@
 @import "../../../style/pieces/vars";
 @import "../../../style/pieces/mixins";
-@import "../../global-nav-footer/style/global-nav-footer";
 
 $nav-border: #4d4d4d;
 
@@ -99,7 +98,7 @@ $nav-border: #4d4d4d;
   height: 0;
   position: fixed;
   left: 0;
-  top: 2.5rem;
+  top: 2.75rem;
   width: 100%;
   z-index: 50;
 

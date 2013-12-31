@@ -2,19 +2,22 @@ include ../html/jade-helpers.jade
 !!! 5
 
 head
-  title article demo
-  meta(name="description", content="article demo")
+  title Mexico U-17 Capitalizes on its Chances against Italy | Doherty Soccer
+  meta(name="description", content="Mexico U-17 Capitalizes on its Chances against Italy")
   include ../html/head.jade
   +css("article")
-  +css("global-nav")
+  +css("global-header")
+  +css("global-footer")
   +css("comment-form")
   +css("comment-post")
 
 body#article-post
   a(href="#main", class="assistive-text") Skip to main content
   div.container
-    +partial("global-nav/html/global-nav.jade","modules/global-nav/data/global-nav.json")
-    section#main
+    //- header
+    include ../modules/global-header/html/global-header.jade
+
+    div#main
       //- article
       +partial("article/html/article.jade","modules/article/data/article.json")
       
@@ -131,52 +134,11 @@ body#article-post
                 +partial("comments/html/comment-post.jade","modules/comments/data/comment-post-3.json")
 
     //- footer
-    footer#global-footer
-      //- article categories / view all
-      section#site-content
-        h2.t7 Article Series
-        ul.article-categories
-          li
-            a(href="#") Soccer In America
-          li
-            a(href="#") US &amp; Mexico
-          li
-            a(href="#") Cuba
-          li
-            a(href="#") View all
-
-      //- social media
-      section#social-media
-        h3.t7 Follow
-        ul.social-links
-          li
-            a(href="#")
-              i.fi-social-facebook
-          li
-            a(href="#")
-              i.fi-social-twitter
-          li
-            a(href="#")
-              i.fi-mail
-      
-      //- site details
-      section#site-details        
-        ul#extra-details
-          li
-            h3
-              a(href="#") About
-          li
-            h3
-              a(href="#") Privacy
-          li
-            h3
-              a(href="#") Settings
-        h3#copyright Doherty Soccer &copy; 2013
-
+    include ../modules/global-footer/html/global-footer.jade
 
   include ../html/foot.jade
   +js("article")
-  +js("global-nav")
+  +js("global-header")
   +js("comment-form")
   +js("comment-post")
 </html>
