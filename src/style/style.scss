@@ -25,9 +25,12 @@ div.flex {
     @include flexbox();
   }
 }
-
+div.flex-all {
+  @include flexbox();
+}
 
 // homepage
+// ===================================
 // ===================================
 #latest-articles {
   @include mq(netbook) {
@@ -37,9 +40,7 @@ div.flex {
 #latest-post {
     margin: 0 5% 3rem;
     @include transition(margin, 0.3s);
-    .article-meta {
-      margin-bottom: 1rem;
-    }
+    .article-meta {margin-bottom: 1rem;}
     @include mq(netbook) {
       @include flex(3);
       margin-right: 0;
@@ -47,9 +48,7 @@ div.flex {
     }
     @include mq(desktop) {
       @include flex(4);
-      .article-post {
-        width: 90%;
-      }
+      .article-post {width: 90%;}
     }
   }
 
@@ -64,9 +63,7 @@ div.flex {
       margin-bottom: 0;
       margin-right: 10%;
     }
-    @include mq(desktop) {
-      margin-left: 0;
-    }
+    @include mq(desktop) {margin-left: 0;}
   }
   .recent-articles {
     list-style-type: none;
@@ -74,11 +71,168 @@ div.flex {
     li {
       @include rems(margin-bottom, 26px);
       border-bottom: 1px solid lighten($black, 75%);
-      // &:last-child {
-      //   border: none;
-      // }
     }
   }
+
+
+
+
+
+// articles index page
+// ===================================
+// ===================================
+#all-articles-header {
+  margin: 0 5% 0.5rem;
+  @include mq(netbook) {margin: 0 10% 1rem;}
+}
+
+#all-topics-toggle {
+  color: $silver;
+  text-align: right;
+  position: relative;
+  span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    @include transition(opacity, 0.3s);
+    &:after {
+      font-family: "foundation-icons";
+      margin-left: 0.5rem;
+      font-size: 125%;
+      vertical-align: middle;        
+    }
+    @include hover();
+  }
+  .expand {
+    opacity: 1;
+    z-index: 305;
+    margin-right: 20%;
+    &:after {
+      content: "\f198";
+      position: absolute;
+      transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+    }
+  }
+  .collapse {
+    opacity: 0;
+    z-index: 300;
+    &:after {content: "\f176";}
+  }
+  @include flex(1);
+  // when clicked, add class="show-collapse"
+  &.show-collapse {
+    .expand {
+      z-index: 300;
+      opacity: 0;
+    }
+    .collapse {
+      z-index: 305;
+      opacity: 1;
+    }
+  }
+  // media queries
+  @include mq(netbook) {display: none;}
+}
+
+#all-topics-wrapper {
+  @include mq(netbook) {
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    div {
+      @include flex(1);
+      padding-right: 5%;
+      &:last-child {padding-right: 0;}
+    }
+  }
+}
+#article-topics {
+  background: $green;
+  padding: 2.5rem 5% 0.5rem;
+  margin-bottom: 2.5rem;
+  @include mq(netbook) {padding: 2.5rem 10% 1rem;}
+  @include transition(height, 0.3s);
+  .t7 {
+    color: $white;
+    margin-bottom: 1rem;
+    @include flex(2);
+  }
+  .t3 {
+    font-size: 0.95rem;
+    color: $black;
+    font-family: $bold;
+    letter-spacing: 0.5px;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid $silver;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.topics-list {
+  list-style: none;
+  margin-bottom: 1.75rem;
+  font-size: 0.875rem;
+  @include mq(netbook) {
+    font-size: 1rem;
+  }
+  li {
+    margin-bottom: 0.75rem;
+    color: $silver;
+    @include transition(color, 0.2s);
+    &:hover {color: $white;}
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+#published-articles {
+  margin: 0 5%;
+  @include mq(netbook) {margin: 0 10%;}
+  .t7 {margin-bottom: 0.5rem;}
+  .article-title {
+    font-size: 1.5rem;
+    @include mq(netbook) {font-size: 1.75rem;}
+  }
+  .lead-in {
+    font-size: 1rem;
+    line-height: 1.4;
+    @include mq(netbook) {font-size: 1.15rem;}
+  }
+  .read-article {font-size: 0.875rem;}
+}
+.published-articles {
+  max-width: 38rem;  
+  list-style: none;
+  li {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $silver;
+    margin-bottom: 1.25rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -93,11 +247,11 @@ div.flex {
     margin: 0 5% 3rem;
     @include mq(netbook) {margin: 0 10%;}
   }
-  .article-title {
-    @include mq(desktop) {
-      @include px(font-size, 60px);
-    }
-  }
+  // .article-title {
+  //   @include mq(desktop) {
+  //     @include px(font-size, 60px);
+  //   }
+  // }
   .article-meta {margin-bottom: 1rem;}
   .comments-list {margin-bottom: 2rem;}
 }
@@ -273,177 +427,9 @@ div.flex {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// global footer
-// ===================================
-#global-footer {
-    background: $green;
-    padding: 5% 0 0;
-    .t7 {
-      color: $white;
-      margin: 0 5% 0.75rem;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-  }
-
-
-  // article categories
-  #site-content {
-    margin-bottom: 2rem;
-    .t7 {
-      color: $white;
-      margin: 0 5% 0.75rem;
-      @include mq(netbook) {
-        margin-left: 10%;
-      }
-    }
-  }
-  .article-categories {
-    margin: 0 5%;
-    list-style: none;
-    @include mq(netbook) {
-      margin-left: 10%;
-    }
-    li {
-      text-transform: uppercase;
-      display: inline-block;
-      margin-bottom: 2%;
-      @include transition(color, 0.3s);
-      &:after {
-        content: " - ";
-        margin-right: 2%;
-      }
-      &:last-child:after {
-        content: "";
-      }
-      &:hover {
-        color: $white;
-        &:after {
-          color: $black;
-        }
-      }
-    }
-  }
-
-  // social media
-  #social-media {
-    background: $black2;
-    color: $green;
-    padding: 2rem 0 0.75rem;
-    .t7 {
-      @include mq(netbook) {margin-left: 10%;}
-    }
-  }
-  .social-links {
-    margin-left: 5%;
-    list-style: none;
-    @include mq(netbook) {margin-left: 10%;}
-    li {
-      display: inline-block;
-      margin-right: 0.75rem;
-    }
-    i {
-      font-size: 200%;
-      @include transition(color, 0.3s);
-      &:hover {
-        color: $white;
-      }
-    }
-  }
-
-  // footer
-  #site-details {
-    background: darken($black2, 3%);
-    color: darken($white, 50%);
-    font-size: 0.75rem;
-    padding: 0.5rem 0;
-    @include flexbox();
-  }
-
-  // about - privacy - settings
-  #extra-details {
-    @include flex(3);
-    font-size: 0.6rem;
-    letter-spacing: 0.5px;
-    margin-left: 5%;
-    @include mq(netbook) {margin-left: 10%;}
-    li {
-      display: inline-block;
-      margin-right: 1.5%;
-      @include transition(color, 0.3s);
-      &:hover {
-        color: $white;
-      }
-      @include mq(tablet) {
-        margin-right: 0.75rem;
-      }
-    }
-  }
-  #copyright {
-    @include flex(3);
-    text-align: right;
-    margin-right: 5%;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
-    @include mq(netbook) {margin-right: 10%;}
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #concacaf-match-calendar {
   margin: 0 5% 3rem;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

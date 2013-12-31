@@ -4,12 +4,29 @@ var ds = {}; //global var
 
 //wait until main document is loaded
 window.addEventListener('load',function(){
-	ds.league_overview.init();
 	
-	// set up navigation
-	ds.league_nav.init({
-		menu: $('#league-menu-options')
-	});
+	// collapse certain things
+	if ($('#all-topics-wrapper').length) {
+		$('#all-topics-wrapper').toggle();
+		$('#all-topics-toggle').on('click', function() {
+			$(this).toggleClass('show-collapse');
+			$('#all-topics-wrapper').toggle();
+		})
+	}
+
+
+
+	// league overview
+	// ===================================
+	if ($('#league-overview').length) {
+		ds.league_overview.init();
+		
+		// set up navigation
+		ds.league_nav.init({
+			menu: $('#league-menu-options')
+		});
+	}
+
 });
 
 
