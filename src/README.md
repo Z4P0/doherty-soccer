@@ -1,6 +1,17 @@
 ## Source-code
 
 
+today:
+
+
+/articles
+the articles ndex page
+===================================
+load more on articles page
+search on articles page
+
+
+
 #### folder structure
 - modules
   each part of the site is broken down into contained pieces
