@@ -8,8 +8,8 @@ class Article(models.Model):
 	preview = models.TextField()
 	published_date = models.DateTimeField(auto_now_add=True)
 	updated_date = models.DateTimeField(auto_now_add=True)
-	category = models.ForeignKey(Category)
-	series = models.ForeignKey(Series)
+	category = models.ForeignKey('article.Category')
+	series = models.ForeignKey('article.Series')
 	# tags = models.ManyTo
 	# key people
 	# author = models.CharField(max_length=100, default="Brendan")
