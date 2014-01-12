@@ -4,3 +4,6 @@ make sure you have a virtualenv setup
 2. wget "virtualenv url from github"
 3. set up a virtualenv called django-virtualenv
 	 "python virtualenv.py django-virtualenv"
+
+to learn:
+- make fields optional
