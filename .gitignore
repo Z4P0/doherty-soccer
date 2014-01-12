@@ -1,2 +1,4 @@
-build/
+build/debug
+build/deploy/django-virtualenv
+build/deploy/db.sqlite3
 docs/
