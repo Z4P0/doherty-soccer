@@ -10,7 +10,7 @@ class Article(models.Model):
 	updated_date = models.DateTimeField(auto_now_add=True)
 	category = models.ForeignKey('article.Category')
 	series = models.ForeignKey('article.Series')
-	# tags = models.ManyToMany?
+	tags = models.ManyToManyField('article.Tag')
 	# key people
 	# author = models.CharField(max_length=100, default="Brendan")
 	# ----------------------------
