@@ -2,13 +2,15 @@
 
 
 today:
+article category/series index
+
 
 
 /articles
 the articles ndex page
 ===================================
-load more on articles page
-search on articles page
+"load more" on articles page
+"search" on articles page
 
 
 

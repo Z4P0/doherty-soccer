@@ -4,12 +4,10 @@ ul.recent-articles
     article.article-preview
       //- title
       h2.article-title
-        a(href="#") #{data[i].title}
+        a(href="01-article-page.html") #{data[i].title}
       //- meta
-      span.article-meta Posted in <a href="#" class="article-category">#{data[i].postMeta.category}</a>
+      span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">#{data[i].postMeta.category}</a>
           span.posted-on #{data[i].postMeta.date}
-      //- leadin
-      //- p.lead-in #{data[i].leadIn}
       p
-        a(href="#").read-more Read more
+        a(href="01-article-page.html").read-more Read more
   - }
