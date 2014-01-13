@@ -1,0 +1,71 @@
+<section id="all-articles">
+  <h2 id="all-articles-header" class="t7">All Articles</h2>
+  <section id="article-topics">
+    <div class="flex-all">
+      <h3 class="t7">All Topics</h3><span id="all-topics-toggle" class="toggle"><span class="expand">Expand</span><span class="collapse">Collapse</span></span>
+    </div>
+    <div id="all-topics-wrapper">
+      <div>
+        <h4 class="t3">Clubs</h4>
+        <ul class="topics-list">
+          <li><a href="01-article-category-series.html">Club America</a></li>
+          <li><a href="01-article-category-series.html">FC Buffalo</a></li>
+          <li><a href="01-article-category-series.html">New York Red Bulls</a></li>
+          <li><a href="01-article-category-series.html">Rochester Rhinos</a></li>
+          <li><a href="01-article-category-series.html">Tottenham Hotspur</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="t3">US</h4>
+        <ul class="topics-list">
+          <li><a href="01-article-category-series.html">MLS</a></li>
+          <li><a href="01-article-category-series.html">NASL</a></li>
+          <li><a href="01-article-category-series.html">U.S. Open Cup</a></li>
+          <li><a href="01-article-category-series.html">USL-Pro</a></li>
+          <li><a href="01-article-category-series.html">USMNT</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="t3">MX</h4>
+        <ul class="topics-list">
+          <li><a href="01-article-category-series.html">Ascenso MX</a></li>
+          <li><a href="01-article-category-series.html">Liga MX</a></li>
+          <li><a href="01-article-category-series.html">El Tri</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="t3">Series</h4>
+        <ul class="topics-list">
+          <li><a href="01-article-category-series.html">Soccer In America</a></li>
+          <li><a href="01-article-category-series.html">College Soccer</a></li>
+          <li><a href="01-article-category-series.html">Cuba!</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="t3">Other</h4>
+        <ul class="topics-list">
+          <li><a href="01-article-category-series.html">Match Highlights</a></li>
+          <li><a href="01-article-category-series.html">Match Preview</a></li>
+          <li><a href="01-article-category-series.html">Match Report</a></li>
+          <li><a href="01-article-category-series.html">Weekly Wrap-Up</a></li>
+          <li><a href="01-article-category-series.html">Attendances</a></li>
+          <li><a href="01-article-category-series.html">Important Other Stuff</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section id="published-articles">
+    <h3 class="t7">Published Articles</h3>
+    <ul class="published-articles">
+      {% for article in published_articles %}
+      <li>
+        <article class="article-preview">
+          <h4 class="article-title"><a href="{% url 'article' article.slug %}">{{article.title}}</a></h4>
+          <span class="article-meta">Posted in <a href="{% url 'article_category' article.category|slugify %}" class="article-category">{{article.category}}</a><span class="posted-on">December 30, 2013</span></span>
+          <p class="lead-in">{{article.leadin}}</p><a href="{% url 'article' article.slug %}" class="read-article">Read more</a>
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</section>
