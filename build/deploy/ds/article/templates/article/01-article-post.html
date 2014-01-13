@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }} | {% endblock %}
+
+{% block content %}
+<article class="article-post">
+  <h2 class="article-title">{{article.title}}</h2><span class="article-meta">Posted in <a href="{% url 'article:article_category' article.category|slugify%}" class="article-category">{{article.category}}</a><span class="posted-on">October 31, 2013</span></span>
+  {{article.content|safe}}
+</article>
+{% endblock %}
