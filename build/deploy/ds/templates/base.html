@@ -1,6 +1,7 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <head>
-  <title>{% block title%}{% endblock %}Doherty Soccer</title>
+  <title>{% if title %}{% block title%}{% endblock %}{% endif %}Doherty Soccer</title>
   <meta name="description" content="homepage demo">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -8,12 +9,15 @@
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="apple-touch-icon" href="img/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png"><!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="{{ STATIC_ROOT }}js/libs/modernizr.js"></script>
-  <link rel="stylesheet" href="{{ STATIC_ROOT }}style/style.css">
-    <link rel="stylesheet" href="{{ STATIC_ROOT }}style/modules/global-header.css">
-    <link rel="stylesheet" href="{{ STATIC_ROOT }}style/modules/global-footer.css">
-    <link rel="stylesheet" href="{{ STATIC_ROOT }}style/modules/article.css">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+  <!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="{% static 'js/libs/modernizr.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'style/style.css' %}">
+  <link rel="stylesheet" href="{% static 'style/modules/global-header.css' %}">
+  <link rel="stylesheet" href="{% static 'style/modules/global-footer.css' %}">
+  {% if css %}
+  {% block css %}{% endblock %}
+  {% endif %}
 </head>
 <body id="homepage"><a href="#main" class="assistive-text">Skip to main content</a>
   <div class="container">
@@ -66,9 +70,6 @@
       </section>
     </footer>
   </div>
-  <!-- this is where we load all the JS-->
-  <script src="js/libs/jquery.js"></script>
-  <script src="js/main.js"></script>
-      <script src="js/modules/article.js"></script>
-      <script src="js/modules/global-header.js"></script>
+  <script src="{% static 'js/libs/jquery.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 </body></html>

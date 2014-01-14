@@ -1,3 +1,16 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- {% block title %}{{ title }} | {% endblock %} -->
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'article/article.css' %}">
+{% endblock %}
+
+
+{% block content %}
+{# <link rel="stylesheet" href="{% static 'article/article.css' %}"> #}
+
 <section id="all-articles">
   <h2 id="all-articles-header" class="t7">All Articles</h2>
   <section id="article-topics">
@@ -54,6 +67,7 @@
       </div>
     </div>
   </section>
+
   <section id="published-articles">
     <h3 class="t7">Published Articles</h3>
     <ul class="published-articles">
@@ -69,3 +83,4 @@
     </ul>
   </section>
 </section>
+{% endblock %}
