@@ -1,4 +1,5 @@
 build/debug
 build/deploy/django-virtualenv
 build/deploy/db.sqlite3
+build/deploy/ds/ds/secret.py
 docs/
