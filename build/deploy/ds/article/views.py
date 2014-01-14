@@ -6,8 +6,12 @@ from django.http import HttpResponse
 def index(request):
 	published_articles = Article.objects.all()[:10]
 	categories = Category.objects.all()
+	series = Series.objects.all()
+	title = 'Articles'
 	return render_to_response('article/01-articles.html', {
+		'title': title,
 		'categories': categories,
+		'series': series,
 		'published_articles': published_articles,
 		})
 
