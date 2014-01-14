@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-<!-- {% block title %}{{ title }} | {% endblock %} -->
 
-{% block css %}
-<link rel="stylesheet" href="{% static 'article/article.css' %}">
-{% endblock %}
+{% block title %}{{ title }} | {% endblock %}
+{% block description %}{{description}} | {% endblock %}
+
+
+{% block css %}<link rel="stylesheet" href="{% static 'article/article.css' %}">{% endblock %}
 
 
 {% block content %}
-{# <link rel="stylesheet" href="{% static 'article/article.css' %}"> #}
-
 <section id="all-articles">
   <h2 id="all-articles-header" class="t7">All Articles</h2>
   <section id="article-topics">

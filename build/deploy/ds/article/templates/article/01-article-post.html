@@ -1,9 +1,146 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+
+{% block page_id %}article-post{% endblock %}
 {% block title %}{{ article.title }} | {% endblock %}
+{% block description %} {{article.title}} - {{ article.leadin}} | {% endblock %}
+
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'article/article.css' %}">
+<link rel="stylesheet" href="{% static 'style/modules/comment-form.css' %}">
+<link rel="stylesheet" href="{% static 'style/modules/comment-post.css' %}">
+{% endblock %}
+
+
 
 {% block content %}
 <article class="article-post">
   <h2 class="article-title">{{article.title}}</h2><span class="article-meta">Posted in <a href="{% url 'article:article_category' article.category|slugify%}" class="article-category">{{article.category}}</a><span class="posted-on">October 31, 2013</span></span>
   {{article.content|safe}}
 </article>
+<section id="article-tags">
+  <h3 class="t7">Tags</h3>
+  <ul class="article-tags">
+    {% for tag in article.tags.all %}<li><a href="{% url 'article:article_tag' tag.slug %}">{{tag.title}}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+<section id="share-article">
+  <h3 class="t7">Recommend</h3>
+  <ul class="share-article">
+    <li><i class="fi-social-facebook"></i></li>
+    <li><i class="fi-social-google-plus"></i></li>
+    <li><i class="fi-social-reddit"></i></li>
+    <li><i class="fi-social-stumbleupon"></i></li>
+    <li><i class="fi-social-tumblr"></i></li>
+    <li><i class="fi-social-twitter"></i></li>
+  </ul>
+</section>
+<div class="flex">
+  <section id="next-article">
+    <h3 class="t7">Next post</h3>
+    <article class="article-post">
+      <h4 class="article-title"><a href="{% url 'article:article' next_article.slug %}">{{next_article.title}}</a></h4>
+      <p class="lead-in">{{next_article.leadin}}</p>
+      <a href="{% url 'article:article' next_article.slug %}" class="read-article">Read more</a>
+    </article>
+  </section>
+  <section id="related-articles">
+    <h3 class="t7">Related articles</h3>
+    <ul class="related-articles">
+      {% for related in related_articles %}
+      <li>
+        <article class="article-preview">
+          <h4 class="article-title"><a href="{% url 'article:article' related.slug %}">{{related.title}}</a></h4>
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+<section id="comments">
+  <div class="flex">
+    <form id="comment-form">
+      <h3 class="t7">Leave a comment</h3>
+      <textarea placeholder="Enter your comment..."></textarea>
+      <div id="comment-reveal">
+        <ul id="comment-registration">
+          <li>
+            <label>
+              <h4 class="t5">Email</h4>
+              <input type="text" placeholder="ex. coys@epl.com"/>
+            </label>
+          </li>
+          <li>
+            <label>
+              <h4 class="t5">Username</h4>
+              <input type="text" placeholder="ex. mr.levy"/>
+            </label>
+          </li>
+        </ul>
+        <label id="comment-follow">
+          <input type="checkbox"/>Notify me of replies to my comment
+        </label>
+        <div id="submit-comment">
+          <input type="submit" value="Submit"/>
+        </div>
+      </div>
+    </form>
+    <div id="comments-list">
+      <h3 class="t7">Comments</h3>
+      <ul class="comments-list">
+        <li>
+          <div class="comment">
+            <ul class="comment-vote">
+              <li><i class="fi-arrow-up"></i></li>
+              <li><i class="fi-arrow-down"></i></li>
+            </ul>
+            <article class="comment-content">
+              <h4 class="comment-meta"><a href="#">Tim Sass</a> on October 29, 2013 at 4:04 pm</h4>
+              <p class="comment-text">This is a really good decision from USL. It’s going to make things much better organized for upward movement of players.</p>
+              <ul class="inline comment-actions">
+                <li>reply</li>
+                <li>report</li>
+              </ul>
+            </article>
+          </div>
+        </li>
+        <li>
+          <div class="comment">
+            <ul class="comment-vote">
+              <li><i class="fi-arrow-up"></i></li>
+              <li><i class="fi-arrow-down"></i></li>
+            </ul>
+            <article class="comment-content">
+              <h4 class="comment-meta"><a href="#">count_duku</a> on December 30, 2013 at 6:25 am</h4>
+              <p class="comment-text">one of the comments I saw on /r/gonewild the other day: hey do you like fitness? because you can try fitness dick in yo mouth</p>
+              <ul class="inline comment-actions">
+                <li>reply</li>
+                <li>report</li>
+              </ul>
+            </article>
+          </div>
+        </li>
+        <li>
+          <div class="comment">
+            <ul class="comment-vote">
+              <li><i class="fi-arrow-up"></i></li>
+              <li><i class="fi-arrow-down"></i></li>
+            </ul>
+            <article class="comment-content">
+              <h4 class="comment-meta"><a href="#">High-on-potenuse</a> on December 29, 2013 at 11:25 am</h4>
+              <p class="comment-text">I was hanging out with my friend on the beach, smoking. We found some cool huts made out of bamboo and palm leaves. As we were chilling in one of them I said &quot;This place is really cool, we should totally come and hang out here.&quot; He replied &quot;We are.&quot;Blew my mind.</p>
+              <ul class="inline comment-actions">
+                <li>reply</li>
+                <li>report</li>
+              </ul>
+            </article>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 {% endblock %}
