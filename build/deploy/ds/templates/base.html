@@ -1,8 +1,7 @@
-{% load staticfiles %}
-<!DOCTYPE html>
+{% load staticfiles %}<!DOCTYPE html>
 <head>
-  <title>{% if title %}{% block title%}{% endblock %}{% endif %}Doherty Soccer</title>
-  <meta name="description" content="homepage demo">
+  <title>{% block title%}{% endblock %}Doherty Soccer</title>
+  <meta name="description" content="{% block description %}{% endblock %}Doherty Soccer (DS)">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -15,11 +14,10 @@
   <link rel="stylesheet" href="{% static 'style/style.css' %}">
   <link rel="stylesheet" href="{% static 'style/modules/global-header.css' %}">
   <link rel="stylesheet" href="{% static 'style/modules/global-footer.css' %}">
-  {% if css %}
   {% block css %}{% endblock %}
-  {% endif %}
 </head>
-<body id="homepage"><a href="#main" class="assistive-text">Skip to main content</a>
+<body id="{% block page_id %}{% endblock %}">
+  <a href="#main" class="assistive-text">Skip to main content</a>
   <div class="container">
     <header id="global-header">
       <h1> <a href="/">Doherty Soccer</a></h1>
@@ -72,4 +70,5 @@
   </div>
   <script src="{% static 'js/libs/jquery.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/modules/global-header.js' %}"></script>
 </body></html>
