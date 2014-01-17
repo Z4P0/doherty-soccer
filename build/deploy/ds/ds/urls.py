@@ -13,9 +13,9 @@ admin.autodiscover()
 # main urls
 # ----------------------------
 urlpatterns = patterns('',
-  # url(r'^$', 'ds.views.home', name='home'),
-  url(r'^article/', include('article.urls', namespace='article')),
+  url(r'^$', 'ds.views.home', name='home'),
   url(r'^articles/', include('article.urls', namespace='article')),
+  url(r'^article/', include('article.urls', namespace='article')),
   url(r'^admin/', include(admin.site.urls)),
 )
 
