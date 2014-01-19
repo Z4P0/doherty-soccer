@@ -5,6 +5,7 @@ from article.models import Article, Category, Series, Tag
 
 class ArticleAdmin(admin.ModelAdmin):
 	prepopulated_fields = {'slug': ('title',)}
+	list_display = ('title', 'published_date', 'updated_date', 'category', 'series')
 
 class CategoryAdmin(admin.ModelAdmin):
 	prepopulated_fields = {'slug': ('title',)}
