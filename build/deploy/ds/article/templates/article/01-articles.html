@@ -74,7 +74,7 @@
       <li>
         <article class="article-preview">
           <h4 class="article-title"><a href="{% url 'article:article' article.slug %}">{{article.title}}</a></h4>
-          <span class="article-meta">Posted in <a href="{% url 'article:article_category' article.category|slugify %}" class="article-category">{{article.category}}</a><span class="posted-on">December 30, 2013</span></span>
+          <span class="article-meta">Posted in <a href="{% url 'article:article_category' article.category|slugify %}" class="article-category">{{article.category}}</a><span class="posted-on">{{ article.published_date|date:"F j, Y" }}</span></span>
           <p class="lead-in">{{article.leadin}}</p><a href="{% url 'article:article' article.slug %}" class="read-article">Read more</a>
         </article>
       </li>
