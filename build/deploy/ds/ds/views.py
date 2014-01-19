@@ -9,7 +9,7 @@ from django.http import HttpResponse
 def home(request):
 	published_articles = Article.objects.all()[:10]
 	latest_post = published_articles[0];
-	recent_posts = published_articles[1:6]
+	recent_posts = published_articles[1:7]
 	# ----------------------------
 	title = 'Home'
 	description = 'Your source for CONCACAF Coverage'

@@ -14,8 +14,8 @@ admin.autodiscover()
 # ----------------------------
 urlpatterns = patterns('',
   url(r'^$', 'ds.views.home', name='home'),
-  url(r'^articles/', include('article.urls', namespace='article')),
   url(r'^article/', include('article.urls', namespace='article')),
+  url(r'^articles/', include('article.urls', namespace='article')),
   url(r'^admin/', include(admin.site.urls)),
 )
 
@@ -23,3 +23,6 @@ urlpatterns = patterns('',
 
 if settings.DEBUG:
 	urlpatterns += staticfiles_urlpatterns()
+	urlpatterns += patterns('',
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+    'document_root': settings.MEDIA_ROOT}))

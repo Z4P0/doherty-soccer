@@ -14,8 +14,14 @@ class Article(models.Model):
 	# key people
 	# author = models.CharField(max_length=100, default="Brendan")
 	# ----------------------------
+	class Meta:
+		ordering = ["-published_date"]
+		verbose_name_plural = "Articles"
+
 	def __unicode__(self):
 		return self.title
+
+
 
 
 
@@ -24,8 +30,14 @@ class Category(models.Model):
 	title = models.CharField(max_length=100)
 	slug = models.SlugField(max_length=100, unique=True)
 	# ----------------------------
+	class Meta:
+		verbose_name_plural = "Catgories"
+		ordering = ["title"]
+
 	def __unicode__(self):
 		return self.title
+
+
 
 
 
@@ -33,8 +45,14 @@ class Series(models.Model):
 	title = models.CharField(max_length=100)
 	slug = models.SlugField(max_length=100, unique=True)
 	# ----------------------------
+	class Meta:
+		verbose_name_plural = "Series"
+		ordering = ["title"]
+
 	def __unicode__(self):
 		return self.title
+
+
 
 
 
@@ -42,5 +60,9 @@ class Tag(models.Model):
 	title = models.CharField(max_length=50)
 	slug = models.SlugField(max_length=50, unique=True)
 	# ----------------------------
+	class Meta:
+		verbose_name_plural = "Tags"
+		ordering = ["title"]
+
 	def __unicode__(self):
 		return self.title
