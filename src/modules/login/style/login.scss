@@ -1,55 +1,18 @@
 @import "../../../style/pieces/vars";
 @import "../../../style/pieces/mixins";
 
-#sign-in {
-	padding-bottom: 0.5rem !important; // gross
-	.fi-minus {
-		margin-right: 5%;
-		background: #000;
-		padding: 0.1rem 0.75rem;
-		opacity: 0;
-		@include transition(opacity, 0.3s);
-		@include mq(netbook) {
-			display: none;
-		}
-		}
-	.flex-all {
-		@include mq(netbook) {
-			display: block;
-		}
-		}
-	&.open {
-		.fi-minus {
-			opacity: 1;
-			}
-		@include mq(netbook) {
-			position: relative;
-			.flex-all {
-				position: absolute;
-				top: 0;
-			}
-			#login-form-wrapper {
-				position: absolute;
-				top: 0;
-				right: 0;
-			}
-		}
-	}
-}
-#login-form-wrapper {
-	position: absolute;
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
-	background: url("/img/backgrounds/rhinos-1.jpg");
-	@include transition(height, 0.3s);
-	&.open {
-		clip:auto !important;
-		position: static;
-		margin-top: 0.75rem;
-		padding: 1rem 5%;
-		border-top: 3px solid darken($green, 10%);
-		border-bottom: 3px solid darken($green, 10%);
+
+#login {
+	#main {
+		background: url("/img/backgrounds/rhinos-1.jpg");
+		// background: url("/img/backgrounds/previa-america-cruz-azul-copa-mx-semifinales-2013.jpg");
+		background-size: cover;
+		background-position: 0;
 		position: relative;
+		padding: 35% 0 40%;
+		@include mq(netbook) {
+			padding: 17% 0 28%;		
+		}
 		&:after {
 			content: "\00a0";
 			position: absolute;
@@ -59,18 +22,34 @@
 			opacity: 0.6;
 		}
 	}
+	#global-footer {
+		margin-top: 0;
+	}
 }
+
+#login-form-wrapper {
+	margin: 0 5%;
+	@include mq(netbook) {
+		margin: 0 10%;
+	}
+}
+
 #login-form {
 	position: relative;
 	z-index: 50;
 	color: $white;
-	margin: 17% 0 28%;
+	max-width: 20rem;
+	margin: 0 auto;
+	// margin: 17% 0 28%;
 	a {
 		display: inline !important;
 		margin: 0 !important;
+		color: inherit;
+		text-decoration: none;
 	}
-	span {
+	p {
 		font-size: 1rem;
+		margin-bottom: 0;
 	}
 	.close {
 		display: block;

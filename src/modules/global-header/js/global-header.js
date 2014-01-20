@@ -23,21 +23,21 @@ ds.nav = (function() {
     });
 
     // sign in
-    $signIn = $nav.find('#sign-in');
-    $loginForm = $('#login-form-wrapper');
-    $nav.find('#sign-in a').on('click', toggleLogin);
-    $signIn.find('.fi-minus').on('click', toggleLogin);
+    // $signIn = $nav.find('#sign-in');
+    // $loginForm = $('#login-form-wrapper');
+    // $nav.find('#sign-in a').on('click', toggleLogin);
+    // $signIn.find('.fi-minus').on('click', toggleLogin);
 
 
     // search field
     $search = $(_settings.search);
   };
 
-  var toggleLogin = function(e) {
-    e.preventDefault();
-    $signIn.toggleClass('open');
-    $loginForm.toggleClass('open');
-  }
+  // var toggleLogin = function(e) {
+  //   e.preventDefault();
+  //   $signIn.toggleClass('open');
+  //   $loginForm.toggleClass('open');
+  // }
 
   return {
     init : init
