@@ -1,6 +1,6 @@
 @import "../../../style/pieces/vars";
 @import "../../../style/pieces/mixins";
-
+@import "header-login";
 $nav-border: #4d4d4d;
 
 #global-header {
@@ -121,14 +121,11 @@ $nav-border: #4d4d4d;
     color: darken($white, 20%);
     border-bottom: 1px solid $nav-border;
     @include px(font-size, 18px);
-    @include px(padding-bottom, 6px);
-    @include px(padding-top, 24px);
+    padding: 1rem 0 0.75rem;
     @include transition(background, 0.3s);
     &:last-child {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
       border: none;
-    }
+      }
     &.here {
       position: relative;
       &:after {
@@ -140,7 +137,7 @@ $nav-border: #4d4d4d;
         width: 2%;
         background: $green;
       }
-    }
+      }
   }
   a {
     display: inline-block;

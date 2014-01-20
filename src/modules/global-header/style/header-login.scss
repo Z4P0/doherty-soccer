@@ -1,0 +1,130 @@
+@import "../../../style/pieces/vars";
+@import "../../../style/pieces/mixins";
+
+#sign-in {
+	padding-bottom: 0.5rem !important; // gross
+	.fi-minus {
+		margin-right: 5%;
+		background: #000;
+		padding: 0.1rem 0.75rem;
+		opacity: 0;
+		@include transition(opacity, 0.3s);
+		@include mq(netbook) {
+			display: none;
+		}
+		}
+	.flex-all {
+		@include mq(netbook) {
+			display: block;
+		}
+		}
+	&.open {
+		.fi-minus {
+			opacity: 1;
+			}
+		@include mq(netbook) {
+			position: relative;
+			.flex-all {
+				position: absolute;
+				top: 0;
+			}
+			#login-form-wrapper {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+	}
+}
+#login-form-wrapper {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	background: url("/img/backgrounds/rhinos-1.jpg");
+	@include transition(height, 0.3s);
+	&.open {
+		clip:auto !important;
+		position: static;
+		margin-top: 0.75rem;
+		padding: 1rem 5%;
+		border-top: 3px solid darken($green, 10%);
+		border-bottom: 3px solid darken($green, 10%);
+		position: relative;
+		&:after {
+			content: "\00a0";
+			position: absolute;
+			top: 0; bottom: 0;
+			left: 0; right: 0;
+			background: $green;
+			opacity: 0.6;
+		}
+	}
+}
+#login-form {
+	position: relative;
+	z-index: 50;
+	color: $white;
+	margin: 17% 0 28%;
+	a {
+		display: inline !important;
+		margin: 0 !important;
+	}
+	span {
+		font-size: 1rem;
+	}
+	.close {
+		display: block;
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		text-align: right;
+		margin-bottom: 2rem;
+		color: $silver;
+		.fi-x:before {
+			font-size: 1.25rem;
+			vertical-align: sub;
+			margin-left: 0.25rem;
+		}
+	}
+	input[type="text"], input[type="password"] {
+		padding: 0.25rem;
+		font-size: 1.25rem;
+		width: 70%;
+		background: rgba($silver, 0.3);
+		border: none;
+		color: #fff;
+		border-radius: 4px;
+	}
+	input[type="submit"] {
+		border: none;
+		background: transparent;
+		color: $white;
+		font-size: 1rem;
+		margin: 0;
+		padding-right: 1rem;
+		border-left: 1px solid rgba($silver, 0.4);
+	}
+	.flex-all {
+		margin-top: 1rem;
+		span {
+			@include flex(1);
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+}
+
+#username-label {
+	border-bottom: 1px solid rgba($silver, 0.3);
+	padding-bottom: 0.85rem;
+}
+#forgot-password {
+	// display: inline-block;
+	font-size: 0.875rem !important;
+	vertical-align: middle;
+	a {
+		margin: 0 !important;
+		position: relative;
+		top: 0.25rem;
+	}
+}

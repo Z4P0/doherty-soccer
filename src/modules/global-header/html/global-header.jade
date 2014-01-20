@@ -15,9 +15,28 @@ header#global-header
         a(href="#") Competitions
       //- li
         a(href="#") Players
-      li
+      li#sign-in
         a(href="#") Sign In
-      li
+        
+        //- div.flex-all
+          a(href="#") Sign In
+          i.fi-minus(title="Close login form")
+        //- div#login-form-wrapper
+          form#login-form(action="#", method="POST")
+            label#username-label
+              span Username
+              input(type="text")
+            label
+              span Password
+              input(type="password")
+            div.flex-all
+              span#forgot-password
+                a(href="#") Forgot password?
+              span
+                a(href="#") Register
+                input(type="submit", value="Login")
+
+      li#search
         span#search-text Search
         i.fi-magnifying-glass
         //- form#search-field
