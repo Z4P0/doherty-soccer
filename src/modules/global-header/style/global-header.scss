@@ -43,7 +43,7 @@ $nav-border: #4d4d4d;
   line-height: 1;
   @include mq(netbook) {
     margin-right: 10%;
-    @include flex(2);
+    @include flex(3);
     position: relative;
   }
 }
@@ -167,7 +167,7 @@ $nav-border: #4d4d4d;
       float: left;
       display: inline-block;
       background: inherit;
-      border-right: 1px solid $white;
+      border-right: 1px solid rgba($silver, 0.3);
       vertical-align: sub;
       padding: 0.5rem 0.75rem;
       @include px(min-height, 38px);
@@ -175,7 +175,7 @@ $nav-border: #4d4d4d;
         background: darken($green, 15%);
         border-bottom: 1px solid darken($green, 20%);
       }
-      &:first-child {border-left: 1px solid $white;}
+      &:first-child {border-left: 1px solid rgba($silver, 0.3)}
       &:last-child {padding: 0.5rem 0.75rem; }
       &.here {
         background: $green;

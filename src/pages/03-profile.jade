@@ -9,7 +9,7 @@ head
   +css("global-footer")
   +css("login")
 
-body#login(data-page="signin")
+body#profile(data-page="signin")
   a(href="#main", class="assistive-text") Skip to main content
   div.container
     //- header
@@ -17,14 +17,17 @@ body#login(data-page="signin")
         
     //- main
     div#main
-      include ../modules/login/html/login.jade
+      section#user-profile
+        h2 Username
+        p logout
+
+      //- include ../modules/login/html/login.jade
 
 
     //- footer
     include ../modules/global-footer/html/global-footer.jade
     
   include ../html/foot.jade
-  +js("article")
   +js("login")
   +js("global-header")
 </html>

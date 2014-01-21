@@ -9,7 +9,7 @@ head
   +css("global-footer")
   +css("article")
 
-body#homepage
+body#homepage(data-page="home")
   a(href="#main", class="assistive-text") Skip to main content
   div.container
     //- header
@@ -54,5 +54,6 @@ body#homepage
     
   include ../html/foot.jade
   +js("article")
+  +js("login")
   +js("global-header")
 </html>

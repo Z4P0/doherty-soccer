@@ -5,6 +5,7 @@
 
 ds.nav = (function() {
   var $nav,
+      page,
       $toggle,
       $signIn,
       $loginForm,
@@ -15,6 +16,17 @@ ds.nav = (function() {
     // nav
     $nav = $(_settings.nav);
 
+
+    // page (what page are we on?)
+    page = $('body').attr('data-page');
+
+    $nav.find('li').each(function(i, el) {
+      if (el.getAttribute('data-page') === page) {
+        el.className = 'here';
+      }
+    })
+
+
     // toggle
     $toggle = $(_settings.toggle);
     $toggle.click(function() {
@@ -22,22 +34,11 @@ ds.nav = (function() {
       $nav.toggleClass('nav-show');
     });
 
-    // sign in
-    // $signIn = $nav.find('#sign-in');
-    // $loginForm = $('#login-form-wrapper');
-    // $nav.find('#sign-in a').on('click', toggleLogin);
-    // $signIn.find('.fi-minus').on('click', toggleLogin);
-
 
     // search field
     $search = $(_settings.search);
   };
 
-  // var toggleLogin = function(e) {
-  //   e.preventDefault();
-  //   $signIn.toggleClass('open');
-  //   $loginForm.toggleClass('open');
-  // }
 
   return {
     init : init

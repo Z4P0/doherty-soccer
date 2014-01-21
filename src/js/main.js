@@ -4,6 +4,23 @@ var ds = {}; //global var
 
 //wait until main document is loaded
 window.addEventListener('load',function(){
+
+	// localStorage
+	if (localStorage.getItem('ds') === null) {
+		console.log('no localStorage');
+		var test = {
+			'loggedIn': false
+		};
+		localStorage.setItem('ds', JSON.stringify(test));
+		console.log('localStorage set');
+	}
+	// localStorage.removeItem('ds');
+	ds.localStorage = JSON.parse(localStorage.getItem('ds'));
+	ds.users.init();
+
+
+
+
 	
 	// collapse certain things
 	if ($('#all-topics-wrapper').length) {
@@ -30,6 +47,62 @@ window.addEventListener('load',function(){
 });
 
 
+
+
+
+ds.users = (function() {
+  var $loginForm;
+
+  var init = function() {
+    if (ds.localStorage.loggedIn === true) {
+      console.log('logged in');
+      ds.users.loggedIn();
+    } else if (ds.localStorage.loggedIn === false) {
+    	console.log('logged out');
+    }
+
+		if ($('#login-form-wrapper').length) {
+	    $loginForm = $('#login-form');
+	    document.getElementById('login-form').addEventListener('keypress', 
+	    	function (e) {if (e.keyCode === 13) dummyLogin(); }, false);    
+	    $loginForm.find('input[type="submit"]').click(function(e) {
+	    	e.preventDefault();
+	    	dummyLogin();
+	    });
+	  }
+  };
+
+
+  var dummyLogin = function(e) {
+  	// get login info from form
+  	// set it to the local object
+  	ds.localStorage.loggedIn = true;
+  	ds.localStorage.username = $loginForm.find('input[type="text"]').val();
+  	// console.log(ds.localStorage.username);
+  	ds.users.save();
+  	// console.log($loginForm.find('input[type="password"]').val());
+  }
+
+  var loggedIn = function(e) {
+  	var $signIn = $('#sign-in');
+  	// $signIn.find('a').html('Profile');
+  	$signIn.find('a').attr('href','03-profile.html').html('Profile');
+  }
+
+  var save = function(e) {
+		localStorage.setItem('ds', JSON.stringify(ds.localStorage));
+  }
+
+  var del = function(e) {
+  	localStorage.removeItem('ds');
+  }
+
+  return {
+    init : init,
+    loggedIn: loggedIn,
+    save: save
+  };
+})();
 
 
 ds.league_nav = (function() {

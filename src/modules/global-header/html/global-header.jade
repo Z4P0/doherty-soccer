@@ -9,16 +9,16 @@ header#global-header
       i.fi-list(title="Show navigation menu")
       i.fi-x(title="Close navigation menu")
     ul#nav-menu
-      li.here
+      li(data-page="article")
         a(href="01-articles-index.html") Articles
       //- li
-        a(href="#") Competitions
+      //-   a(href="#") Competitions
       //- li
-        a(href="#") Players
-      li#sign-in
+      //-   a(href="#") Players
+      li(data-page="signin")#sign-in
         a(href="03-login.html") Sign In
         
-      li#search
+      li(data-page="search")#search
         span#search-text Search
         i.fi-magnifying-glass
         //- form#search-field

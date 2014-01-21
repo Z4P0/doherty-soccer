@@ -19,13 +19,13 @@
   max-width: 1420px;
   margin: 0 auto;
 }
-// div.flex
-div.flex {
+// .flex
+.flex {
   @include mq(netbook) {
     @include flexbox();
   }
 }
-div.flex-all {
+.flex-all {
   @include flexbox();
 }
 
