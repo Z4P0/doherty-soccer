@@ -1,0 +1,127 @@
+section#user-profile
+  section#user-overview.flex-1
+    div.flex
+      h2#username.flex-3 Username
+      form#logout-form.flex-1(action="#", method="POST")
+        input(type="submit", value="Logout")#logout
+
+    div.flex
+      div.flex-3
+        figure#user-profile-image
+          img(src="/img/users/zapo.jpg")
+        //- form#profile-picture(action="#", method="POST")
+        //-   input(type="submit", value="Edit profile picture")
+      nav#user-nav.flex-2
+        ul#user-nav-list
+          //- li
+            a(href="#") Dash
+          li
+            a(href="#") Bookmarks
+          li
+            a(href="#") Comments
+          li
+            a(href="#") Game Calendar
+          li
+            a(href="#") Subscriptions
+          li
+            a(href="#") Settings
+  div.flex-3
+    article#user-bookmarks
+      h3.t7.flex-1 Bookmarked
+      ul.flex-4#bookmarked-articles-list
+        li
+          article.article-preview
+            //- title
+            h2.article-title
+              a(href="01-article-page.html") Tottenham Hotspur and US U17 Team Highlight 2013 IMG Invitational Tournament
+            //- meta
+            span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">Soccer In America</a>
+              span.posted-on December 17, 2013
+        li
+          article.article-preview
+            //- title
+            h2.article-title
+              a(href="01-article-page.html") Leones Negros is the Liga Ascenso MX Apertura 2013 Champion!
+            //- meta
+            span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">Ascenso MX</a>
+              span.posted-on December 16, 2013
+        li
+          article.article-preview
+            //- title
+            h2.article-title
+              a(href="01-article-page.html") Mexico U-17 Coasts Past Argentina 3-0 En Route to the Final
+            //- meta
+            span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">El Tri</a>
+              span.posted-on November 5, 2013
+        li
+          article.article-preview
+            //- title
+            h2.article-title
+              a(href="01-article-page.html") Raúl “Potro” Gutiérrez sent out the same starting line-up from the victory over Italy to face Brazil.
+            //- meta
+            span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">El Tri</a>
+              span.posted-on November 2, 2013
+        li
+          article.article-preview
+            //- title
+            h2.article-title
+              a(href="01-article-page.html") Mexico’s Shaky Start in the U-17 World Cup
+            //- meta
+            span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">El Tri</a>
+              span.posted-on October 29, 2013
+    //- hr
+    section#user-comments
+      h3.t7.flex-1 Comments
+      ul.flex-4#user-comment-list
+        li
+          article.user-comment
+            p.article-meta Commment on article 
+              a(href="#")"Mexico’s Shaky Start in the U-17 World Cup"
+            p If she has a car you better ask her if she has ever checked the oil....
+            section.comment-actions
+              p 
+                span Edit
+                span Delete
+              p 
+                span +20 [+34/-14]
+                span Replies
+        li
+          article.user-comment
+            p.article-meta Commment on article 
+              a(href="#")"Tottenham Hotspur and US U17 Team Highlight 2013 IMG Invitational Tournament"
+            p Chelsea: Hey United, can we have Rooney? United: No -Fast forward 5 months- United: Hey Chelsea can we have Mata? Chelsea: Oh sure mate! here, let me just bend over for you...
+            section.comment-actions
+              p 
+                span Edit
+                span Delete
+              p 
+                span +10 [+14/-4]
+                span Replies
+        li
+          article.user-comment
+            p.article-meta Commment on article 
+              a(href="#")"Leones Negros is the Liga Ascenso MX Apertura 2013 Champion!"
+            p Why are so many people compelled to put a "the" before Ukraine? Do you also say "the Canada" or "the Spain"?
+            section.comment-actions
+              p 
+                span Edit
+                span Delete
+              p 
+                span +10 [+14/-4]
+                span Replies
+
+
+    section#game-calendar
+      h3.t7.flex-1 Calendar
+      div.flex-4
+        ul#user-teams
+          li Tottenham Hotspur
+          li Cruz Azul
+            p latest result: W 3 - 0
+          li MNT (El Tri)
+            p latest result: W: 1 - 0
+        p upcoming competitions
+        ul#user-upcoming
+          li World Cup
+          li Liga MX
+          li Copa MX

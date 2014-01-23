@@ -1,0 +1,76 @@
+@import "../../../style/pieces/vars";
+@import "../../../style/pieces/mixins";
+
+
+#profile #main {
+	padding-top: 0.2%;
+}
+
+#user-overview {
+	background: $green;
+	padding: 5%;
+	margin-bottom: 10%;
+	@include mq(netbook) {
+		padding: 5% 10%;
+	}
+}
+
+#username {margin-bottom: 0.5rem;}
+
+#user-profile-image {
+	@include px(height, 150px);
+	overflow: hidden;
+	margin: 0 0 0.5rem;
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+#logout-form {text-align: right;}
+#logout {
+	background: transparent;
+	border: none;
+	border-left: 1px solid rgba($silver, 0.3);
+	color: #555;
+}
+
+#user-nav-list {
+	list-style: none;
+	margin-left: 10%;
+	// background: $green;
+	li {
+		margin-bottom: 1rem;
+		font-size: 0.875rem;
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+
+#user-bookmarks, #user-comments, #game-calendar {
+	margin: 0 5% 4rem;
+  @include mq(netbook) {
+  	margin: 0 10% 4rem;
+    @include flexbox();
+  }
+  .t7 {
+  	margin-bottom: 0.5rem;
+  }
+}
+
+#bookmarked-articles-list, #user-comment-list, #user-teams, #user-upcoming {
+	list-style: none;
+	li {
+		border-bottom: 1px solid rgba($silver, 0.7);
+		margin-bottom: 0.5rem;
+	}
+	.article-title {
+		font-size: 1rem;
+	}
+	.article-meta {
+		font-size: 0.75rem;
+	}
+}

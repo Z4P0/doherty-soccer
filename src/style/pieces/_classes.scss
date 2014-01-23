@@ -1,32 +1,31 @@
+@import "mixins";
+
 // wrapper - 80% width, 1024px max
 .wrapper {
 	position: relative;
 	width: 80%;
 	max-width: 1024px;
 	margin: 0 auto;
-  @extend .cf;
 }
 
 
-// post
-.post {
-	max-width: 35em;
-	margin-bottom: 4.5em;
-	p {
-		line-height: 1.4;
-		margin: 0 0 1em;
-	}
-}
 
-.copyright {
-	font-size: 0.6875em;
-	text-transform: uppercase;
-}
+// .copyright {
+// 	font-size: 0.6875em;
+// 	text-transform: uppercase;
+// }
 .center { text-align: center; }
 .caps { text-transform: uppercase; }
 .strike { text-decoration: line-through; }
 
 
+// flex
+.flex {@include flexbox();}
+.flex-1 {@include flex(1);}
+.flex-2 {@include flex(2);}
+.flex-3 {@include flex(3);}
+.flex-4 {@include flex(4);}
+.flex-5 {@include flex(5);}
 
 
 // clearfix

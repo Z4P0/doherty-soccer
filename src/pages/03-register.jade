@@ -8,10 +8,8 @@ head
   +css("global-header")
   +css("global-footer")
   +css("login")
-  +css("article")
-  +css("user-dashboard")
 
-body#profile(data-page="signin")
+body#login(data-page="signin")
   a(href="#main", class="assistive-text") Skip to main content
   div.container
     //- header
@@ -19,13 +17,17 @@ body#profile(data-page="signin")
         
     //- main
     div#main
-      include ../modules/user-dashboard/html/user-dashboard.jade
+      p account creation
+      p username, email, password
+
+      //- include ../modules/login/html/login.jade
 
 
     //- footer
     include ../modules/global-footer/html/global-footer.jade
     
   include ../html/foot.jade
+  +js("article")
   +js("login")
   +js("global-header")
 </html>
