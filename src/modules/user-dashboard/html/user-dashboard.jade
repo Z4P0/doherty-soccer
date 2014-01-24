@@ -1,34 +1,27 @@
 section#user-profile
-  section#user-overview.flex-1
+  header#user-header.flex-1
+    h2#username Username
     div.flex
-      h2#username.flex-3 Username
-      form#logout-form.flex-1(action="#", method="POST")
-        input(type="submit", value="Logout")#logout
-
-    div.flex
-      div.flex-3
-        figure#user-profile-image
-          img(src="/img/users/zapo.jpg")
-        //- form#profile-picture(action="#", method="POST")
-        //-   input(type="submit", value="Edit profile picture")
+      figure#user-profile-image.flex-3
+        img(src="/img/users/zapo.jpg")
       nav#user-nav.flex-2
         ul#user-nav-list
+          li
+            a(href="#user-bookmarks") Bookmarks
+          li
+            a(href="#user-comments") Comments
           //- li
-            a(href="#") Dash
-          li
-            a(href="#") Bookmarks
-          li
-            a(href="#") Comments
-          li
             a(href="#") Game Calendar
           li
-            a(href="#") Subscriptions
+            a(href="#user-subscriptions") Subscriptions
           li
-            a(href="#") Settings
-  div.flex-3
-    article#user-bookmarks
+            a(href="#user-settings") Settings
+        form#logout-form.flex-1(action="#", method="POST")
+          input(type="submit", value="Logout")#logout
+  div#user-dashboard.flex-3
+    section#user-bookmarks.user-section
       h3.t7.flex-1 Bookmarked
-      ul.flex-4#bookmarked-articles-list
+      ul.flex-4#bookmarked-articles-list.user-dash-list
         li
           article.article-preview
             //- title
@@ -69,59 +62,143 @@ section#user-profile
             //- meta
             span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">El Tri</a>
               span.posted-on October 29, 2013
-    //- hr
-    section#user-comments
+    section#user-comments.user-section
       h3.t7.flex-1 Comments
       ul.flex-4#user-comment-list
         li
           article.user-comment
-            p.article-meta Commment on article 
-              a(href="#")"Mexico’s Shaky Start in the U-17 World Cup"
-            p If she has a car you better ask her if she has ever checked the oil....
-            section.comment-actions
-              p 
-                span Edit
-                span Delete
-              p 
-                span +20 [+34/-14]
-                span Replies
+            h4.t6 If she has a car you better ask her if she has ever checked the oil....
+            p.comment-meta Commment on article 
+              a(href="#")"Mexico’s Shaky Start in the U-17 World Cup" 
+              | at October 29, 2013 at 4:04 pm
+            ul.comment-actions.inline
+              li +20 [+34/-14]
+              li Edit
+              li Delete
         li
           article.user-comment
-            p.article-meta Commment on article 
-              a(href="#")"Tottenham Hotspur and US U17 Team Highlight 2013 IMG Invitational Tournament"
-            p Chelsea: Hey United, can we have Rooney? United: No -Fast forward 5 months- United: Hey Chelsea can we have Mata? Chelsea: Oh sure mate! here, let me just bend over for you...
-            section.comment-actions
-              p 
-                span Edit
-                span Delete
-              p 
-                span +10 [+14/-4]
-                span Replies
+            h4.t6 Chelsea: Hey United, can we have Rooney? United: No -Fast forward 5 months- United: Hey Chelsea can we have Mata? Chelsea: Oh sure mate! here, let me just bend over for you...
+            p.comment-meta Commment on article 
+              a(href="#")"Tottenham Hotspur and US U17 Team Highlight 2013 IMG Invitational Tournament" 
+              | at June 9, 2012 at 6:44 pm
+            ul.comment-actions.inline
+              li +10 [+14/-4]
+              li Edit
+              li Delete
+            section.comment-replies 
+              h5.t7 Replies
+              ul.user-dash-comment-replies-list
+                li
+                  article.user-dash-comment-reply.flex
+                    figure.user-profile-thumbnail.flex-1
+                      img(src="http://lorempixel.com/40/40", alt="dummy", width="40", height="40")
+                    div.flex-3
+                      h6.t5 
+                        a(href="#") thaighst
+                        | And thus, one of the world's greatest mysteries was solved
+                      p.comment-date January 6 at 12:50pm
         li
           article.user-comment
-            p.article-meta Commment on article 
-              a(href="#")"Leones Negros is the Liga Ascenso MX Apertura 2013 Champion!"
-            p Why are so many people compelled to put a "the" before Ukraine? Do you also say "the Canada" or "the Spain"?
-            section.comment-actions
-              p 
-                span Edit
-                span Delete
-              p 
-                span +10 [+14/-4]
-                span Replies
+            h4.t6 Why are so many people compelled to put a "the" before Ukraine? Do you also say "the Canada" or "the Spain"?
+            p.comment-meta Commment on article 
+              a(href="#")"Leones Negros is the Liga Ascenso MX Apertura 2013 Champion!" 
+              | at January 23, 2014 at 8:04 am            
+            ul.comment-actions.inline
+              li +10 [+14/-4]
+              li Edit
+              li Delete
+            section.comment-replies
+              h5.t7 Replies
+              ul.user-dash-comment-replies-list
+                li
+                  article.user-dash-comment-reply.flex
+                    figure.user-profile-thumbnail.flex-1
+                      img(src="http://lorempixel.com/40/40", alt="dummy", width="40", height="40")
+                    div.flex-3
+                      h6.t5
+                        a(href="#") robo_house__
+                        | can't wait until the writers find a way to somehow bring him back! i'm sure it will be natural and in no way forced
+                      p.comment-date 37 minutes ago
 
-
-    section#game-calendar
+    //- section#game-calendar.user-section
       h3.t7.flex-1 Calendar
       div.flex-4
-        ul#user-teams
+        ul#user-teams.user-dash-list
           li Tottenham Hotspur
           li Cruz Azul
             p latest result: W 3 - 0
           li MNT (El Tri)
             p latest result: W: 1 - 0
         p upcoming competitions
-        ul#user-upcoming
+        ul#user-upcoming.user-dash-list
           li World Cup
           li Liga MX
           li Copa MX
+
+    section#user-subscriptions.user-section
+      h3.t7.flex-1 Subscriptions
+      div.flex-4
+        ul#user-subscriptions-list.user-dash-list
+          li
+            h4.t6
+              a(href="#") El Tri
+            span (2) 15 total
+             i.fi-x
+          li
+            h4.t6
+              a(href="#") Mexico
+            span (1) 23 total
+             i.fi-x
+          li
+            h4.t6
+              a(href="#") Youth
+            span 8 total
+             i.fi-x
+          li
+            h4.t6
+              a(href="#") NASL
+            span 14 total
+             i.fi-x
+          li
+            h4.t6
+              a(href="#") USL-Pro
+            span (2) 16 total
+             i.fi-x
+          li
+            h4.t6
+              a(href="#") Soccer in America
+            span 3 total
+             i.fi-x
+
+    section#user-settings.user-section
+      h3.t7.flex-1 Settings
+      div.flex-4
+        ul#user-settings-list.user-dash-list
+          li 
+            h4.t6 Language
+            span English | Español
+          li 
+            h4.t6 Font size
+            span small | normal | large
+          li 
+            h4.t6 Email frequency
+            span As Published | 1/week | 1/month
+          li 
+            h4.t6 Change profile picture
+          li
+            label
+              h4.t6 Change password
+              input(type="password")
+          li 
+            label
+              h4.t6 Change email
+              input(type="email")
+          li#beta-test-li
+            label
+              h4.t6 Beta test
+              input(type="checkbox")
+            p You will see unique article designs and interactions. This is essentially a playground for us to play with editorial design on the web. Have you ever played Portal? Kinda like that but without the risk of death
+          li
+            h4.t6 Delete profile
+        p#member-since Member since July 27, 2011
+

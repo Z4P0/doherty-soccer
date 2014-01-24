@@ -2,23 +2,42 @@
 @import "../../../style/pieces/mixins";
 
 
-#profile #main {
-	padding-top: 0.2%;
+#profile {
+	#main {padding-top: 0;}
+	#global-footer {margin-top: 0;}
 }
 
-#user-overview {
-	background: $green;
-	padding: 5%;
-	margin-bottom: 10%;
+#user-profile {
 	@include mq(netbook) {
-		padding: 5% 10%;
+		@include flexbox();
 	}
 }
 
-#username {margin-bottom: 0.5rem;}
+#user-header {
+	color: #fff;
+	background: $green;
+	padding: 5%;
+	margin-bottom: 2rem;
+	@include mq(netbook) {
+		text-align: right;
+		padding: 5% 0;
+		margin: 0;
+		.flex {
+			display: block;
+		}
+	}
+}
+
+#username {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+	@include mq(netbook) {
+		margin: 0 10% 0.5rem;
+	}
+}
 
 #user-profile-image {
-	@include px(height, 150px);
+	@include px(height, 156px);
 	overflow: hidden;
 	margin: 0 0 0.5rem;
 	img {
@@ -27,14 +46,21 @@
 	}
 }
 
-#logout-form {text-align: right;}
+// #logout-form {text-align: right;}
 #logout {
 	background: transparent;
 	border: none;
-	border-left: 1px solid rgba($silver, 0.3);
-	color: #555;
+	color: #444;
+	margin-left: 10%;
+	padding: 0;
+	@include hover();
 }
 
+#user-nav {
+	@include mq(netbook) {
+		margin: 3rem 10% 0;
+	}
+}
 #user-nav-list {
 	list-style: none;
 	margin-left: 10%;
@@ -42,6 +68,10 @@
 	li {
 		margin-bottom: 1rem;
 		font-size: 0.875rem;
+		@include transition(color, 0.3s);
+		&:hover {
+			color: lighten($white, 10%);
+		}
 	}
 	a {
 		text-decoration: none;
@@ -49,8 +79,15 @@
 	}
 }
 
+#user-dashboard {
+	@include mq(netbook) {
+		margin-top: 10%;
+	}
+}
 
-#user-bookmarks, #user-comments, #game-calendar {
+
+
+.user-section {
 	margin: 0 5% 4rem;
   @include mq(netbook) {
   	margin: 0 10% 4rem;
@@ -61,16 +98,169 @@
   }
 }
 
-#bookmarked-articles-list, #user-comment-list, #user-teams, #user-upcoming {
+.user-dash-list {
 	list-style: none;
 	li {
 		border-bottom: 1px solid rgba($silver, 0.7);
 		margin-bottom: 0.5rem;
 	}
+}
+
+
+// bookmarks
+// ===================================
+#bookmarked-articles-list {
 	.article-title {
 		font-size: 1rem;
 	}
 	.article-meta {
 		font-size: 0.75rem;
+	}	
+}
+
+
+// comments
+// ===================================
+#user-comment-list {
+	list-style: none;
+}
+.user-comment {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 1.5rem;
+	.t6 {
+		font-size: 1rem;
+		margin-bottom: 0.25rem;
 	}
+}
+.comment-actions {
+	font-size: 0.875rem;
+	color: lighten($black, 25%);
+	margin-bottom: 1rem;
+	li {margin-right: 1rem;}
+}
+.comment-meta {
+	color: #888;
+	font-family: $bold;
+	font-size: 0.75rem;
+	a {
+		color: $green;
+		@include transition(color, 0.3s);
+		&:hover {
+			color: $black;
+		}
+	}
+}
+.comment-replies .t7 {
+	color: lighten($black, 20%);
+	font-size: 0.75rem;
+}
+.user-dash-comment-replies-list {
+	list-style: none;
+	li {margin-bottom: 2rem;}
+}
+.user-dash-comment-reply {
+	.t5 {
+		font-size: 0.875rem;
+		a {
+			text-decoration: none;
+			font-weight: bold;
+			margin-right: 0.5rem;
+		}
+	}
+}
+.user-profile-thumbnail {
+	@include px(max-width, 52px);
+}
+.comment-date {
+	font-size: 0.75rem;
+	color: darken(#888, 10%);
+}
+
+
+// subscriptions
+// ===================================
+#user-subscriptions-list {
+	li {
+		@include flexbox();
+		margin-bottom: 0.75rem;
+	}
+	.t6 {
+		@include flex(1);
+		font-size: 1rem;
+		font-family: $bold;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	span {
+		@include flex(1);
+		font-size: 0.875rem;
+		text-align: right;
+		color: $black;
+	}
+	.fi-x {
+		color: #ccc;
+		font-size: 1rem;
+		margin-left: 0.75rem;
+		border-left: 1px solid rgba($silver, 0.9);
+		padding: 0 0.4rem;
+		// opacity: 0;
+		@include transition(color, 0.3s);
+		// @include transition(opacity, 0.3s);
+		&:hover {
+			cursor: pointer;
+			color: $black;
+			// opacity: 1;
+		}
+	}
+}
+
+
+// settings
+// ===================================
+#user-settings {
+	@include mq(netbook) {
+		margin-bottom: 0;
+		padding-bottom: 4rem;
+	}
+}
+#user-settings-list {
+	li, label {
+		@include flexbox();
+	}
+	li {
+		margin-bottom: 1rem;
+	}
+	label {
+		width: 100%;
+		span {
+			text-align: left;
+		}
+	}
+	.t6 {
+		font-size: 1rem;
+		// font-family: $bold;
+		@include flex(1);
+	}
+	span {
+		@include flex(1);
+		text-align: right;
+	}
+	// input {
+	// 	text-align: right;
+	// }
+}
+#beta-test-li {
+	display: block !important;
+	p {
+		font-size: 0.75rem;
+	}
+}
+
+#member-since {
+	margin: 2rem 0 0;
+	font-size: 0.875rem;
+	color: lighten($black, 20%);
+	font-style: italic;
 }
