@@ -3,7 +3,8 @@
 
 
 #profile {
-	#main {padding-top: 0;}
+	#main {background: #fff; margin-top: 0;}
+	.container {background: #000;}
 	#global-footer {margin-top: 0;}
 }
 
@@ -22,6 +23,7 @@
 		text-align: right;
 		padding: 5% 0;
 		margin: 0;
+		@include px(max-width, 286px);
 		.flex {
 			display: block;
 		}
@@ -220,17 +222,26 @@
 // settings
 // ===================================
 #user-settings {
-	@include mq(netbook) {
-		margin-bottom: 0;
-		padding-bottom: 4rem;
+	margin-bottom: 0;
+	padding-bottom: 4rem;
+	input[type="password"], input[type="email"] {
+		margin-bottom: 0.25rem;
 	}
+}
+.setting-option {
+	font-size: 0.75rem;
+	@include flex(1);
+	text-align: right;
 }
 #user-settings-list {
 	li, label {
 		@include flexbox();
+		align-items: center;
 	}
+	.select-label {display: inline-block;}
 	li {
-		margin-bottom: 1rem;
+		padding-bottom: 0.35rem;
+		margin-bottom: 0.65rem;
 	}
 	label {
 		width: 100%;
@@ -240,16 +251,8 @@
 	}
 	.t6 {
 		font-size: 1rem;
-		// font-family: $bold;
 		@include flex(1);
 	}
-	span {
-		@include flex(1);
-		text-align: right;
-	}
-	// input {
-	// 	text-align: right;
-	// }
 }
 #beta-test-li {
 	display: block !important;
@@ -258,6 +261,16 @@
 	}
 }
 
+
+
+
+
+
+
+
+
+
+// ===================================
 #member-since {
 	margin: 2rem 0 0;
 	font-size: 0.875rem;

@@ -142,12 +142,16 @@ section#user-profile
           li
             h4.t6
               a(href="#") El Tri
-            span (2) 15 total
+            span 
+              b (2) 
+              | 15 total
              i.fi-x
           li
             h4.t6
               a(href="#") Mexico
-            span (1) 23 total
+            span 
+              b (1) 
+              | 23 total
              i.fi-x
           li
             h4.t6
@@ -162,7 +166,9 @@ section#user-profile
           li
             h4.t6
               a(href="#") USL-Pro
-            span (2) 16 total
+            span 
+              b (2) 
+              | 16 total
              i.fi-x
           li
             h4.t6
@@ -176,15 +182,25 @@ section#user-profile
         ul#user-settings-list.user-dash-list
           li 
             h4.t6 Language
-            span English | Español
+            div.setting-option
+              select
+                option(value="english", selected="selected") English
+                option(value="español") Español
           li 
             h4.t6 Font size
-            span small | normal | large
+            div.setting-option
+              select
+                option(value="small") Small
+                option(value="regular", selected="selected") Regular
+                option(value="large") Large
           li 
             h4.t6 Email frequency
-            span As Published | 1/week | 1/month
-          li 
-            h4.t6 Change profile picture
+            div.setting-option
+              select
+                option(value="as-published", selected="selected") As Published
+                option(value="1-week") 1/week
+                option(value="1-month") 1/month
+                option(value="no-emails") None
           li
             label
               h4.t6 Change password
@@ -193,6 +209,8 @@ section#user-profile
             label
               h4.t6 Change email
               input(type="email")
+          li 
+            h4.t6 Change profile picture
           li#beta-test-li
             label
               h4.t6 Beta test

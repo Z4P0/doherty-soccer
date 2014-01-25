@@ -15,10 +15,6 @@
   @include px(margin-top, 40px);
   padding-top: 2rem;
 }
-.container {
-  max-width: 1420px;
-  margin: 0 auto;
-}
 // .flex
 .flex {
   @include mq(netbook) {
@@ -245,7 +241,7 @@
 #article-post {
   .article-post {
     margin: 0 5% 3rem;
-    @include mq(netbook) {margin: 0 10%;}
+    @include mq(netbook) {margin: 0 10% 4rem;}
   }
   // .article-title {
   //   @include mq(desktop) {
