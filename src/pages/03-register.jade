@@ -2,14 +2,14 @@ include ../html/jade-helpers.jade
 !!! 5
 
 head
-  title Login | Doherty Soccer
+  title Register | Doherty Soccer
   meta(name="description", content="homepage demo")
   include ../html/head.jade
   +css("global-header")
   +css("global-footer")
-  +css("login")
+  +css("register")
 
-body#login(data-page="signin")
+body#register(data-page="signin")
   a(href="#main", class="assistive-text") Skip to main content
   div.container
     //- header
@@ -17,10 +17,7 @@ body#login(data-page="signin")
         
     //- main
     div#main
-      p account creation
-      p username, email, password
-
-      //- include ../modules/login/html/login.jade
+      include ../modules/login/html/register.jade
 
 
     //- footer
@@ -28,6 +25,6 @@ body#login(data-page="signin")
     
   include ../html/foot.jade
   +js("article")
-  +js("login")
+  //- +js("login")
   +js("global-header")
 </html>

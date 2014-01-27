@@ -1,0 +1,27 @@
+div#register-form-wrapper
+  form#register-form(action="#", method="POST")
+    p
+      label
+        span Username
+        input(type="text", name="username")
+    p
+      label
+        span Email
+        input(type="email", name="email")
+    p 
+      label
+        span Password
+        input(type="password", name="password")
+    p 
+      label.label-underline
+        span Confirm
+        input(type="password", name="password2")
+    p.label-underline#terms-and-conditions
+      span Terms &amp; Conditions
+      label
+        input(type="checkbox", name="t&c")
+        small I agree to the terms and conditions. More can be read 
+          a(href="#") here
+    div.flex-all
+      span
+        input(type="submit", value="Register")
