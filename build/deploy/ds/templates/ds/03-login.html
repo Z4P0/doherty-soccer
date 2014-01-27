@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}{{ title }} | {% endblock %}
+
+{% block description %}{{description}} | {% endblock %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'style/modules/login.css' %}">{% endblock %}
+
+{% block page_id %}login{% endblock %}
+
+{% block content %}
+<div id="login-form-wrapper">
+  <form id="login-form" action="/u/" method="POST">
+    {% if form.errors %}<p class="login-form-errors">Sorry, try a different username or password</p>{% endif %}
+    {% csrf_token %}
+    <p><label id="username-label"><span>Username</span><input type="text" name="username"></label></p>
+    <p><label><span>Password</span><input type="password" name="password"></label></p>
+    <div class="flex-all">
+      <span id="forgot-password"><a href="03-forgotten-password.html">Forgot password?</a></span>
+      <span><a href="03-register.html">Register</a><input type="submit" value="Login"></span>
+    </div>
+  </form>
+</div>
+{% endblock %}
