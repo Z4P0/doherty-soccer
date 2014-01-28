@@ -1,5 +1,5 @@
-div#register-form-wrapper
-  form#register-form(action="#", method="POST")
+div.form-wrapper#register-form-wrapper
+  form.form#register-form(action="#", method="POST")
     p
       label
         span Username
@@ -8,18 +8,18 @@ div#register-form-wrapper
       label
         span Email
         input(type="email", name="email")
-    p 
+    p#register-p
       label
         span Password
         input(type="password", name="password")
     p 
-      label.label-underline
-        span Confirm
+      label.label-underline#register-underline
+        span#register-confirm Confirm
         input(type="password", name="password2")
     p.label-underline#terms-and-conditions
       span Terms &amp; Conditions
       label
-        input(type="checkbox", name="t&c")
+        input(type="checkbox", name="terms-and-conditions")
         small I agree to the terms and conditions. More can be read 
           a(href="#") here
     div.flex-all

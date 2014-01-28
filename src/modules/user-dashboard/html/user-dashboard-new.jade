@@ -1,0 +1,74 @@
+section#user-profile
+  header#user-header.flex-1
+    h2#username Username
+    div.flex
+      figure#user-profile-image.flex-3
+        img(src="/img/users/zapo.jpg")
+      nav#user-nav.flex-2
+        ul#user-nav-list
+          li
+            a(href="#user-bookmarks") Bookmarks
+          li
+            a(href="#user-comments") Comments
+          //- li
+            a(href="#") Game Calendar
+          li
+            a(href="#user-subscriptions") Subscriptions
+          li
+            a(href="#user-settings") Settings
+        form#logout-form.flex-1(action="#", method="POST")
+          input(type="submit", value="Logout")#logout
+  div#user-dashboard.flex-3
+    section#user-bookmarks.user-section
+      h3.t7.flex-1 Bookmarked
+      p.flex-4.nothing-yet No bookmarks yet
+    section#user-comments.user-section
+      h3.t7.flex-1 Comments
+      p.flex-4.nothing-yet No comments yet
+    section#user-subscriptions.user-section
+      h3.t7.flex-1 Subscriptions
+      p.flex-4.nothing-yet No subscriptions yet
+    section#user-settings.user-section
+      h3.t7.flex-1 Settings
+      div.flex-4
+        ul#user-settings-list.user-dash-list
+          li 
+            h4.t6 Language
+            div.setting-option
+              select
+                option(value="english", selected="selected") English
+                option(value="español") Español
+          li 
+            h4.t6 Font size
+            div.setting-option
+              select
+                option(value="small") Small
+                option(value="regular", selected="selected") Regular
+                option(value="large") Large
+          li 
+            h4.t6 Email frequency
+            div.setting-option
+              select
+                option(value="as-published", selected="selected") As Published
+                option(value="1-week") 1/week
+                option(value="1-month") 1/month
+                option(value="no-emails") None
+          li
+            label
+              h4.t6 Change password
+              input(type="password")
+          li 
+            label
+              h4.t6 Change email
+              input(type="email")
+          li 
+            h4.t6 Change profile picture
+          li#beta-test-li
+            label
+              h4.t6 Beta test
+              input(type="checkbox")
+            p You will see unique article designs and interactions. This is essentially a playground for us to play with editorial design on the web. Have you ever played Portal? Kinda like that but without the risk of death
+          li
+            h4.t6 Delete profile
+        p#member-since Member since July 27, 2011
+

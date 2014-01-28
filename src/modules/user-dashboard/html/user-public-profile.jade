@@ -1,0 +1,158 @@
+section#user-profile
+  header#user-header.flex-1
+    h2#username Username
+    div.flex
+      figure#user-profile-image.flex-3
+        img(src="/img/users/zapo.jpg")
+      nav#user-nav.flex-2
+        ul#user-nav-list
+          li
+            a(href="#user-bookmarks") Bookmarks
+          li
+            a(href="#user-comments") Comments
+          //- li
+            a(href="#") Game Calendar
+          li
+            a(href="#user-subscriptions") Subscriptions
+  div#user-dashboard.flex-3
+    section#user-bookmarks.user-section
+      h3.t7.flex-1 Bookmarked
+      ul.flex-4#bookmarked-articles-list.user-dash-list
+        li
+          article.article-preview
+            //- title
+            h2.article-title
+              a(href="01-article-page.html") Tottenham Hotspur and US U17 Team Highlight 2013 IMG Invitational Tournament
+            //- meta
+            span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">Soccer In America</a>
+              span.posted-on December 17, 2013
+        li
+          article.article-preview
+            //- title
+            h2.article-title
+              a(href="01-article-page.html") Leones Negros is the Liga Ascenso MX Apertura 2013 Champion!
+            //- meta
+            span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">Ascenso MX</a>
+              span.posted-on December 16, 2013
+        li
+          article.article-preview
+            //- title
+            h2.article-title
+              a(href="01-article-page.html") Mexico U-17 Coasts Past Argentina 3-0 En Route to the Final
+            //- meta
+            span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">El Tri</a>
+              span.posted-on November 5, 2013
+        li
+          article.article-preview
+            //- title
+            h2.article-title
+              a(href="01-article-page.html") Raúl “Potro” Gutiérrez sent out the same starting line-up from the victory over Italy to face Brazil.
+            //- meta
+            span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">El Tri</a>
+              span.posted-on November 2, 2013
+        li
+          article.article-preview
+            //- title
+            h2.article-title
+              a(href="01-article-page.html") Mexico’s Shaky Start in the U-17 World Cup
+            //- meta
+            span.article-meta Posted in <a href="01-article-category-series.html" class="article-category">El Tri</a>
+              span.posted-on October 29, 2013
+    section#user-comments.user-section
+      h3.t7.flex-1 Comments
+      ul.flex-4#user-comment-list
+        li
+          article.user-comment
+            h4.t6 If she has a car you better ask her if she has ever checked the oil....
+            p.comment-meta Commment on article 
+              a(href="#")"Mexico’s Shaky Start in the U-17 World Cup" 
+              | at October 29, 2013 at 4:04 pm
+            ul.comment-actions.inline
+              li +20 [+34/-14]
+              li Edit
+              li Delete
+        li
+          article.user-comment
+            h4.t6 Chelsea: Hey United, can we have Rooney? United: No -Fast forward 5 months- United: Hey Chelsea can we have Mata? Chelsea: Oh sure mate! here, let me just bend over for you...
+            p.comment-meta Commment on article 
+              a(href="#")"Tottenham Hotspur and US U17 Team Highlight 2013 IMG Invitational Tournament" 
+              | at June 9, 2012 at 6:44 pm
+            ul.comment-actions.inline
+              li +10 [+14/-4]
+              li Edit
+              li Delete
+            section.comment-replies 
+              h5.t7 Replies
+              ul.user-dash-comment-replies-list
+                li
+                  article.user-dash-comment-reply.flex
+                    figure.user-profile-thumbnail.flex-1
+                      img(src="http://lorempixel.com/40/40", alt="dummy", width="40", height="40")
+                    div.flex-3
+                      h6.t5 
+                        a(href="#") thaighst
+                        | And thus, one of the world's greatest mysteries was solved
+                      p.comment-date January 6 at 12:50pm
+        li
+          article.user-comment
+            h4.t6 Why are so many people compelled to put a "the" before Ukraine? Do you also say "the Canada" or "the Spain"?
+            p.comment-meta Commment on article 
+              a(href="#")"Leones Negros is the Liga Ascenso MX Apertura 2013 Champion!" 
+              | at January 23, 2014 at 8:04 am            
+            ul.comment-actions.inline
+              li +10 [+14/-4]
+              li Edit
+              li Delete
+            section.comment-replies
+              h5.t7 Replies
+              ul.user-dash-comment-replies-list
+                li
+                  article.user-dash-comment-reply.flex
+                    figure.user-profile-thumbnail.flex-1
+                      img(src="http://lorempixel.com/40/40", alt="dummy", width="40", height="40")
+                    div.flex-3
+                      h6.t5
+                        a(href="#") robo_house__
+                        | can't wait until the writers find a way to somehow bring him back! i'm sure it will be natural and in no way forced
+                      p.comment-date 37 minutes ago
+
+    section#user-subscriptions.user-section
+      h3.t7.flex-1 Subscriptions
+      div.flex-4
+        ul#user-subscriptions-list.user-dash-list
+          li
+            h4.t6
+              a(href="#") El Tri
+            span 
+              b (2) 
+              | 15 total
+             i.fi-x
+          li
+            h4.t6
+              a(href="#") Mexico
+            span 
+              b (1) 
+              | 23 total
+             i.fi-x
+          li
+            h4.t6
+              a(href="#") Youth
+            span 8 total
+             i.fi-x
+          li
+            h4.t6
+              a(href="#") NASL
+            span 14 total
+             i.fi-x
+          li
+            h4.t6
+              a(href="#") USL-Pro
+            span 
+              b (2) 
+              | 16 total
+             i.fi-x
+          li
+            h4.t6
+              a(href="#") Soccer in America
+            span 3 total
+             i.fi-x

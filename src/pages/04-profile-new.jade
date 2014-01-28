@@ -7,7 +7,6 @@ head
   include ../html/head.jade
   +css("global-header")
   +css("global-footer")
-  +css("login")
   +css("article")
   +css("user-dashboard")
 
@@ -19,7 +18,7 @@ body#profile(data-page="signin")
         
     //- main
     div#main
-      include ../modules/user-dashboard/html/user-dashboard.jade
+      include ../modules/user-dashboard/html/user-dashboard-new.jade
 
 
     //- footer

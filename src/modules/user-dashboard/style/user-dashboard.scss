@@ -267,7 +267,11 @@
 
 
 
-
+.nothing-yet {
+	font-size: 0.875rem;
+	color: lighten($black, 50%);
+	font-style: italic;
+}
 
 
 // ===================================

@@ -47,7 +47,7 @@ ds.users = (function() {
   var loggedIn = function(e) {
   	var $signIn = $('#sign-in');
   	// $signIn.find('a').html('Profile');
-  	$signIn.find('a').attr('href','03-profile.html').html('Profile');
+  	$signIn.find('a').attr('href','04-profile.html').html('Profile');
   	$('#logout').click(function(e) {
   		ds.users.del();
   	})
