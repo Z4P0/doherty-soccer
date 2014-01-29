@@ -5,3 +5,4 @@ build/deploy/ds/ds/secret.py
 build/deploy/ds/static
 build/deploy/ds/media
 docs/
+src/node_modules/

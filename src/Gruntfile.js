@@ -318,9 +318,27 @@ module.exports = function(grunt) {
         files: ['pages/*.jade'],
         tasks: ['pages']
       }
+    },
+
+
+    // yui compression
+    min: {
+      dist: {
+        src: ['../build/debug/js/main.js', '../build/debug/js/modules/*.js'],
+        dest: '../build/debug/js/main.min.js'
+      }
+    },
+    cssmin: {
+      dist: {
+        src: ['../build/debug/style/style.css', '../build/debug/style/modules/*.css'],
+        dest: '../build/debug/style/style.min.css'
+      }
     }
 
+
+
   });
+
 
 
 
@@ -361,13 +379,15 @@ module.exports = function(grunt) {
 
   grunt.registerTask('deploy', function() {
     grunt.task.run([
-      'clean:deploy',
-      'compass:deploy',
-      'compass:deploy_modules',
-      'copy:deploy',
-      'jade:deploy_pages',
-      'jade:deploy',
-      'docs'
+      'min',
+      'cssmin'
+      // 'clean:deploy',
+      // 'compass:deploy',
+      // 'compass:deploy_modules',
+      // 'copy:deploy',
+      // 'jade:deploy_pages',
+      // 'jade:deploy',
+      // 'docs'
     ]);
   });
 
