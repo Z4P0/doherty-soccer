@@ -101,6 +101,86 @@ body[data-page="signin"] {
 	padding-bottom: 0.5rem;
 }
 
-@import "forgot-password";
-@import "login";
-@import "register";
+
+
+
+// register
+// ===================================
+// ===================================
+#register #main {
+	// background: url("/img/backgrounds/Goal_celebration_New_York_Red_Bulls_vs_San_Jose_Earthquakes_2011.jpg");
+	background: url("/static/img/backgrounds/Goal_celebration_New_York_Red_Bulls_vs_San_Jose_Earthquakes_2011.jpg");
+	background-size: cover;
+}
+
+#register-form {
+	p {
+		margin-bottom: 1.25rem;
+	}
+}
+#register-p {
+	margin-bottom: 0.5rem !important;
+	+ p {
+		margin-bottom: 0.5rem;
+	}
+}
+
+#register-underline {
+	padding-bottom: 1.25rem;
+}
+
+#register-confirm {
+	color: lighten($black, 30%);
+}
+
+#terms-and-conditions {
+	span {
+		display: inline-block;
+		margin-bottom: 0.25rem;
+		font-size: 0.875rem;
+	}
+	input {
+		margin-right: 0.5rem;
+		margin-bottom: 0;
+	}
+	a {
+		text-decoration: underline;
+	}
+}
+
+
+
+// login
+// ===================================
+// ===================================
+#login #main {
+	// background: url("/img/backgrounds/rhinos-1.jpg");
+	background: url("/static/img/backgrounds/rhinos-1.jpg");
+	background-size: cover;
+}
+
+
+
+#forgot-password {
+	font-size: 0.875rem !important;
+	vertical-align: middle;
+	a {
+		margin: 0 !important;
+		position: relative;
+		top: 0.25rem;
+	}
+}
+
+
+// forgotten password
+// ===================================
+// ===================================
+#forgotten-password #main {
+	// background: url("/img/backgrounds/previa-america-cruz-azul-copa-mx-semifinales-2013.jpg");
+	background: url("/static/img/backgrounds/previa-america-cruz-azul-copa-mx-semifinales-2013.jpg");
+	background-size: cover;
+}
+
+#forgotten-password-form .flex-all span:last-child {
+	text-align: center;
+}

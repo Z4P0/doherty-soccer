@@ -17,9 +17,9 @@ window.addEventListener('load',function(){
 	// localStorage.removeItem('ds');
 	ds.localStorage = JSON.parse(localStorage.getItem('ds'));
 	// var test = new ds.users.init();
-	ds.users.init();
+	// ds.users.init();
 	// console.log(test);
-	console.log(ds);
+	// console.log(ds);
 
 
 	

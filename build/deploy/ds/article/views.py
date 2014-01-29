@@ -7,13 +7,11 @@ def index(request):
 	published_articles = Article.objects.all()[:10]
 	categories = Category.objects.all()
 	series = Series.objects.all()
-	title = 'Articles'
-	description = 'All articles published'
-	# should loop throug all categories and series to say:
-	# covering: MLS, USMNT, Youth Development, Soccer In America
 	return render_to_response('article/01-articles.html', {
-		'title': title,
-		'description': description,
+		'title': 'Articles',
+		'description': 'All articles published',
+		'page_id': 'articles-index',
+		'data_page': 'article',
 		'categories': categories,
 		'series': series,
 		'published_articles': published_articles,
@@ -37,7 +35,9 @@ def view_article(request, slug):
 	return render_to_response('article/01-article-post.html', {
 		'article': article,
 		'next_article': next_article,
-		'related_articles': related_articles
+		'related_articles': related_articles,
+		'page_id': 'article-post',
+		'data_page': 'article'
 		})
 
 
@@ -54,6 +54,8 @@ def view_category(request, slug):
 	return render_to_response('article/01-article-category-series.html', {
 		'title': category,
 		'description': description,
+		'page_id': category.slug,
+		'data_page': 'article',
 		'posts': category_articles[1:5],
 		'latest_post': category_articles[0]
 		})
@@ -68,6 +70,8 @@ def view_tag(request, slug):
 	tag_articles = Article.objects.filter(tags=tag)[:10]
 	return render_to_response('article/01-article-category-series.html', {
 		'title': tag,
+		'page_id': tag.slug,
+		'data_page': 'article',
 		'posts': tag_articles[1:5],
 		'latest_post': tag_articles[0]
 		})

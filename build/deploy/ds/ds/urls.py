@@ -21,6 +21,12 @@ urlpatterns = patterns('',
   url(r'^u/profile/$', 'ds.views.user_profile', name='user_profile'),
   url(r'^u/sign-out/$', 'ds.views.sign_out', name='sign_out'),
   # url(r'^u/(?P<username>[^\.]+)$', 'ds.views.user_profile', name='user_profile'),
+
+  # register
+  url(r'^register/', 'ds.views.register', name='register'),
+  # forgotten password
+  url(r'^forgotten-password/', 'ds.views.forgotten_password', name='forgotten_password'),
+
   # articles
   url(r'^article/', include('article.urls', namespace='article')),
   url(r'^articles/', include('article.urls', namespace='article')),

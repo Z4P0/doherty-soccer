@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}{{ title }} | {% endblock %}
+{% block description %}{{description}} | {% endblock %}
+{% block page_id %}{{page_id}}{% endblock %}
+{% block data_page %}{{data_page}}{% endblock %}
+
+
+{% block content %}
+<div id="register-form-wrapper" class="form-wrapper">
+  <form id="register-form" action="/register/" method="POST" class="form">
+    {% if form.errors %}<p class="login-form-errors">Sorry, try a different username or password</p>{% endif %}
+    {% csrf_token %}
+    <p>
+      <label><span>Username</span>
+        <input type="text" name="username">
+      </label>
+    </p>
+    <p>
+      <label><span>Email</span>
+        <input type="email" name="email">
+      </label>
+    </p>
+    <p id="register-p">
+      <label><span>Password</span>
+        <input type="password" name="password">
+      </label>
+    </p>
+    <p> 
+      <label id="register-underline" class="label-underline"><span id="register-confirm">Confirm</span>
+        <input type="password" name="password2">
+      </label>
+    </p>
+    <p id="terms-and-conditions" class="label-underline"><span>Terms &amp; Conditions</span>
+      <label>
+        <input type="checkbox" name="terms-and-conditions"><small>I agree to the terms and conditions. More can be read <a href="#">here</a></small>
+      </label>
+    </p>
+    <div class="flex-all"><span>
+        <input type="submit" value="Register"></span></div>
+  </form>
+</div>
+{% endblock %}

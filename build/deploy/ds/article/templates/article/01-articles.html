@@ -1,12 +1,10 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-
 {% block title %}{{ title }} | {% endblock %}
 {% block description %}{{description}} | {% endblock %}
-
-
-{% block css %}<link rel="stylesheet" href="{% static 'article/article.css' %}">{% endblock %}
+{% block page_id %}{{page_id}}{% endblock %}
+{% block data_page %}{{data_page}}{% endblock %}
 
 
 {% block content %}

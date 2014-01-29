@@ -1,18 +1,10 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-{% block page_id %}article-post{% endblock %}
 {% block title %}{{ article.title }} | {% endblock %}
 {% block description %} {{article.title}} - {{ article.leadin}} | {% endblock %}
-
-
-
-{% block css %}
-<link rel="stylesheet" href="{% static 'article/article.css' %}">
-<link rel="stylesheet" href="{% static 'style/modules/comment-form.css' %}">
-<link rel="stylesheet" href="{% static 'style/modules/comment-post.css' %}">
-{% endblock %}
-
+{% block page_id %}{{page_id}}{% endblock %}
+{% block data_page %}{{data_page}}{% endblock %}
 
 
 {% block content %}

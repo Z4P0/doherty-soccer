@@ -4,7 +4,6 @@ ds.commentPost = (function() {
   // vars
 
   var init = function() {
-    console.log('hello from comment-post.js');
     // for each comment, listen for:
     // replies & upvotes
     $('.comment').each(function(i, el) {
