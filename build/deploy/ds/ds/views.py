@@ -3,8 +3,7 @@ from article.models import Article, Category, Series, Tag
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib import auth
 from django.core.context_processors import csrf
-from django.contrib.auth.forms import UserCreationForm
-
+from forms import DS_UserRegistration
 
 def home(request):
 	published_articles = Article.objects.all()[:10]
@@ -59,19 +58,30 @@ def auth_user(request):
 # register
 def register(request):
 	if request.method == 'POST':
-		form = UserCreationForm(request.POST)
+		form = DS_UserRegistration(request.POST)
 		if form.is_valid():
 			form.save()
-			return HttpResponseRedirect('u/profile')
+			# how do we grab the username from this to pass to the view?
+			# form['username']
+			return HttpResponseRedirect('/u/profile')
 	
 	args = {}
 	args.update(csrf(request))
-	args['form'] = UserCreationForm()
+	args['form'] = DS_UserRegistration()
 	args['title'] = 'Register'
 	args['description'] = 'Register'
 	args['page_id'] = 'register'
 	args['data_page'] = 'signin'
 	return render_to_response('ds/03-register.html', args)
+
+# register - sucess
+# def register_success(request):
+
+
+# register - complete
+# def thoing(request):
+
+
 
 # forgotten password
 def forgotten_password(request):

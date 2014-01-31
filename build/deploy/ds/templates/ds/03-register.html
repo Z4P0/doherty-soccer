@@ -10,33 +10,38 @@
 {% block content %}
 <div id="register-form-wrapper" class="form-wrapper">
   <form id="register-form" action="/register/" method="POST" class="form">
-    {% if form.errors %}<p class="login-form-errors">Sorry, try a different username or password</p>{% endif %}
     {% csrf_token %}
     <p>
-      <label><span>Username</span>
-        <input type="text" name="username">
+      <label>
+        <span>Username</span>
+        {{form.username}}
       </label>
     </p>
     <p>
-      <label><span>Email</span>
-        <input type="email" name="email">
+      <label>
+        <span>Email</span>
+        {{form.email}}
       </label>
     </p>
     <p id="register-p">
-      <label><span>Password</span>
-        <input type="password" name="password">
+      <label>
+        <span>Password</span>
+        {{form.password1}}
       </label>
     </p>
     <p> 
-      <label id="register-underline" class="label-underline"><span id="register-confirm">Confirm</span>
-        <input type="password" name="password2">
+      <label id="register-underline" class="label-underline">
+        <span id="register-confirm">Confirm</span>
+        {{form.password2}}
       </label>
     </p>
     <p id="terms-and-conditions" class="label-underline"><span>Terms &amp; Conditions</span>
       <label>
-        <input type="checkbox" name="terms-and-conditions"><small>I agree to the terms and conditions. More can be read <a href="#">here</a></small>
+        {{form.termsAndConditions}}
+        <small>I agree to the terms and conditions. More can be read <a href="#">here</a></small>
       </label>
     </p>
+
     <div class="flex-all"><span>
         <input type="submit" value="Register"></span></div>
   </form>

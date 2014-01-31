@@ -24,6 +24,9 @@ urlpatterns = patterns('',
 
   # register
   url(r'^register/', 'ds.views.register', name='register'),
+  # this would be for email confimrmation
+  # url(r'^register/complete', 'ds.views.register_complete', name='register_complete'),
+
   # forgotten password
   url(r'^forgotten-password/', 'ds.views.forgotten_password', name='forgotten_password'),
 
