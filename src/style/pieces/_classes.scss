@@ -1,5 +1,25 @@
 @import "mixins";
 
+
+// overlay
+.overlay {
+	position: relative;
+	&:after {
+		@include transition(height, 1s);
+		// opacity: 0;
+		content: "\00a0";
+		position: absolute;
+		top: 0;
+		// bottom: 0;
+		width: 100%;
+		height: 0;
+		// height: 100%;
+		background: rgba($black, 0.85);
+		height: 100%;
+	}
+}
+
+
 // wrapper - 80% width, 1024px max
 .wrapper {
 	position: relative;

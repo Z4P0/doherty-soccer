@@ -22,6 +22,8 @@ window.addEventListener('load',function(){
 	// console.log(ds);
 
 
+
+
 	
 	// collapse certain things
 	if ($('#all-topics-wrapper').length) {
@@ -45,6 +47,13 @@ window.addEventListener('load',function(){
 		});
 	}
 
+
+
+
+	// set some page settings
+	ds.height = $(document).height();
+	console.log('height');
+	console.log(ds.height);
 });
 
 

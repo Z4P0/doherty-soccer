@@ -5,10 +5,6 @@ head
   title Profile | Doherty Soccer
   meta(name="description", content="homepage demo")
   include ../html/head.jade
-  +css("global-header")
-  +css("global-footer")
-  +css("article")
-  +css("user-dashboard")
 
 body#profile(data-page="signin")
   a(href="#main", class="assistive-text") Skip to main content
@@ -25,6 +21,4 @@ body#profile(data-page="signin")
     include ../modules/global-footer/html/global-footer.jade
     
   include ../html/foot.jade
-  +js("login")
-  +js("global-header")
 </html>

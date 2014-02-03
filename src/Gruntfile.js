@@ -184,18 +184,18 @@ module.exports = function(grunt) {
     watch: {
       base_sass: {
         files: ['style/*.scss','style/**/*.scss'],
-        tasks: ['compass:build']
+        tasks: ['compass:build', 'cssmin']
       },
       module_sass: {
         files: ['modules/**/style/*.scss'],
-        tasks: ['css']
+        tasks: ['css', 'cssmin']
       },
       base_jade: {
         files: ['html/*.jade','*.jade'],
         tasks: ['jade:index']
       },
       module_jade: {
-        files: ['modules/**/demo/*.jade','modules/**/html/*.jade','modules/**/data/*.json'],
+        files: ['modules/**/html/*.jade','modules/**/data/*.json'],
         tasks: ['html', 'pages']
       },
       base_img: {
@@ -212,7 +212,7 @@ module.exports = function(grunt) {
       },
       module_js:{
         files: ['modules/**/js/*.js'],
-        tasks: ['js']
+        tasks: ['js', 'min']
       },
       docs: {
         files: ['docs/**/*.*'],
@@ -238,8 +238,6 @@ module.exports = function(grunt) {
         dest: '../build/debug/style/style.min.css'
       }
     }
-
-
 
   });
 
@@ -292,6 +290,41 @@ module.exports = function(grunt) {
     ]);
   });
 
+
+
+// // trigger on watch events
+// grunt.event.on('watch', function(action, filepath, target) {
+//   // if filepath is 'modules/**/style', run as 'css:module-name'
+
+//   if (target === 'module_sass') {
+//     console.log('css:'+filepath.split('/')[1]);
+//     grunt.config('watch.module_sass.args.0', filepath.split('/')[1]);
+//   }
+
+//   // grunt.log.writeln(filepath + ' was indeed ' + action);
+//   // var test;
+//   // test = filepath.split('/');
+//   // if (test[0] === 'modules' && test[2] === 'style') {
+//   //   grunt.log.writeln(test);
+
+//   //   console.log(target);
+//   //   // grunt.task.run('css:'+test[1]);
+//   //   // grunt.config('watch.module_sass.tasks', 'css:'+target);
+//   // }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
   // compile stuff in 'docs'
   grunt.registerTask('docs', 'update docs/ folder', function() {
     grunt.task.run([
@@ -318,14 +351,16 @@ module.exports = function(grunt) {
   // compile SCSS changes
   grunt.registerTask('css', function(module) {
     module = module || '**';
-    var mode = grunt.option('deploy') ? 'deploy' : 'debug';
+
+    console.log(this);
+    console.log(module);
 
     // go through every module, or the one passed
     grunt.file.expand('modules/'+module+'/style').forEach(function(path) {
       grunt.registerTask(path, function() {
         // set the sassDir for each module
-        grunt.config('compass.'+mode+'_modules.options.sassDir', path);
-        grunt.task.run('compass:'+mode+'_modules');
+        grunt.config('compass.debug_modules.options.sassDir', path);
+        grunt.task.run('compass:debug_modules');
       });
 
       // run it
@@ -353,6 +388,7 @@ module.exports = function(grunt) {
 
     grunt.config('copy.module_js.files', modules);
     grunt.task.run('copy:module_js');
+    
   });
 
 
@@ -416,20 +452,30 @@ module.exports = function(grunt) {
   // grunt.registerTask('w', function(module) {
   //   module = module || '**';
 
-  //       // check html
-  //   var watch_html = ['modules/'+module+'/html/*.jade', 'modules/'+module+'/html/*.json'],
-  //       // check js
-  //       watch_js = ['modules/'+module+'/js/*.js'],
-  //       // check style
-  //       watch_style = ['modules/'+module+'/style/*.scss'],
-  //       // check imgs
-  //       watch_imgs = ['modules/'+module+'/img/*.*'];
+  //   // tasks
+  //   // ----------------------------
+  //   // html
+  //   var html_task = ['modules/'+module+'/html/*jade' ]
+  //   // js
+  //   var js_task = ['modules/'+module+'/js/*jade' ]
 
-  //   var html_task = ['html:'+module],
-  //       js_task = ['js:'+module],
-  //       style_task = ['css:'+module],
-  //       img_task = ['assets:'+module];
+  //   // scss
+  //   var html_task = ['modules/'+module+'/html/*jade' ]
 
-  //   // unfinished
+  // //       // check html
+  // //   var watch_html = ['modules/'+module+'/html/*.jade', 'modules/'+module+'/html/*.json'],
+  // //       // check js
+  // //       watch_js = ['modules/'+module+'/js/*.js'],
+  // //       // check style
+  // //       watch_style = ['modules/'+module+'/style/*.scss'],
+  // //       // check imgs
+  // //       watch_imgs = ['modules/'+module+'/img/*.*'];
+
+  // //   var html_task = ['html:'+module],
+  // //       js_task = ['js:'+module],
+  // //       style_task = ['css:'+module],
+  // //       img_task = ['assets:'+module];
+
+  // //   // unfinished
   // });
 };

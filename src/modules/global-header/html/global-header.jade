@@ -18,8 +18,22 @@ header#global-header
       li(data-page="signin")#sign-in
         a(href="03-login.html") Sign In
         
-      li(data-page="search")#search
-        span#search-text Search
-        i.fi-magnifying-glass
-        //- form#search-field
-          input(type="text", placeholder="Search")
+      li(data-page="search")#search-li
+        div#search-toggle
+          span#search-text Search
+          i.fi-magnifying-glass(title="Search")
+        form#search-form(action="#", method="POST")
+          input#search-input(type="text")
+          span#search-form-close
+            i.fi-x(title="Cancel search")
+        div#search-results
+          h3.t7 Search Results
+          ul#search-results-list
+            li 
+              a(href="#") one
+            li 
+              a(href="#") two
+            li 
+              a(href="#") three
+            li 
+              a(href="#") four
