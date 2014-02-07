@@ -169,7 +169,7 @@ $nav-border: #4d4d4d;
         border-bottom: 1px solid darken($green, 20%);
       }
       &:first-child {border-left: 1px solid rgba($silver, 0.3)}
-      &:last-child {padding: 0.5rem 0.75rem; }
+      // &:last-child {padding: 0.5rem 0.75rem; }
       &.here {
         background: $green;
         border-bottom: 1px solid $green;
@@ -185,5 +185,3 @@ $nav-border: #4d4d4d;
     }
   }
 }
-
-@import "search";

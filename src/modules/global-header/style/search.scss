@@ -48,12 +48,16 @@
   }
   &.hidden {
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
+    display: none;
   }
   @include mq(netbook) {
     @include px(min-width, 300px);
     right: 0;
-    top: 0.4rem;
+    top: 2.6rem;
+    background: $green;
+    padding: 0.75rem 1rem 1rem;
+    margin: 0;
   }
 }
 
@@ -71,10 +75,24 @@
     margin-left: 5%;
     color: #fff;
   }
+  @include mq(netbook) {
+    position: absolute;
+    right: 0;
+    @include px(width, 300px);
+    margin-top: 3.5rem;
+  }
 }
 
 #search-results-list {
   li {
     background: transparent;
+    @include mq(netbook) {
+      display: block;
+      float: none;
+      margin: 0.5rem 0;
+      a {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 }

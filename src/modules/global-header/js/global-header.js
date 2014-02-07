@@ -72,7 +72,6 @@ ds.nav = (function() {
       $('#search-results').show();
       $search_field.off('keypress');
     });
-    console.log('--- width: ' + ds.width);
 
     // setTimeout(function() {
     //   toggleSearch()      
@@ -92,8 +91,11 @@ ds.nav = (function() {
   }
 
   var toggleSearch = function() {
-    if (ds.width < 768) $container.toggleClass('overlay');
-    $search_toggle.toggleClass('hidden');
+    // mobile
+    if (ds.width < 768) {
+      $container.toggleClass('overlay');
+      $search_toggle.toggleClass('hidden');
+    }
     $form.toggleClass('hidden');
   }
 
