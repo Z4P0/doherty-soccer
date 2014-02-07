@@ -208,7 +208,7 @@ module.exports = function(grunt) {
       },
       base_js:{
         files: ['js/*.js', 'js/**/*.js'],
-        tasks: ['copy:js']
+        tasks: ['copy:js', 'min']
       },
       module_js:{
         files: ['modules/**/js/*.js'],

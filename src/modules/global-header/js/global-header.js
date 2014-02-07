@@ -72,6 +72,8 @@ ds.nav = (function() {
       $('#search-results').show();
       $search_field.off('keypress');
     });
+    console.log('--- width: ' + ds.width);
+
     // setTimeout(function() {
     //   toggleSearch()      
     // }, 1000);
@@ -90,7 +92,7 @@ ds.nav = (function() {
   }
 
   var toggleSearch = function() {
-    $container.toggleClass('overlay');
+    if (ds.width < 768) $container.toggleClass('overlay');
     $search_toggle.toggleClass('hidden');
     $form.toggleClass('hidden');
   }
@@ -100,9 +102,3 @@ ds.nav = (function() {
     init : init
   };
 })();
-
-ds.nav.init({
-  nav: '#nav-menu',
-  toggle: '#nav-toggle',
-  search: '#search-li',
-});

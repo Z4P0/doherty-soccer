@@ -52,8 +52,14 @@ window.addEventListener('load',function(){
 
 	// set some page settings
 	ds.height = $(document).height();
-	console.log('height');
-	console.log(ds.height);
+	ds.width = $(document).width();
+
+
+	ds.nav.init({
+	  nav: '#nav-menu',
+	  toggle: '#nav-toggle',
+	  search: '#search-li',
+	});
 });
 
 
