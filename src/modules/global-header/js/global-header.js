@@ -11,7 +11,8 @@ ds.nav = (function() {
       $search_toggle,
       $form,
       $search_field,
-      $container;
+      $search_results,
+      $container; // this one is for when we search on miobile and darken the screen
 
   var init = function(_settings) {
     // nav
@@ -50,32 +51,26 @@ ds.nav = (function() {
     $form = $search_li.find('#search-form');
     $form.toggleClass('hidden'); // hide it
     
+
+    // search form toggles
+    // ----------------------------
     // set up search form toggle
     $search_toggle = $search_li.find('#search-toggle')
-    $search_toggle.click(function() {
-      toggleSearch();
-    })
-
+    $search_toggle.click(function() {toggleSearch();})
     // set up search-close btn
-    $search_li.find('#search-form-close').click(function() {
-      toggleSearch();
-    });
+    $search_li.find('#search-form-close').click(function() {toggleSearch();});
 
-
-
+    // search form results div
+    // ----------------------------
+    $search_results = $search_li.find('#search-results');
+    $search_results.toggleClass('hidden');
 
 
     // DEBUG MODE
-    toggleMenu();
-    $('#search-results').toggle();
-    $search_field.on('keypress', function() {
-      $('#search-results').show();
-      $search_field.off('keypress');
+    $search_field.on('keyup', function(e) {
+      $search_results.toggleClass('hidden');
+      if (e.keyCode === 27 ) toggleSearch();
     });
-
-    // setTimeout(function() {
-    //   toggleSearch()      
-    // }, 1000);
 
   };
 
@@ -86,7 +81,6 @@ ds.nav = (function() {
     // hide search form if it was left open
     if ($search_toggle.hasClass('hidden')) {
       toggleSearch(); 
-      $('#search-results').hide();
     }
   }
 
@@ -97,6 +91,14 @@ ds.nav = (function() {
       $search_toggle.toggleClass('hidden');
     }
     $form.toggleClass('hidden');
+    toggleResults();
+  }
+
+  var toggleResults = function() {
+    if (!$search_results.hasClass('hidden')) {
+      $search_results.toggleClass('hidden');
+    }
+    
   }
 
 

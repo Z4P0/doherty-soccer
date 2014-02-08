@@ -81,6 +81,9 @@
     @include px(width, 300px);
     margin-top: 3.5rem;
   }
+  &.hidden {
+    display: none;
+  }
 }
 
 #search-results-list {
@@ -90,8 +93,13 @@
       display: block;
       float: none;
       margin: 0.5rem 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
       a {
         margin-bottom: 0.5rem;
+        text-transform: none;
+        font-size: 1rem;
       }
     }
   }
