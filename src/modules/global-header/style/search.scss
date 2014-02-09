@@ -65,6 +65,7 @@
   @include flex(1);
   text-align: right;
   color: lighten($black, 50%);
+  @include hover();
 }
 
 #search-results {
