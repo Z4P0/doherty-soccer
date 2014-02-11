@@ -1,7 +1,7 @@
 @import "../../../style/pieces/vars";
 @import "../../../style/pieces/mixins";
 
-body[data-page="signin"] {
+.user-gate {
 	#main {
 		background-position: 0;
 		position: relative;
