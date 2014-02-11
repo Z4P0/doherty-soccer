@@ -419,23 +419,19 @@
 // article-categories
 // ===================================
 // ===================================
-.article-category-wrapper {
-  margin: 0 5%;
-  @include cf();
-  @include mq(netbook) {
-    margin: 0 10%;
-  }
-}
+// .article-category-wrapper {
+//   margin: 0 5%;
+//   @include cf();
+//   @include mq(netbook) {
+//     margin: 0 10%;
+//   }
+// }
 .article-category-hgroup {
   background: $green;
   color: $white;
-  text-align: right;
-  float: right;
-  padding: 1rem 1rem 2.25rem;
-  @include mq(netbook) {
-    width: 65%;
-  }
-  // @include px(max-width, 500px);
+  text-align: center;
+  padding: 2.25rem 1rem;
+  @extend %wrapper;
   h2 {
     text-transform: uppercase;
     font-family: $bold; 
@@ -444,25 +440,69 @@
     border-bottom: 1px solid $silver;
     margin-bottom: 0.875rem; 
   }
-  h3 {
-    font-size: 1.125rem;
-  }
 }
 
 
 
 .subscribe-btn {
   display: inline-block;
-  background: darken($green, 5%);
+  background: $white;
+  color: $green;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   font-size: 0.875rem;
+  @include transition(background, 0.3s);
+  &:hover {
+    cursor: pointer;
+    background: darken($green, 5%);
+    color: $white;
+  }
 }
+
+
+%wrapper {
+  margin: 2rem 5%;
+  @include mq(netbook) {
+    margin: 3rem 10%;
+  }
+}
+
+
+.latest-category-posts {
+  @extend %wrapper;
+  @include mq(netbook) {
+    @include flexbox();
+  }
+  article {
+    @include flex(1);
+    border-bottom: 1px solid $silver;
+    @include mq(netbook) {
+      margin-right: 2rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+#more-recent {
+  .article-title {
+    margin-bottom: 1.25rem;
+  }
+  p {
+    line-height: 1.4;
+  }
+}
+
+
+
 
 
 // #concacaf-match-calendar {
 //   margin: 0 5% 3rem;
 // }
+
+
 
 
 
