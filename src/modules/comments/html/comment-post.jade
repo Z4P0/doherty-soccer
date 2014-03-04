@@ -1,10 +1,12 @@
-div.comment
+div.comment(data-score="#{data.score}")
 	//- upvote/downvote
-	ul.comment-vote
+	ul.comment-vote(data-vote-cast="none")
 		li
-			i.fi-arrow-up
+			i.fi-arrow-up(data-vote="upvote")
 		li
-			i.fi-arrow-down
+			span.comment-score #{data.score}
+		li
+			i.fi-arrow-down(data-vote="downvote")
 	//- the comment
 	article.comment-content
 		h4.comment-meta <a href="#">#{data.commentAuthor}</a> on #{data.postDate} at #{data.postTime}

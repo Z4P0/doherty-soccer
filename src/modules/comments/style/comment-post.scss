@@ -1,31 +1,66 @@
 @import "../../../style/pieces/vars";
 @import "../../../style/pieces/mixins";
 
+
+
+// page styles
+// ===================================
+#comments {
+  margin: 2rem 5% 0;
+  @include mq(netbook) {margin: 3rem 10% 0;}
+  .t7 {margin-bottom: 1rem;}
+}
+#comments-list {
+  @include mq(netbook) {
+    @include flex(3);
+    padding-left: 2rem;
+  }
+}
+.comments-list {
+  list-style: none;
+  li {
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid lighten($black, 70%);
+  }
+}
+#comment-form {
+  @include mq(netbook) {
+    @include flex(2);
+  }
+}
+
+
+
 .comment {
   @include flexbox();
-  i {
-    font-size: 175%;
-    color: $silver;
-    // color: lighten($black, 70%);
-    @include transition(color, 0.3s);
-    &:hover {
-      cursor: pointer;
-    }
-  }
 }
 .comment-vote {
   @include flex(1);
   list-style: none;
   text-align: center;
-  @include px(max-width, 20px);
   margin-right: 0.5rem;
+  @include px(max-width, 20px);
   li {
     border: none;
     padding: 0;
     margin: 0;
-    &:first-child i:hover {color: $green;}
-    &:last-child i:hover {color: $black;}
   }
+  i {
+    font-size: 175%;
+    color: $silver;
+    @include transition(color, 0.3s);
+    @include hover();
+  }
+  &[data-vote-cast="upvote"] .fi-arrow-up,
+  .fi-arrow-up:hover {color: $green;}
+  &[data-vote-cast="downvote"] .fi-arrow-down,
+  .fi-arrow-down:hover {color: $black;}
+}
+.comment-score {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  color: lighten($black, 35%);
 }
 
 .comment-content {
@@ -46,13 +81,39 @@
 }
 
 
-
 .comment-actions {
+  font-size: 0.875rem;
   color: lighten($black, 25%);
-  @include px(font-size, 12px);
+  margin-bottom: 0.5rem;
   li {
     @include hover();
     &:after {content: " | ";}
     &:last-child:after {content: "";}
+    padding: 0;
+    margin: 0;
+    border-bottom: none;    
+  }
+}
+
+.replies {
+
+}
+.comment-replies {
+  // background: rgba($green, 0.25);
+  border-left: 1px solid $silver;
+  padding: 0.75rem;
+  padding-right: 0;
+  min-width: 200px;
+  li {
+    list-style: none;
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+  .t7 {
+    color: lighten($black, 20%);
+    font-size: 0.75rem;
   }
 }

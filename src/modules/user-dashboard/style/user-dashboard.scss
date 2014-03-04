@@ -134,28 +134,7 @@
 		margin-bottom: 0.25rem;
 	}
 }
-.comment-actions {
-	font-size: 0.875rem;
-	color: lighten($black, 25%);
-	margin-bottom: 1rem;
-	li {margin-right: 1rem;}
-}
-.comment-meta {
-	color: #888;
-	font-family: $bold;
-	font-size: 0.75rem;
-	a {
-		color: $green;
-		@include transition(color, 0.3s);
-		&:hover {
-			color: $black;
-		}
-	}
-}
-.comment-replies .t7 {
-	color: lighten($black, 20%);
-	font-size: 0.75rem;
-}
+
 .user-dash-comment-replies-list {
 	list-style: none;
 	li {margin-bottom: 2rem;}

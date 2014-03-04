@@ -1,8 +1,11 @@
 @import "../../../style/pieces/vars";
 @import "../../../style/pieces/mixins";
 
-#comment-form {
-  margin-bottom: $unit;
+.reply-form {  
+  // background: lighten($green, 55%);
+  border-left: 1px solid $silver;
+  padding: 1.25rem;
+  padding-right: 0;
   .t7 {
     margin-bottom: 0.25rem;
     @include mq(netbook) {
@@ -32,12 +35,22 @@
     margin-bottom: 0;
   }
 }
-#comment-follow {
+#comment-form {
+  @extend .reply-form;
+  border: none;
+  // background: transparent;
+  padding: 0;
+  margin-bottom: $unit;
+}
+#comment-follow, .comment-follow {
   font-size: 0.75rem;
   input {margin-right: 0.5rem;}
 }
+.submit-comment {
+  input { margin:0; }
+}
 #submit-comment {
-  input{margin:0;}
+  @extend .submit-comment;
   padding-bottom: 1rem;
   border-bottom: 1px solid darken($silver, 10%);
 }

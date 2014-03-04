@@ -243,11 +243,6 @@
     margin: 0 5% 3rem;
     @include mq(netbook) {margin: 0 10% 4rem;}
   }
-  // .article-title {
-  //   @include mq(desktop) {
-  //     @include px(font-size, 60px);
-  //   }
-  // }
   .article-meta {margin-bottom: 1rem;}
   .comments-list {margin-bottom: 2rem;}
 }
@@ -374,44 +369,6 @@
 
 
 
-
-
-
-
-
-
-
-  // comments
-  // ===================================
-  #comments {
-    margin: 2rem 5% 0;
-    @include mq(netbook) {margin: 3rem 10% 0;}
-    .t7 {margin-bottom: 1rem;}
-  }
-  #comments-list {
-    @include mq(netbook) {
-      @include flex(3);
-      padding-left: 2rem;
-    }
-  }
-  .comments-list {
-    list-style: none;
-    li {
-      padding-bottom: 0.75rem;
-      margin-bottom: 1.25rem;
-      border-bottom: 1px solid lighten($black, 70%);
-    }
-  }
-  .comment-actions li {
-    padding: 0;
-    margin: 0;
-    border-bottom: none;
-  }
-  #comment-form {
-    @include mq(netbook) {
-      @include flex(2);
-    }
-  }
 
 
 
