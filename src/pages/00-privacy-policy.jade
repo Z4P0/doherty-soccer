@@ -1,0 +1,59 @@
+include ../html/jade-helpers.jade
+!!! 5
+
+head
+	title Doherty Soccer
+	meta(name="description", content="homepage demo")
+	include ../html/head.jade
+
+body#homepage(data-page="home")
+	a(href="#main", class="assistive-text") Skip to main content
+	div.container
+		//- header
+		include ../modules/global-header/html/global-header.jade
+				
+		//- main
+		div#main
+			section#privacy-policy
+				h2.t4 Privacy Policy
+
+				p What kind of customer’s personal information is collected. You may want to offer a detailed explanation about why you collect the information in the first place, such as it is needed to communicate with the customer or to ship goods.
+				p How the customer’s information is securely stored. Include the name of the provider you use. For example, “XYZ.com uses ABC’s state of the art software to securely store your data.”
+				p How any or all of the information is shared. Include an opt-out option. Inform your customers that you might send information about hem to third parties, and allow them the choice of opting out: you will not be allowed to convey their information without their consent.
+				p Third-party advertisers on your site and links to their websites. Explain why you are sharing the information with third-party advertisers; perhaps those advertisers need your information to fulfill orders or to send an email confirmation. Customers are not as skittish about sharing information if they understand that it is necessary and beneficial to them.
+				p Include a cookie policy. (A cookie is a string of information that a website stores on a visitor’s computer, and that the visitor’s browser provides to the website each time the visitor returns.) Although cookies are not rocket science, there is a tremendous amount of misinformation and misunderstanding about them concerning privacy. Read about how to create a web site cookie policy that will dispel any apprehension visitors to your site may have.
+
+				p If you require any more information or have any questions about our privacy policy, please feel free to contact us by email at <a href="mailto:"></a>.
+				p At Doherty Soccer we consider the privacy of our visitors to be extremely important. This privacy policy document describes in detail the types of personal information is collected and recorded by Doherty Soccer and how we use it. 
+				h3.t5 Log Files
+				p Like many other Web sites, Doherty Soccer makes use of log files. These files merely logs visitors to the site - usually a standard procedure for hosting companies and a part of hosting services's analytics. The information inside the log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date/time stamp, referring/exit pages, and possibly the number of clicks. This information is used to analyze trends, administer the site, track user's movement around the site, and gather demographic information. IP addresses, and other such information are not linked to any information that is personally identifiable. 
+
+				h3.t5 Cookies and Web Beacons
+				p Doherty Soccer uses cookies to store information about visitors' preferences, to record user-specific information on which pages the site visitor accesses or visits, and to personalize or customize our web page content based upon visitors' browser type or other information that the visitor sends via their browser.  
+
+				h3.t5 Third Party Privacy Policies
+				p You should consult the respective privacy policies of these third-party ad servers for more detailed information on their practices as well as for instructions about how to opt-out of certain practices. Doherty Soccer's privacy policy does not apply to, and we cannot control the activities of, such other advertisers or web sites. You may find a comprehensive listing of these privacy policies and their links here: <a href="http://www.privacypolicyonline.com/privacy-policy-links" title="Privacy Policy Links">Privacy Policy Links</a>. 
+				p If you wish to disable cookies, you may do so through your individual browser options. More detailed information about cookie management with specific web browsers can be found at the browsers' respective websites.
+
+
+				h3.t5 Children's Information
+				p We believe it is important to provide added protection for children online. We encourage parents and guardians to spend time online with their children to observe, participate in and/or monitor and guide their online activity.
+				p Doherty Soccer does not knowingly collect any personally identifiable information from children under the age of 13.  If a parent or guardian believes that Doherty Soccer has in its database the personally-identifiable information of a child under the age of 13, please contact us immediately (using the contact in the first paragraph) and we will use our best efforts to promptly remove such information from our records.
+
+				h3.t5 Online Privacy Policy Only
+				p This privacy policy applies only to our online activities and is valid for visitors to our website and regarding information shared and/or collected there.
+				p This policy does not apply to any information collected offline or via channels other than this website.
+
+				h3.t5 Consent
+				p By using our website, you hereby consent to our privacy policy and agree to its terms.
+
+				h3.t5 Update
+				p
+					strong This Privacy Policy was last updated on: Thursday, March 6th, 2014.
+
+
+		//- footer
+		include ../modules/global-footer/html/global-footer.jade
+		
+	include ../html/foot.jade
+</html>

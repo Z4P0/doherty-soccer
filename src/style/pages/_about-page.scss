@@ -1,0 +1,6 @@
+@import "../pieces/vars";
+@import "../pieces/mixins";
+
+#about-ds {
+	@extend %wrapper;
+}

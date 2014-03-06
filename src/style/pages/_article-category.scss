@@ -1,0 +1,64 @@
+@import "../pieces/vars";
+@import "../pieces/mixins";
+
+#article-series #main {
+  padding-top: 0;
+}
+.article-category-hgroup {
+  background: $green;
+  color: $white;
+  text-align: center;
+  padding: 2.5rem 5% 1rem;
+  @include mq(netbook) {
+    padding: 3rem 10% 1.5rem;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-family: $bold; 
+    font-size: 3rem;
+    padding-bottom: 0.875rem;
+    border-bottom: 1px solid $silver;
+    margin-bottom: 0.875rem; 
+  }
+}
+
+.subscribe-btn {
+  display: inline-block;
+  background: $white;
+  color: $green;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  @include transition(background, 0.3s);
+  &:hover {
+    cursor: pointer;
+    background: darken($green, 5%);
+    color: $white;
+  }
+}
+
+.latest-category-posts {
+  @extend %wrapper;
+  @include mq(netbook) {@include flexbox();}
+  article {
+    @include flex(1);
+    margin-bottom: 2.5rem;
+    @include mq(netbook) {
+      margin-right: 2rem;
+      margin-bottom: 1.25rem;
+      &:last-child {margin-right: 0;}
+    }
+  }
+  .article-title {
+    font-size: 1.5rem;
+  }
+  p {line-height: 1.4;}
+}
+
+#latest-2 {
+  margin-top: 2rem;
+  @include mq(netbook) {
+    margin-top: 4rem;
+    .article-title { font-size: 2.5rem; }
+  }
+}

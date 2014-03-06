@@ -1,0 +1,44 @@
+@import "../pieces/vars";
+@import "../pieces/mixins";
+
+#latest-articles {
+  @include mq(netbook) {
+    @include flexbox();
+  }
+}
+#latest-post {
+    margin: 0 5% 3rem;
+    @include transition(margin, 0.3s);
+    .article-meta {margin-bottom: 1rem;}
+    @include mq(netbook) {
+      @include flex(3);
+      margin-right: 0;
+      margin-left: 10%;
+    }
+    @include mq(desktop) {
+      @include flex(4);
+      .article-post {width: 90%;}
+    }
+  }
+
+#recent-posts {
+    margin: 0 5% 3rem;
+    @include transition(margin, 0.3s);
+    .t7 {
+      @include px(margin-bottom, 13px);
+    }
+    @include mq(netbook) {
+      @include flex(2);
+      margin-bottom: 0;
+      margin-right: 10%;
+    }
+    @include mq(desktop) {margin-left: 0;}
+  }
+  .recent-articles {
+    list-style-type: none;
+    @include rems(max-width, 390px);
+    li {
+      @include rems(margin-bottom, 26px);
+      border-bottom: 1px solid lighten($black, 75%);
+    }
+  }

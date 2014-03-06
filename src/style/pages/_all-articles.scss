@@ -1,0 +1,137 @@
+@import "../pieces/vars";
+@import "../pieces/mixins";
+
+#all-articles-header {
+  margin: 0 5% 0.5rem;
+  @include mq(netbook) {margin: 0 10% 1rem;}
+}
+
+#all-topics-toggle {
+  color: $silver;
+  text-align: right;
+  position: relative;
+  span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    @include transition(opacity, 0.3s);
+    &:after {
+      font-family: "foundation-icons";
+      margin-left: 0.5rem;
+      font-size: 125%;
+      vertical-align: middle;        
+    }
+    @include hover();
+  }
+  .expand {
+    opacity: 1;
+    z-index: 305;
+    margin-right: 20%;
+    &:after {
+      content: "\f198";
+      position: absolute;
+      transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+    }
+  }
+  .collapse {
+    opacity: 0;
+    z-index: 300;
+    &:after {content: "\f176";}
+  }
+  @include flex(1);
+  // when clicked, add class="show-collapse"
+  &.show-collapse {
+    .expand {
+      z-index: 300;
+      opacity: 0;
+    }
+    .collapse {
+      z-index: 305;
+      opacity: 1;
+    }
+  }
+  // media queries
+  @include mq(netbook) {display: none;}
+}
+
+#all-topics-wrapper {
+  @include mq(netbook) {
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    div {
+      @include flex(1);
+      padding-right: 5%;
+      &:last-child {padding-right: 0;}
+    }
+  }
+}
+#article-topics {
+  background: $green;
+  padding: 2.5rem 5% 0.5rem;
+  margin-bottom: 2.5rem;
+  @include mq(netbook) {padding: 2.5rem 10% 1rem;}
+  @include transition(height, 0.3s);
+  .t7 {
+    color: $white;
+    margin-bottom: 1rem;
+    @include flex(2);
+  }
+  .t3 {
+    font-size: 0.95rem;
+    color: $black;
+    font-family: $bold;
+    letter-spacing: 0.5px;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid $silver;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.topics-list {
+  list-style: none;
+  margin-bottom: 1.75rem;
+  font-size: 0.875rem;
+  @include mq(netbook) {
+    font-size: 1rem;
+  }
+  li {
+    margin-bottom: 0.75rem;
+    color: $silver;
+    @include transition(color, 0.2s);
+    &:hover {color: $white;}
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+#published-articles {
+  margin: 0 5%;
+  @include mq(netbook) {margin: 0 10%;}
+  .t7 {margin-bottom: 0.5rem;}
+  .article-title {
+    font-size: 1.5rem;
+    @include mq(netbook) {font-size: 1.75rem;}
+  }
+  .lead-in {
+    font-size: 1rem;
+    line-height: 1.4;
+    @include mq(netbook) {font-size: 1.15rem;}
+  }
+  .read-article {font-size: 0.875rem;}
+}
+.published-articles {
+  max-width: 38rem;  
+  list-style: none;
+  li {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $silver;
+    margin-bottom: 1.25rem;
+  }
+}
